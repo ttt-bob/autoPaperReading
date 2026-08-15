@@ -1,0 +1,40 @@
+{
+  "checked": 139,
+  "mismatches": [
+    {
+      "arxiv_id": "2401.07781",
+      "readme_title": "AssistGUI: Task-Oriented Desktop Graphical User Interface Automation",
+      "arxiv_title": "Towards A Better Metric for Text-to-Video Generation",
+      "url": "https://arxiv.org/abs/2401.07781",
+      "ratio": 0.319
+    },
+    {
+      "arxiv_id": "2404.10887",
+      "readme_title": "Search Beyond Queries: Training Smaller Language Models for Web Interactions via Reinforcement Learning",
+      "arxiv_title": "Grounded Language Agent for Product Search via Intelligent Web Interactions",
+      "url": "https://arxiv.org/abs/2404.10887",
+      "ratio": 0.418
+    },
+    {
+      "arxiv_id": "2403.03186",
+      "readme_title": "Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study",
+      "arxiv_title": "Cradle: Empowering Foundation Agents Towards General Computer Control",
+      "url": "https://arxiv.org/abs/2403.03186",
+      "ratio": 0.395
+    },
+    {
+      "arxiv_id": "2407.03037",
+      "readme_title": "Vision-driven Automated Mobile GUI Testing via Multimodal Large Language Model",
+      "arxiv_title": "Seeing is Believing: Vision-driven Non-crash Functional Bug Detection for Mobile Apps",
+      "url": "https://arxiv.org/abs/2407.03037",
+      "ratio": 0.37
+    },
+    {
+      "arxiv_id": "2407.09295",
+      "readme_title": "Security Matrix for Multimodal Agents on Mobile Devices: A Systematic and Proof of Concept Study",
+      "arxiv_title": "Systematic Categorization, Construction and Evaluation of New Attacks against Multi-modal Mobile GUI Agents",
+      "url": "https://arxiv.org/abs/2407.09295v2",
+      "ratio": 0.249
+    }
+  ]
+}

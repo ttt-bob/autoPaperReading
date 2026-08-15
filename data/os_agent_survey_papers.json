@@ -1,0 +1,1825 @@
+{
+  "source": "https://github.com/OS-Agent-Survey/OS-Agent-Survey",
+  "generated_at": "2026-07-01",
+  "count": 303,
+  "papers": [
+    {
+      "date": "2025-02-18",
+      "title": "Evaluating the Robustness of Multimodal Agents Against Active Environmental Injection Attacks",
+      "url": "https://arxiv.org/abs/2502.13053",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2025-02-17",
+      "title": "Explorer: Scaling Exploration-driven Web Trajectory Synthesis for Multimodal Web Agents",
+      "url": "https://arxiv.org/abs/2502.11357",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2025-02-04",
+      "title": "Dissecting Adversarial Robustness of Multimodal LM Agents.",
+      "url": "https://arxiv.org/abs/2406.12814",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-12-19",
+      "title": "Agent-SafetyBench: Evaluating the Safety of LLM Agents.",
+      "url": "https://arxiv.org/abs/2412.14470",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-12-13",
+      "title": "Falcon-UI: Understanding GUI Before Following User Instructions.",
+      "url": "https://arxiv.org/abs/2412.09362",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-12-13",
+      "title": "AgentTrek: Agent Trajectory Synthesis via Guiding Replay with Web Tutorials.",
+      "url": "https://arxiv.org/abs/2412.09605",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-12-09",
+      "title": "BigDocs: An Open and Permissively-Licensed Dataset for Training Multimodal Models on Document and Code Tasks.",
+      "url": "https://arxiv.org/abs/2412.04626",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-12-05",
+      "title": "AGUVIS: Unified Pure Vision Agents for Autonomous GUI Interaction.",
+      "url": "https://arxiv.org/abs/2412.04454v1",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-12-02",
+      "title": "Ponder & Press: Advancing Visual GUI Agent towards General Computer Control.",
+      "url": "https://arxiv.org/abs/2412.01268",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-11-26",
+      "title": "ShowUI: One Vision-Language-Action Model for GUI Visual Agent.",
+      "url": "https://arxiv.org/abs/2411.17465",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-11-22",
+      "title": "ScribeAgent: Towards Specialized Web Agents Using Production-Scale Workflow Data.",
+      "url": "https://arxiv.org/abs/2411.15004",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-11-20",
+      "title": "AdaptAgent: Adapting Multimodal Web Agents with Few-Shot Learning from Human Demonstrations.",
+      "url": "https://arxiv.org/abs/2411.13451",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-11-18",
+      "title": "Improved GUI Grounding via Iterative Narrowing.",
+      "url": "https://arxiv.org/abs/2411.13591",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-11-18",
+      "title": "Improved GUI Grounding via Iterative Narrowing.",
+      "url": "https://arxiv.org/abs/2411.13591v4",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-11-15",
+      "title": "The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use.",
+      "url": "https://arxiv.org/abs/2411.10323",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-11-10",
+      "title": "Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents.",
+      "url": "https://arxiv.org/abs/2411.06559",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-11-04",
+      "title": "Attacking Vision-Language Computer Agents via Pop-ups.",
+      "url": "https://arxiv.org/abs/2411.02391",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-11-01",
+      "title": "WebOlympus: An Open Platform for Web Agents on Live Websites.",
+      "url": "https://aclanthology.org/2024.emnlp-demo.20/",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-31",
+      "title": "AndroidLab: Training and Systematic Benchmarking of Android Autonomous Agents.",
+      "url": "https://arxiv.org/abs/2410.24024",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-30",
+      "title": "OS-ATLAS: A Foundation Action Model for Generalist GUI Agents.",
+      "url": "https://arxiv.org/abs/2410.23218",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-29",
+      "title": "Auto-Intent: Automated Intent Discovery and Self-Exploration for Large Language Model Web Agents.",
+      "url": "https://arxiv.org/abs/2410.22552",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-28",
+      "title": "AutoGLM: Autonomous Foundation Agents for GUIs.",
+      "url": "https://arxiv.org/abs/2411.00820",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-28",
+      "title": "AssistEditor: Multi-Agent Collaboration for GUI Workflow Automation in Video Creation.",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3664647.3684998",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-10-28",
+      "title": "Shopping MMLU: A Massive Multi-Task Online Shopping Benchmark for Large Language Models.",
+      "url": "https://arxiv.org/abs/2410.20745",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-10-28",
+      "title": "MMT-Bench: A Comprehensive Multimodal Benchmark for Evaluating Large Vision-Language Models Towards Multitask AGI.",
+      "url": "https://arxiv.org/abs/2404.16006",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-10-25",
+      "title": "EDGE: Enhanced Grounded GUI Understanding with Enriched Multi-Granularity Synthetic Data.",
+      "url": "https://arxiv.org/abs/2410.19461",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-25",
+      "title": "OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration, Feedback and Optimization.",
+      "url": "https://arxiv.org/abs/2410.19609",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-24",
+      "title": "Ferret-UI One: Mastering Universal User Interface Understanding Across Platforms.",
+      "url": "https://arxiv.org/abs/2410.18967",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-24",
+      "title": "OSCAR: Operating System Control via State-Aware Reasoning and Re-Planning.",
+      "url": "https://arxiv.org/abs/2410.18963",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-24",
+      "title": "AgentStore: Scalable Integration of Heterogeneous Agents As Specialized Generalist Computer Assistant.",
+      "url": "https://arxiv.org/abs/2410.18603",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-24",
+      "title": "Infogent: An Agent-Based Framework for Web Information Aggregation.",
+      "url": "https://arxiv.org/abs/2410.19054",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-24",
+      "title": "VideoWebArena: Evaluating Long Context Multimodal Agents with Video Understanding Web Tasks.",
+      "url": "https://arxiv.org/abs/2410.19100",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-10-23",
+      "title": "MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control.",
+      "url": "https://arxiv.org/abs/2410.17520",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-10-22",
+      "title": "ShowUI: One Vision-Language-Action Model for Generalist GUI Agent.",
+      "url": "https://openreview.net/forum?id=UXdxYnkJtX",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-22",
+      "title": "Large Language Models Empowered Personalized Web Agents.",
+      "url": "https://arxiv.org/abs/2410.17236",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-22",
+      "title": "Advweb: Controllable black-box attacks on vlm-powered web agents.",
+      "url": "https://arxiv.org/abs/2410.17401",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-10-21",
+      "title": "Beyond Browsing: API-Based Web Agents.",
+      "url": "https://arxiv.org/abs/2410.16464",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-19",
+      "title": "SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation.",
+      "url": "https://arxiv.org/abs/2410.15164",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-10-17",
+      "title": "Harnessing Webpage UIs for Text-Rich Visual Understanding.",
+      "url": "https://arxiv.org/abs/2410.13824",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-17",
+      "title": "AgentOccam: A Simple Yet Strong Baseline for LLM-Based Web Agents.",
+      "url": "https://arxiv.org/abs/2410.13825",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-17",
+      "title": "MobA: A Two-Level Agent System for Efficient Mobile Task Automation.",
+      "url": "https://arxiv.org/abs/2410.13757",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-11",
+      "title": "VisionTasker: Mobile Task Automation Using Vision Based UI Understanding and LLM Task Planning.",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3654777.3676386",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-11",
+      "title": "Refusal-Trained LLMs Are Easily Jailbroken As Browser Agents.",
+      "url": "https://arxiv.org/abs/2410.13886",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-10-10",
+      "title": "Agent S: An Open Agentic Framework that Uses Computers Like a Human.",
+      "url": "https://arxiv.org/abs/2410.08164",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-09",
+      "title": "TinyClick: Single-Turn Agent for Empowering GUI Automation.",
+      "url": "https://arxiv.org/abs/2410.11871",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-09",
+      "title": "ClickAgent: Enhancing UI Location Capabilities of Autonomous Agents.",
+      "url": "https://arxiv.org/abs/2410.11872",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-09",
+      "title": "ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents.",
+      "url": "https://arxiv.org/abs/2410.06703",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-10-07",
+      "title": "Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents.",
+      "url": "https://arxiv.org/abs/2410.05243",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-03",
+      "title": "NNetscape Navigator: Complex Demonstrations for Web Agents Without a Demonstrator.",
+      "url": "https://arxiv.org/abs/2410.02907",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-10-01",
+      "title": "Dynamic Planning for LLM-based Graphical User Interface Automation.",
+      "url": "https://arxiv.org/abs/2410.00467",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10-01",
+      "title": "Multimodal Auto Validation For Self-Refinement in Web Agents.",
+      "url": "https://arxiv.org/abs/2410.00689",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-10",
+      "title": "OS-ATLAS: A Foundation Action Model for Generalist GUI Agents",
+      "url": "https://arxiv.org/abs/2410.23218",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "AutoGLM: Autonomous Foundation Agents for GUIs",
+      "url": "https://arxiv.org/abs/2411.00820",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "EDGE: Enhanced Grounded GUI Understanding with Enriched Multi-Granularity Synthetic Data",
+      "url": "https://arxiv.org/abs/2410.19461",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "Ferret-UI 2: Mastering Universal User Interface Understanding Across Platforms",
+      "url": "https://arxiv.org/abs/2410.18967",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "ShowUI: One Vision-Language-Action Model for Generalist GUI Agent",
+      "url": "https://openreview.net/forum?id=UXdxYnkJtX",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "Harnessing Webpage UIs for Text-Rich Visual Understanding",
+      "url": "https://arxiv.org/abs/2410.13824",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "TinyClick: Single-Turn Agent for Empowering GUI Automation",
+      "url": "https://arxiv.org/abs/2410.11871",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents",
+      "url": "https://arxiv.org/abs/2410.05243",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "NNetscape Navigator: Complex Demonstrations for Web Agents Without a Demonstrator",
+      "url": "https://arxiv.org/abs/2410.02907",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "OpenWebVoyager: Building Multimodal Web Agents via Iterative Real-World Exploration, Feedback and Optimization",
+      "url": "https://arxiv.org/abs/2410.19609",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "OSCAR: Operating System Control via State-Aware Reasoning and Re-Planning",
+      "url": "https://arxiv.org/abs/2410.18963",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "Large Language Models Empowered Personalized Web Agents",
+      "url": "https://arxiv.org/abs/2410.17236",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "AgentOccam: A Simple Yet Strong Baseline for LLM-Based Web Agents",
+      "url": "https://arxiv.org/abs/2410.13825",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "Agent S: An Open Agentic Framework that Uses Computers Like a Human",
+      "url": "https://arxiv.org/abs/2410.08164",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-10",
+      "title": "ClickAgent: Enhancing UI Location Capabilities of Autonomous Agents",
+      "url": "https://arxiv.org/abs/2410.11872",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-09-30",
+      "title": "MM1.5: Methods, Analysis & Insights from Multimodal LLM Fine-tuning.",
+      "url": "https://arxiv.org/abs/2409.20566",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-09-25",
+      "title": "Turn Every Application into an Agent: Towards Efficient Human-Agent-Computer Interaction with API-First LLM-Based Agents.",
+      "url": "https://arxiv.org/abs/2409.17140",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-24",
+      "title": "Synatra: Turning indirect knowledge into direct demonstrations for digital agents at scale.",
+      "url": "https://arxiv.org/abs/2409.15637",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-09-23",
+      "title": "MobileVLM: A Vision-Language Model for Better Intra- and Inter-UI Understanding.",
+      "url": "https://arxiv.org/abs/2409.14818",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-09-23",
+      "title": "From Commands to Prompts: LLM-based Semantic File System for AIOS.",
+      "url": "https://arxiv.org/abs/2410.11843",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-23",
+      "title": "Steward: Natural Language Web Automation.",
+      "url": "https://arxiv.org/abs/2409.15441",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-22",
+      "title": "MobileViews: A Large-Scale Mobile GUI Dataset.",
+      "url": "https://arxiv.org/abs/2409.14337",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-09-17",
+      "title": "Eia: Environmental injection attack on generalist web agents for privacy leakage.",
+      "url": "https://arxiv.org/abs/2409.11295",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-09-16",
+      "title": "NaviQAte: Functionality-Guided Web Application Navigation.",
+      "url": "https://arxiv.org/abs/2409.10741",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-14",
+      "title": "PeriGuru: A Peripheral Robotic Mobile App Operation Assistant based on GUI Image Understanding and Prompting with LLM.",
+      "url": "https://arxiv.org/abs/2409.09354",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-12",
+      "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale.",
+      "url": "https://arxiv.org/abs/2409.08264",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-11",
+      "title": "Agent Workflow Memory.",
+      "url": "https://arxiv.org/abs/2409.07429",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-09-06",
+      "title": "WebQuest: A Benchmark for Multimodal QA on Web Page Sequences.",
+      "url": "https://arxiv.org/abs/2409.13711",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-09",
+      "title": "Synatra: Turning indirect knowledge into direct demonstrations for digital agents at scale",
+      "url": "https://arxiv.org/abs/2409.15637",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-09",
+      "title": "MobileVLM: A Vision-Language Model for Better Intra- and Inter-UI Understanding",
+      "url": "https://arxiv.org/abs/2409.14818",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-09",
+      "title": "From Commands to Prompts: LLM-based Semantic File System for AIOS",
+      "url": "https://arxiv.org/abs/2410.11843",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-09",
+      "title": "NaviQAte: Functionality-Guided Web Application Navigation",
+      "url": "https://arxiv.org/abs/2409.10741",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-09",
+      "title": "PeriGuru: A Peripheral Robotic Mobile App Operation Assistant based on GUI Image Understanding and Prompting with LLM",
+      "url": "https://arxiv.org/abs/2409.09354",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-09",
+      "title": "Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale",
+      "url": "https://arxiv.org/abs/2409.08264",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-08-30",
+      "title": "UI-Hawk: Unleashing the Screen Stream Understanding for GUI Agents.",
+      "url": "https://www.preprints.org/manuscript/202408.2137",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-08-28",
+      "title": "Webpilot: A versatile and autonomous multi-agent system for web task execution with strategic exploration.",
+      "url": "https://arxiv.org/abs/2408.15978",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-08-24",
+      "title": "AutoWebGLM: A Large Language Model-based Web Navigating Agent.",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3637528.3671620",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-08-24",
+      "title": "Intelligent Agents with LLM-based Process Automation.",
+      "url": "https://dl.acm.org/doi/abs/10.1145/3637528.3671646",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-08-05",
+      "title": "Caution for the Environment: Multimodal Agents are Susceptible to Environmental Distractions.",
+      "url": "https://arxiv.org/abs/2408.02544",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-08-01",
+      "title": "OpenWebAgent: An Open Toolkit to Enable Web Agents on Large Language Models.",
+      "url": "https://aclanthology.org/2024.acl-demos.8/",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-08-01",
+      "title": "Omniparser for pure vision based gui agent.",
+      "url": "https://arxiv.org/abs/2408.00203",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-08",
+      "title": "UI-Hawk: Unleashing the Screen Stream Understanding for GUI Agents",
+      "url": "https://www.preprints.org/manuscript/202408.2137",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-08",
+      "title": "OpenWebAgent: An Open Toolkit to Enable Web Agents on Large Language Models",
+      "url": "https://aclanthology.org/2024.acl-demos.8/",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-07-26",
+      "title": "OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation.",
+      "url": "https://arxiv.org/abs/2407.19056",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-22",
+      "title": "AssistantBench: Can Web Agents Solve Realistic and Time-Consuming Tasks?",
+      "url": "https://arxiv.org/abs/2407.15711",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-21",
+      "title": "Towards LLMCI: Multimodal AI for LLM-Vision UI Operation.",
+      "url": "https://doi.org/10.21203/rs.3.rs-4653823/v1",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-07-19",
+      "title": "GUI Action Narrator: Where and When Did That Action Take Place?",
+      "url": "https://arxiv.org/abs/2406.13719",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-07-17",
+      "title": "Agent-e: From autonomous web navigation to foundational design principles in agentic systems.",
+      "url": "https://arxiv.org/abs/2407.13032",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-07-15",
+      "title": "Spider2-V: How Far Are Multimodal Agents From Automating Data Science and Engineering Workflows?",
+      "url": "https://arxiv.org/abs/2407.10956",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-13",
+      "title": "RealWeb: A Benchmark for Universal Instruction Following in Realistic Web Services Navigation.",
+      "url": "https://ieeexplore.ieee.org/abstract/document/10707522",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-12",
+      "title": "Security Matrix for Multimodal Agents on Mobile Devices: A Systematic and Proof of Concept Study.",
+      "url": "https://arxiv.org/abs/2407.09295",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-07-11",
+      "title": "UICrit: Enhancing Automated Design Evaluation with a UI Critique Dataset.",
+      "url": "https://arxiv.org/abs/2407.08850",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-07",
+      "title": "WorkArena++: Towards Compositional Planning and Reasoning-based Common Knowledge Work Tasks.",
+      "url": "https://arxiv.org/abs/2407.05291",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-05",
+      "title": "MobileFlow: A Multimodal LLM for Mobile GUI Agent.",
+      "url": "https://arxiv.org/abs/2407.04346",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-07-04",
+      "title": "MobileExperts: A Dynamic Tool-Enabled Agent Team in Mobile Devices.",
+      "url": "https://arxiv.org/abs/2407.03913",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-07-03",
+      "title": "Amex: Android multi-annotation expo dataset for mobile gui agents.",
+      "url": "https://arxiv.org/abs/2407.17490",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-01",
+      "title": "Tree Search for Language Model Agents.",
+      "url": "https://arxiv.org/abs/2407.01476",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-07-01",
+      "title": "CRAB: Cross-environment Agent Benchmark for Multimodal Language Model Agents.",
+      "url": "https://arxiv.org/abs/2407.01511",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07-01",
+      "title": "Mobile-Bench: An Evaluation Benchmark for LLM-based Mobile Agents.",
+      "url": "https://arxiv.org/abs/2407.00993",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-07",
+      "title": "MobileFlow: A Multimodal LLM for Mobile GUI Agent",
+      "url": "https://arxiv.org/abs/2407.04346",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-07",
+      "title": "Towards LLMCI: Multimodal AI for LLM-Vision UI Operation",
+      "url": "https://doi.org/10.21203/rs.3.rs-4653823/v1",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-07",
+      "title": "Agent-e: From autonomous web navigation to foundational design principles in agentic systems",
+      "url": "https://arxiv.org/abs/2407.13032",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-07",
+      "title": "AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents",
+      "url": "https://arxiv.org/abs/2407.18901",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-07",
+      "title": "OfficeBench: Benchmarking Language Agents across Multiple Applications for Office Automation",
+      "url": "https://arxiv.org/abs/2407.19056",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-06-27",
+      "title": "Read anywhere pointed: Layout-aware gui screen reading with tree-of-lens grounding.",
+      "url": "https://arxiv.org/abs/2406.19263",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-06-20",
+      "title": "VGA: Vision GUI Assistant - Minimizing Hallucinations through Image-Centric Fine-Tuning.",
+      "url": "https://arxiv.org/abs/2406.14056",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-06-20",
+      "title": "Identifying User Goals from UI Trajectories.",
+      "url": "https://arxiv.org/abs/2406.14314",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-18",
+      "title": "WebCanvas: Benchmarking Web Agents in Online Environments.",
+      "url": "https://arxiv.org/abs/2406.12373",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-14",
+      "title": "VideoGUI: A Benchmark f om Instructional Videos.",
+      "url": "https://arxiv.org/abs/2406.10227",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-12",
+      "title": "GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices.",
+      "url": "https://arxiv.org/abs/2406.08451",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-06-12",
+      "title": "Tell Me What's Next: Textual Foresight for Generic UI Representations.",
+      "url": "https://arxiv.org/abs/2406.07822",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-06-12",
+      "title": "GUI-WORLD: A Dataset for GUI-oriented Multimodal LLM-based Agents.",
+      "url": "https://arxiv.org/abs/2406.10819",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-12",
+      "title": "MobileAgentBench: An Efficient and User-Friendly Benchmark for Mobile LLM Agents.",
+      "url": "https://arxiv.org/abs/2406.08184",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-11",
+      "title": "CAAP: Context-Aware Action Planning Prompting to Solve Computer Tasks with Front-End UI Only.",
+      "url": "https://arxiv.org/abs/2406.06947",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-06-06",
+      "title": "On the Effects of Data Scale on UI Control Agents.",
+      "url": "https://arxiv.org/abs/2406.03679",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-05",
+      "title": "UGIF-DataSet: A New Dataset for Cross-lingual, Cross-modal Sequential actions on the UI.",
+      "url": "https://aclanthology.org/2024.findings-naacl.89/",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06-03",
+      "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration.",
+      "url": "https://arxiv.org/abs/2406.01014",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-06-01",
+      "title": "WebSuite: Systematically Evaluating Why Web Agents Fail.",
+      "url": "https://arxiv.org/abs/2406.01623",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-06",
+      "title": "VGA: Vision GUI Assistant - Minimizing Hallucinations through Image-Centric Fine-Tuning",
+      "url": "https://arxiv.org/abs/2406.14056",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-06",
+      "title": "GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices",
+      "url": "https://arxiv.org/abs/2406.08451",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-06",
+      "title": "Tell Me What's Next: Textual Foresight for Generic UI Representations",
+      "url": "https://arxiv.org/abs/2406.07822",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-06",
+      "title": "On the effects of data scale on computer control agents",
+      "url": "https://arxiv.org/abs/2406.03679",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-06",
+      "title": "WebCanvas: Benchmarking Web Agents in Online Environments",
+      "url": "https://arxiv.org/abs/2406.12373",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-05-23",
+      "title": "AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents.",
+      "url": "https://arxiv.org/abs/2405.14573",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-05-23",
+      "title": "AGILE: A Novel Reinforcement Learning Framework of LLM Agents.",
+      "url": "https://arxiv.org/abs/2405.14751",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-05-17",
+      "title": "Latent State Estimation Helps UI Agents to Reason.",
+      "url": "https://arxiv.org/abs/2405.11120",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-05-08",
+      "title": "Visual Grounding for User Interfaces.",
+      "url": "https://aclanthology.org/2024.naacl-industry.9/",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-05-07",
+      "title": "Mapping natural language instructions to mobile UI action sequences.",
+      "url": "https://arxiv.org/abs/2005.03776",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-05-05",
+      "title": "Visual grounding for desktop graphical user interfaces.",
+      "url": "https://arxiv.org/abs/2407.01558",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-05-05",
+      "title": "Android in the Zoo：Chain-of-Action-Thought for GUI Agents.",
+      "url": "https://arxiv.org/abs/2403.02713",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-05-01",
+      "title": "Navigating WebAI: Training Agents to Complete Web Tasks with Large Language Models and Reinforcement Learning.",
+      "url": "https://arxiv.org/abs/2405.00516",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-05",
+      "title": "Navigating WebAI: Training Agents to Complete Web Tasks with Large Language Models and Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2405.00516",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-05",
+      "title": "AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents",
+      "url": "https://arxiv.org/abs/2405.14573",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-05",
+      "title": "Latent state estimation helps ui agents to reason",
+      "url": "https://arxiv.org/abs/2405.11120",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04-28",
+      "title": "MMAC-Copilot: Multi-modal Agent Collaboration Operating System Copilot.",
+      "url": "https://arxiv.org/abs/2404.18074",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-04-25",
+      "title": "Benchmarking mobile device control agents across diverse configurations.",
+      "url": "https://arxiv.org/abs/2404.16660",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-16",
+      "title": "Search Beyond Queries: Training Smaller Language Models for Web Interactions via Reinforcement Learning.",
+      "url": "https://arxiv.org/abs/2404.10887",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-04-15",
+      "title": "MMInA: Benchmarking multihop multimodal internet agents.",
+      "url": "https://arxiv.org/abs/2404.09992",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-12",
+      "title": "Training a Vision Language Model as Smartphone Assistant.",
+      "url": "https://arxiv.org/abs/2404.08755",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-04-12",
+      "title": "Llamatouch: A faithful and scalable testbed for mobile ui task automation.",
+      "url": "https://arxiv.org/abs/2404.16054",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-11",
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments.",
+      "url": "https://arxiv.org/abs/2404.07972",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-09",
+      "title": "Autonomous Evaluation and Refinement of Web Agents.",
+      "url": "https://arxiv.org/abs/2404.06474",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-04-09",
+      "title": "VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?",
+      "url": "https://arxiv.org/abs/2404.05955",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-09",
+      "title": "GUIDE: Graphical User Interface Data for Execution.",
+      "url": "https://arxiv.org/abs/2404.16048",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-08",
+      "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs.",
+      "url": "https://arxiv.org/abs/2404.05719",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-04-04",
+      "title": "AutoWebGLM: A Large Language Model-based Web Navigating Agent.",
+      "url": "https://arxiv.org/abs/2404.03648",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-04-04",
+      "title": "Autowebglm: Bootstrap and reinforce a large language model-based web navigating agent.",
+      "url": "https://arxiv.org/abs/2404.03648",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-04-03",
+      "title": "PromptRPA: Generating Robotic Process Automation on Smartphones from Textual Prompts.",
+      "url": "https://arxiv.org/abs/2404.02475",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-04-02",
+      "title": "Octopus v2: On-device language model for super agent.",
+      "url": "https://arxiv.org/abs/2404.01744",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-04",
+      "title": "Search Beyond Queries: Training Smaller Language Models for Web Interactions via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2404.10887",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04",
+      "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+      "url": "https://arxiv.org/abs/2404.05719",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04",
+      "title": "AutoWebGLM: A Large Language Model-based Web Navigating Agent",
+      "url": "https://arxiv.org/abs/2404.03648",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04",
+      "title": "Benchmarking mobile device control agents across diverse configurations",
+      "url": "https://arxiv.org/abs/2404.16660",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04",
+      "title": "Llamatouch: A faithful and scalable testbed for mobile ui task automation",
+      "url": "https://arxiv.org/abs/2404.16054",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04",
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "url": "https://arxiv.org/abs/2404.07972",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-04",
+      "title": "MMInA: Benchmarking multihop multimodal internet agents",
+      "url": "https://arxiv.org/abs/2404.09992",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-03-30",
+      "title": "Large Language Models Can Self-Improve At Web Agent Tasks.",
+      "url": "https://arxiv.org/abs/2405.20309v2",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-03-29",
+      "title": "Evaluating language model agents on realistic autonomous tasks.",
+      "url": "https://arxiv.org/abs/2312.11671",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-29",
+      "title": "Draw-and-Understand: Leveraging Visual Prompts to Enable MLLMs to Comprehend What You Want.",
+      "url": "https://arxiv.org/abs/2403.20271",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-26",
+      "title": "AgentStudio: A Toolkit for Building General Virtual Agents.",
+      "url": "https://arxiv.org/abs/2403.17918",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-25",
+      "title": "AIOS: LLM Agent Operating System.",
+      "url": "https://arxiv.org/abs/2403.16971v3",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-03-18",
+      "title": "Tur[k]ingBench: A Challenge Benchmark for Web Agents.",
+      "url": "https://arxiv.org/abs/2403.11905",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-15",
+      "title": "Computer User Interface Understanding. A New Dataset and a Learning Framework.",
+      "url": "https://arxiv.org/abs/2403.10170",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-12",
+      "title": "Workarena: How capable are web agents at solving common knowledge work tasks?",
+      "url": "https://arxiv.org/abs/2403.07718",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-06",
+      "title": "PPTC-R benchmark: Towards Evaluating the Robustness of Large Language Models for PowerPoint Task Completion.",
+      "url": "https://arxiv.org/abs/2403.03788",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03-05",
+      "title": "Android in the zoo: Chain-of-action-thought for gui agents.",
+      "url": "https://arxiv.org/abs/2403.02713",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-03-05",
+      "title": "Cradle: Empowering Foundation Agents Towards General Computer Control.",
+      "url": "https://arxiv.org/abs/2403.03186v3",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-03-05",
+      "title": "Android in the Zoo:Chain-of-Action-Thought for GUI Agents.",
+      "url": "https://arxiv.org/abs/2403.02713",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-03",
+      "title": "Large Language Models Can Self-Improve At Web Agent Tasks",
+      "url": "https://arxiv.org/abs/2405.20309v2",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-03",
+      "title": "Cradle: Empowering Foundation Agents Towards General Computer Control",
+      "url": "https://arxiv.org/abs/2403.03186v3",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-03",
+      "title": "Android in the zoo: Chain-of-action-thought for gui agents",
+      "url": "https://arxiv.org/abs/2403.02713",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-03",
+      "title": "AgentStudio: A Toolkit for Building General Virtual Agents",
+      "url": "https://arxiv.org/abs/2403.17918",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-03",
+      "title": "Tur[k]ingBench: A Challenge Benchmark for Web Agents",
+      "url": "https://arxiv.org/abs/2403.11905",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02-27",
+      "title": "Omniact: A dataset and benchmark for enabling multimodal generalist autonomous agents for desktop and web.",
+      "url": "https://arxiv.org/abs/2402.17553",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-02-26",
+      "title": "WIPI: A New Web Threat for LLM-Driven Web Agents.",
+      "url": "https://arxiv.org/abs/2402.16965",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2024-02-23",
+      "title": "On the Multi-turn Instruction Following for Conversational Web Agents.",
+      "url": "https://arxiv.org/abs/2402.15057",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-02-19",
+      "title": "CoCo-Agent: A Comprehensive Cognitive MLLM Agent for Smartphone GUI Automation.",
+      "url": "https://arxiv.org/abs/2402.11941",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-02-12",
+      "title": "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement.",
+      "url": "https://arxiv.org/abs/2402.07456",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-02-09",
+      "title": "ScreenAgent: A Vision Language Model-driven Computer Control Agent.",
+      "url": "https://arxiv.org/abs/2402.07945",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-02-09",
+      "title": "Understanding the weakness of large language model agents within a complex android environment.",
+      "url": "https://arxiv.org/abs/2402.06596",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-02-08",
+      "title": "WebLINX: Real-World website navigation with Multi-Turn dialogue.",
+      "url": "https://arxiv.org/abs/2402.05930",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-02-08",
+      "title": "Ufo: A ui-focused agent for windows os interaction.",
+      "url": "https://arxiv.org/abs/2402.07939",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-02-07",
+      "title": "ScreenAI: A Vision-Language Model for UI and Infographics Understanding.",
+      "url": "https://arxiv.org/abs/2402.04615",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-02-06",
+      "title": "Dual-View Visual Contextualization for Web Navigation.",
+      "url": "https://arxiv.org/abs/2402.04476",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-02",
+      "title": "ScreenAI: A Vision-Language Model for UI and Infographics Understanding",
+      "url": "https://arxiv.org/abs/2402.04615",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02",
+      "title": "Dual-View Visual Contextualization for Web Navigation",
+      "url": "https://arxiv.org/abs/2402.04476",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02",
+      "title": "On the Multi-turn Instruction Following for Conversational Web Agents",
+      "url": "https://arxiv.org/abs/2402.15057",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02",
+      "title": "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement",
+      "url": "https://arxiv.org/abs/2402.07456",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02",
+      "title": "Understanding the weakness of large language model agents within a complex android environment",
+      "url": "https://arxiv.org/abs/2402.06596",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02",
+      "title": "Omniact: A dataset and benchmark for enabling multimodal generalist autonomous agents for desktop and web",
+      "url": "https://arxiv.org/abs/2402.17553",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-02",
+      "title": "WebLINX: Real-World website navigation with Multi-Turn dialogue",
+      "url": "https://arxiv.org/abs/2402.05930",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-01-29",
+      "title": "Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception.",
+      "url": "https://arxiv.org/abs/2401.16158",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-01-25",
+      "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models.",
+      "url": "https://arxiv.org/abs/2401.13919",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-01-25",
+      "title": "GPTVoiceTasker: Advancing Multi-step Mobile Task Efficiency Through Dynamic Interface Exploration and Learning.",
+      "url": "https://arxiv.org/abs/2401.14268",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-01-24",
+      "title": "Visualwebarena: Evaluating multimodal agents on realistic visual web tasks.",
+      "url": "https://arxiv.org/abs/2401.13649",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-01-24",
+      "title": "Agentboard: An analytical evaluation board of multiturn LLM agents.",
+      "url": "https://arxiv.org/abs/2401.13178",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2024-01-20",
+      "title": "E-ANT: A Large-Scale Dataset for Efficient Automatic GUI NavigaTion.",
+      "url": "https://arxiv.org/abs/2406.14250",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-01-17",
+      "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents.",
+      "url": "https://arxiv.org/abs/2401.10935",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-01-17",
+      "title": "GUICourse: From General Vision Language Models to Versatile GUI Agents.",
+      "url": "https://arxiv.org/abs/2406.11317",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2024-01-04",
+      "title": "MobileAgent: enhancing mobile control via human-machine interaction and SOP integration.",
+      "url": "https://arxiv.org/abs/2401.04124",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-01-03",
+      "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded.",
+      "url": "https://arxiv.org/abs/2401.01614",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2024-01",
+      "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents",
+      "url": "https://arxiv.org/abs/2401.10935",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-01",
+      "title": "Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception",
+      "url": "https://arxiv.org/abs/2401.16158",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-01",
+      "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
+      "url": "https://arxiv.org/abs/2401.13919",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-01",
+      "title": "MobileAgent: enhancing mobile control via human-machine interaction and SOP integration",
+      "url": "https://arxiv.org/abs/2401.04124",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-01",
+      "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+      "url": "https://arxiv.org/abs/2401.01614",
+      "section": "Tables"
+    },
+    {
+      "date": "2024-01",
+      "title": "Visualwebarena: Evaluating multimodal agents on realistic visual web tasks",
+      "url": "https://arxiv.org/abs/2401.13649",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-12-26",
+      "title": "AutoTask: Executing Arbitrary Voice Commands by Exploring and Learning from Mobile GUI.",
+      "url": "https://arxiv.org/abs/2312.16062",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-12-25",
+      "title": "WebVLN: Vision-and-Language Navigation on Websites.",
+      "url": "https://arxiv.org/abs/2312.15820",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-12-25",
+      "title": "UINav: A Practical Approach to Train On-Device Automation Agents.",
+      "url": "https://aclanthology.org/2024.naacl-industry.4/",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-12-21",
+      "title": "AppAgent: Multimodal Agents as Smartphone Users.",
+      "url": "https://arxiv.org/abs/2312.13771",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-12-20",
+      "title": "Assistgui: Task-oriented desktop graphical user interface automation.",
+      "url": "https://arxiv.org/abs/2312.13108",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-12-14",
+      "title": "CogAgent: A Visual Language Model for GUI Agents.",
+      "url": "https://arxiv.org/abs/2312.08914",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-12-04",
+      "title": "Intelligent Virtual Assistants with LLM-based Process Automation.",
+      "url": "https://arxiv.org/abs/2312.06677",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-12-04",
+      "title": "MobileGPT: Augmenting LLM with Human-like App Memory for Mobile Task Automation.",
+      "url": "https://arxiv.org/abs/2312.03003v3",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-12",
+      "title": "CogAgent: A Visual Language Model for GUI Agents",
+      "url": "https://arxiv.org/abs/2312.08914",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-12",
+      "title": "AppAgent: Multimodal Agents as Smartphone Users",
+      "url": "https://arxiv.org/abs/2312.13771",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-12",
+      "title": "Assistgui: Task-oriented desktop graphical user interface automation",
+      "url": "https://arxiv.org/abs/2312.13108",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-12",
+      "title": "MobileGPT: Augmenting LLM with Human-like App Memory for Mobile Task Automation",
+      "url": "https://arxiv.org/abs/2312.03003v3",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-12",
+      "title": "WebVLN: Vision-and-Language Navigation on Websites",
+      "url": "https://arxiv.org/abs/2312.15820",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-11-30",
+      "title": "Exposing Limitations of Language Model Agents in Sequential-Task Compositions on the Web.",
+      "url": "https://arxiv.org/abs/2311.18751",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-11-21",
+      "title": "GAIA: a benchmark for general AI assistants.",
+      "url": "https://arxiv.org/abs/2311.12983",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-11-13",
+      "title": "GPT-4V in Wonderland: Large Multimodal Models for Zero-Shot Smartphone GUI Navigation.",
+      "url": "https://arxiv.org/abs/2311.07562",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-11-03",
+      "title": "Pptc benchmark: Evaluating large language models for powerpoint task completion.",
+      "url": "https://arxiv.org/abs/2311.01767",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-11",
+      "title": "GPT-4V in Wonderland: Large Multimodal Models for Zero-Shot Smartphone GUI Navigation",
+      "url": "https://arxiv.org/abs/2311.07562",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-10-27",
+      "title": "Android in the wild: A large-scale dataset for android device control.",
+      "url": "https://arxiv.org/abs/2307.10088",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-10-24",
+      "title": "WebWISE: Web Interface Control and Sequential Exploration with Large Language Models.",
+      "url": "https://arxiv.org/abs/2310.16042",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-10-16",
+      "title": "OpenAgents: An Open Platform for Language Agents in the Wild.",
+      "url": "https://arxiv.org/abs/2310.10634",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-10-12",
+      "title": "A Zero-Shot Language Agent for Computer Control with Structured Reflection.",
+      "url": "https://arxiv.org/abs/2310.08740",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-10-08",
+      "title": "UReader: Universal OCR-free Visually-situated Language Understanding with Multimodal Large Language Model.",
+      "url": "https://arxiv.org/abs/2310.05126",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-10-07",
+      "title": "ILuvUI: Instruction-tuned Language-Vision modeling of UIs from Machine Conversations.",
+      "url": "https://arxiv.org/abs/2310.04869",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-10-07",
+      "title": "Reinforced UI Instruction Grounding: Towards a Generic UI Task Automation API.",
+      "url": "https://arxiv.org/abs/2310.04716",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-10",
+      "title": "ILuvUI: Instruction-tuned Language-Vision modeling of UIs from Machine Conversations",
+      "url": "https://arxiv.org/abs/2310.04869",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-10",
+      "title": "Reinforced UI Instruction Grounding: Towards a Generic UI Task Automation API",
+      "url": "https://arxiv.org/abs/2310.04716",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-10",
+      "title": "WebWISE: Web Interface Control and Sequential Exploration with Large Language Models",
+      "url": "https://arxiv.org/abs/2310.16042",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-10",
+      "title": "A Zero-Shot Language Agent for Computer Control with Structured Reflection",
+      "url": "https://arxiv.org/abs/2310.08740",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-09-20",
+      "title": "You only look at screens: Multimodal chain-of-action agents.",
+      "url": "https://arxiv.org/abs/2309.11436",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-09-20",
+      "title": "You Only Look at Screens:Multimodal Chain-of-Action Agents.",
+      "url": "https://arxiv.org/abs/2309.11436",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-09-15",
+      "title": "Laser: Llm agent with state-space exploration for web navigation.",
+      "url": "https://arxiv.org/abs/2309.08172",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-09",
+      "title": "Laser: Llm agent with state-space exploration for web navigation",
+      "url": "https://arxiv.org/abs/2309.08172",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-08-29",
+      "title": "AutoDroid: LLM-powered Task Automation in Android.",
+      "url": "https://arxiv.org/abs/2308.15272",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-08-07",
+      "title": "Agentbench: Evaluating llms as agents.",
+      "url": "https://arxiv.org/abs/2308.03688",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-08-03",
+      "title": "From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?",
+      "url": "https://arxiv.org/abs/2308.01990",
+      "section": "Safety & Privacy"
+    },
+    {
+      "date": "2023-07-25",
+      "title": "Webarena: A realistic web environment for building autonomous agents.",
+      "url": "https://arxiv.org/abs/2307.13854",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-07-24",
+      "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis.",
+      "url": "https://arxiv.org/abs/2307.12856",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-07",
+      "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis",
+      "url": "https://arxiv.org/abs/2307.12856",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-07",
+      "title": "Android in the wild: A large-scale dataset for android device control",
+      "url": "https://arxiv.org/abs/2307.10088",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-07",
+      "title": "Webarena: A realistic web environment for building autonomous agents",
+      "url": "https://arxiv.org/abs/2307.13854",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-06-14",
+      "title": "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control.",
+      "url": "https://arxiv.org/abs/2306.07863",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-06-09",
+      "title": "Mind2Web: Towards a Generalist Agent for the Web.",
+      "url": "https://arxiv.org/abs/2306.06070",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-06",
+      "title": "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control",
+      "url": "https://arxiv.org/abs/2306.07863",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-06",
+      "title": "Mind2Web: Towards a Generalist Agent for the Web",
+      "url": "https://arxiv.org/abs/2306.06070",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-05-31",
+      "title": "From pixels to UI actions: Learning to follow instructions via graphical user interfaces.",
+      "url": "https://arxiv.org/abs/2306.00245",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-05-30",
+      "title": "Sheetcopilot: Bringing software productivity to the next level through large language models.",
+      "url": "https://arxiv.org/abs/2305.19308",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-05-25",
+      "title": "On the tool manipulation capability of open-source large language models.",
+      "url": "https://arxiv.org/abs/2305.16504",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-05-23",
+      "title": "Hierarchical prompting assists large language model on web navigation.",
+      "url": "https://arxiv.org/abs/2305.14257",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-05-19",
+      "title": "Multimodal Web Navigation with Instruction-Finetuned Foundation Models.",
+      "url": "https://arxiv.org/abs/2305.11854",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-05-14",
+      "title": "Mobile-env: A universal platform for training and evaluation of mobile interaction.",
+      "url": "https://arxiv.org/abs/2305.08144v1",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-05-14",
+      "title": "Mobile-env: Building qualified evaluation benchmarks for llm-gui interaction.",
+      "url": "https://arxiv.org/abs/2305.08144",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-05-09",
+      "title": "InternGPT: Solving Vision-Centric Tasks by Interacting with ChatGPT Beyond Language.",
+      "url": "https://arxiv.org/abs/2305.05662",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-05",
+      "title": "Multimodal Web Navigation with Instruction-Finetuned Foundation Models",
+      "url": "https://arxiv.org/abs/2305.11854",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-05",
+      "title": "Sheetcopilot: Bringing software productivity to the next level through large language models",
+      "url": "https://arxiv.org/abs/2305.19308",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-04-14",
+      "title": "Droidbot-gpt: Gpt-powered ui automation for android.",
+      "url": "https://arxiv.org/abs/2304.07061",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-04-10",
+      "title": "OpenAGI: When LLM Meets Domain Experts.",
+      "url": "https://arxiv.org/abs/2304.04370",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-03-30",
+      "title": "Language Models can Solve Computer Tasks.",
+      "url": "https://arxiv.org/abs/2303.17491",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2023-03-13",
+      "title": "Vision-Language models as success detectors.",
+      "url": "https://arxiv.org/abs/2303.07280",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2023-03",
+      "title": "Language Models can Solve Computer Tasks",
+      "url": "https://arxiv.org/abs/2303.17491",
+      "section": "Tables"
+    },
+    {
+      "date": "2023-01-30",
+      "title": "WebUI: A Dataset for Enhancing Visual UI Understanding with Web Semantics.",
+      "url": "https://arxiv.org/abs/2301.13280",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2023-01-23",
+      "title": "Lexi: Self-Supervised Learning of the UI Language.",
+      "url": "https://arxiv.org/abs/2301.10165",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2022-11-14",
+      "title": "Ugif: Ui grounded instruction following.",
+      "url": "https://arxiv.org/abs/2211.07615",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2022-11",
+      "title": "Ugif: Ui grounded instruction following",
+      "url": "https://arxiv.org/abs/2211.07615",
+      "section": "Tables"
+    },
+    {
+      "date": "2022-10-08",
+      "title": "Understanding html with large language models.",
+      "url": "https://arxiv.org/abs/2210.03945",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2022-10-06",
+      "title": "Towards Better Semantic Understanding of Mobile Interfaces.",
+      "url": "https://arxiv.org/abs/2210.02663",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2022-09-29",
+      "title": "Spotlight: Mobile UI Understanding using Vision-Language Models with a Focus.",
+      "url": "https://arxiv.org/abs/2209.14927",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2022-09-29",
+      "title": "MUG: Interactive Multimodal Grounding on User Interfaces.",
+      "url": "https://arxiv.org/abs/2209.15099",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2022-09-19",
+      "title": "Enabling conversational interaction with mobile ui using large language models.",
+      "url": "https://arxiv.org/abs/2209.08655",
+      "section": "Agent Frameworks"
+    },
+    {
+      "date": "2022-09-16",
+      "title": "ScreenQA: Large-Scale Question-Answer Pairs over Mobile App Screenshots.",
+      "url": "https://arxiv.org/abs/2209.08199",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2022-09",
+      "title": "Enabling conversational interaction with mobile ui using large language models",
+      "url": "https://arxiv.org/abs/2209.08655",
+      "section": "Tables"
+    },
+    {
+      "date": "2022-07-04",
+      "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents.",
+      "url": "https://arxiv.org/abs/2207.01206",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2022-07",
+      "title": "Webshop: Towards scalable real-world web interaction with grounded language agents",
+      "url": "https://arxiv.org/abs/2207.01206",
+      "section": "Tables"
+    },
+    {
+      "date": "2022-05-23",
+      "title": "META-GUI: Towards multi-modal conversational agents on mobile gui.",
+      "url": "https://arxiv.org/abs/2205.11029",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2022-02-16",
+      "title": "A data-driven approach for learning to control computers.",
+      "url": "https://arxiv.org/abs/2202.08137",
+      "section": "Foundation Models"
+    },
+    {
+      "date": "2022-02-04",
+      "title": "A Dataset for Interactive Vision-Language Navigation with Unknown Command Feasibility.",
+      "url": "https://arxiv.org/abs/2202.02312",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2022-02",
+      "title": "A Dataset for Interactive Vision-Language Navigation with Unknown Command Feasibility",
+      "url": "https://arxiv.org/abs/2202.02312",
+      "section": "Tables"
+    },
+    {
+      "date": "2021-04-17",
+      "title": "Mobile app tasks with iterative feedback (motif): Addressing task feasibility in interactive visual environments.",
+      "url": "https://arxiv.org/abs/2104.08560",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2021-01-23",
+      "title": "Websrc: A dataset for web-based structural reading comprehension.",
+      "url": "https://arxiv.org/abs/2101.09465",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2020-05",
+      "title": "Mapping natural language instructions to mobile UI action sequences",
+      "url": "https://arxiv.org/abs/2005.03776",
+      "section": "Tables"
+    },
+    {
+      "date": "2018-08-28",
+      "title": "Mapping natural language commands to web elements.",
+      "url": "https://arxiv.org/abs/1808.09132",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2018-08",
+      "title": "Mapping natural language commands to web elements",
+      "url": "https://arxiv.org/abs/1808.09132",
+      "section": "Tables"
+    },
+    {
+      "date": "2017-11-06",
+      "title": "Building natural language interfaces to web apis.",
+      "url": "https://dl.acm.org/doi/10.1145/3132847.3133009",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2017-08-06",
+      "title": "World of Bits: An Open-Domain Platform for Web-Based Agents.",
+      "url": "https://dl.acm.org/doi/10.5555/3305890.3306005",
+      "section": "Evaluation & Benchmark"
+    },
+    {
+      "date": "2017-08",
+      "title": "World of Bits: An Open-Domain Platform for Web-Based Agents",
+      "url": "https://dl.acm.org/doi/10.5555/3305890.3306005",
+      "section": "Tables"
+    }
+  ]
+}

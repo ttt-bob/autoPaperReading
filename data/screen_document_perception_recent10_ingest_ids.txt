@@ -1,0 +1,13 @@
+# Recent screen/document block perception papers, collected 2026-06-30
+# Scope: 2025-06-30 through 2026-06-30; focus on layout/block parsing,
+# visual grounding, OCR-VLM document understanding, and structured region semantics.
+2606.23344
+2606.03264
+2606.01393
+2603.04205
+2602.05384
+2602.12957
+2512.02498
+2511.10390
+2510.14528
+2509.22186

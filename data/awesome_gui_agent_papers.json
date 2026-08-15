@@ -1,0 +1,6079 @@
+{
+  "source": "https://github.com/showlab/awesome-gui-agent",
+  "source_raw": "https://raw.githubusercontent.com/showlab/awesome-gui-agent/main/README.md",
+  "generated_at": "2026-06-17T17:23:27",
+  "stats": {
+    "entries": 174,
+    "entries_by_section": {
+      "Datasets / Benchmarks": 54,
+      "Models / Agents": 90,
+      "Surveys": 5,
+      "Projects": 18,
+      "Safety": 7
+    },
+    "paper_or_paper_page_entries": 150,
+    "ingestable_entries": 147,
+    "unique_ingest_urls": 144
+  },
+  "entries": [
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "World of Bits: An Open-Domain Platform for Web-Based Agents",
+      "meta": "(Aug. 2017, ICML 2017)",
+      "main_url": "https://proceedings.mlr.press/v70/shi17a.html",
+      "paper_url": "https://proceedings.mlr.press/v70/shi17a/shi17a.pdf",
+      "ingest_url": "https://proceedings.mlr.press/v70/shi17a/shi17a.pdf",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://proceedings.mlr.press/v70/shi17a.html"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://proceedings.mlr.press/v70/shi17a/shi17a.pdf",
+          "kind": "pdf"
+        }
+      ],
+      "all_urls": [
+        "https://proceedings.mlr.press/v70/shi17a.html",
+        "https://proceedings.mlr.press/v70/shi17a/shi17a.pdf"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "A Unified Solution for Structured Web Data Extraction",
+      "meta": "(Jul. 2011, SIGIR 2011)",
+      "main_url": "https://dl.acm.org/doi/10.1145/2009916.2010020",
+      "paper_url": "https://dl.acm.org/doi/10.1145/2009916.2010020",
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://dl.acm.org/doi/10.1145/2009916.2010020",
+          "kind": "doi"
+        }
+      ],
+      "all_urls": [
+        "https://dl.acm.org/doi/10.1145/2009916.2010020"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Rico: A Mobile App Dataset for Building Data-Driven Design Applications",
+      "meta": "(Oct. 2017)",
+      "main_url": "https://dl.acm.org/doi/10.1145/3126594.3126651",
+      "paper_url": "https://dl.acm.org/doi/10.1145/3126594.3126651",
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://dl.acm.org/doi/10.1145/3126594.3126651",
+          "kind": "doi"
+        }
+      ],
+      "all_urls": [
+        "https://dl.acm.org/doi/10.1145/3126594.3126651"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Reinforcement Learning on Web Interfaces using Workflow-Guided Exploration",
+      "meta": "(Feb. 2018, ICLR 2018)",
+      "main_url": "https://arxiv.org/abs/1802.08802",
+      "paper_url": "https://arxiv.org/abs/1802.08802",
+      "ingest_url": "https://arxiv.org/abs/1802.08802",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/stanfordnlp/wge"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/stanfordnlp/wge",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/1802.08802",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/1802.08802",
+        "https://github.com/stanfordnlp/wge"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Mapping Natural Language Instructions to Mobile UI Action Sequences",
+      "meta": "(May. 2020, ACL 2020)",
+      "main_url": "https://arxiv.org/abs/2005.03776",
+      "paper_url": "https://arxiv.org/abs/2005.03776",
+      "ingest_url": "https://arxiv.org/abs/2005.03776",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/deepneuralmachine/seq2act-tensorflow"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/deepneuralmachine/seq2act-tensorflow",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2005.03776",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2005.03776",
+        "https://github.com/deepneuralmachine/seq2act-tensorflow"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebSRC: A Dataset for Web-Based Structural Reading Comprehension",
+      "meta": "(Jan. 2021, EMNLP 2021)",
+      "main_url": "https://arxiv.org/abs/2101.09465",
+      "paper_url": "https://arxiv.org/abs/2101.09465",
+      "ingest_url": "https://arxiv.org/abs/2101.09465",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://x-lance.github.io/WebSRC/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2101.09465",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://x-lance.github.io/WebSRC/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2101.09465",
+        "https://x-lance.github.io/WebSRC/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "AndroidEnv: A Reinforcement Learning Platform for Android",
+      "meta": "(May. 2021)",
+      "main_url": "https://arxiv.org/abs/2105.13231",
+      "paper_url": "https://arxiv.org/abs/2105.13231",
+      "ingest_url": "https://arxiv.org/abs/2105.13231",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/deepmind/android_env"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/deepmind/android_env",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2105.13231",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://github.com/deepmind/android_env",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2105.13231",
+        "https://github.com/deepmind/android_env"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "A Dataset for Interactive Vision-Language Navigation with Unknown Command Feasibility",
+      "meta": "(Feb. 2022)",
+      "main_url": "https://arxiv.org/abs/2202.02312",
+      "paper_url": "https://arxiv.org/abs/2202.02312",
+      "ingest_url": "https://arxiv.org/abs/2202.02312",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2202.02312",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2202.02312"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "META-GUI: Towards Multi-modal Conversational Agents on Mobile GUI",
+      "meta": "(May. 2022)",
+      "main_url": "https://arxiv.org/abs/2205.11029",
+      "paper_url": "https://arxiv.org/abs/2205.11029",
+      "ingest_url": "https://arxiv.org/abs/2205.11029",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://x-lance.github.io/META-GUI-Leaderboard/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2205.11029",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://x-lance.github.io/META-GUI-Leaderboard/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2205.11029",
+        "https://x-lance.github.io/META-GUI-Leaderboard/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+      "meta": "(Jul. 2022)",
+      "main_url": "https://arxiv.org/abs/2207.01206",
+      "paper_url": "https://arxiv.org/abs/2207.01206",
+      "ingest_url": "https://arxiv.org/abs/2207.01206",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/princeton-nlp/WebShop"
+      ],
+      "website_urls": [
+        "https://webshop-pnlp.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/princeton-nlp/WebShop",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2207.01206",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://webshop-pnlp.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2207.01206",
+        "https://github.com/princeton-nlp/WebShop",
+        "https://webshop-pnlp.github.io/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Language Models can Solve Computer Tasks",
+      "meta": "(Mar. 2023)",
+      "main_url": "https://arxiv.org/abs/2303.17491",
+      "paper_url": "https://arxiv.org/abs/2303.17491",
+      "ingest_url": "https://arxiv.org/abs/2303.17491",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/posgnu/rci-agent"
+      ],
+      "website_urls": [
+        "https://posgnu.github.io/rci-web/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/posgnu/rci-agent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2303.17491",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://posgnu.github.io/rci-web/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2303.17491",
+        "https://github.com/posgnu/rci-agent",
+        "https://posgnu.github.io/rci-web/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Mobile-Env: Building Qualified Evaluation Benchmarks for LLM-GUI Interaction",
+      "meta": "(May. 2023)",
+      "main_url": "https://arxiv.org/abs/2305.08144",
+      "paper_url": "https://arxiv.org/abs/2305.08144",
+      "ingest_url": "https://arxiv.org/abs/2305.08144",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/X-LANCE/Mobile-Env"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2305.08144",
+          "kind": "arxiv"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/X-LANCE/Mobile-Env",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2305.08144",
+        "https://github.com/X-LANCE/Mobile-Env"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Mind2Web: Towards a Generalist Agent for the Web",
+      "meta": "(Jun. 2023)",
+      "main_url": "https://arxiv.org/abs/2306.06070",
+      "paper_url": "https://arxiv.org/abs/2306.06070",
+      "ingest_url": "https://arxiv.org/abs/2306.06070",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/osu-nlp-group/mind2web"
+      ],
+      "website_urls": [
+        "https://osu-nlp-group.github.io/Mind2Web/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/osu-nlp-group/mind2web",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2306.06070",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://osu-nlp-group.github.io/Mind2Web/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2306.06070",
+        "https://github.com/osu-nlp-group/mind2web",
+        "https://osu-nlp-group.github.io/Mind2Web/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Android in the Wild: A Large-Scale Dataset for Android Device Control",
+      "meta": "(Jul. 2023)",
+      "main_url": "https://arxiv.org/abs/2307.10088",
+      "paper_url": "https://arxiv.org/abs/2307.10088",
+      "ingest_url": "https://arxiv.org/abs/2307.10088",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/google-research/google-research/tree/master/android_in_the_wild"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/google-research/google-research/tree/master/android_in_the_wild",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2307.10088",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2307.10088",
+        "https://github.com/google-research/google-research/tree/master/android_in_the_wild"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "meta": "(Jul. 2023)",
+      "main_url": "https://arxiv.org/abs/2307.13854",
+      "paper_url": "https://arxiv.org/abs/2307.13854",
+      "ingest_url": "https://arxiv.org/abs/2307.13854",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/web-arena-x/webarena"
+      ],
+      "website_urls": [
+        "https://webarena.dev/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/web-arena-x/webarena",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2307.13854",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://webarena.dev/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2307.13854",
+        "https://github.com/web-arena-x/webarena",
+        "https://webarena.dev/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Interactive Evolution: A Neural-Symbolic Self-Training Framework For Large Language Models",
+      "meta": "(Nov. 2023)",
+      "main_url": "https://arxiv.org/abs/2311.09278",
+      "paper_url": "https://arxiv.org/abs/2311.09278",
+      "ingest_url": "https://arxiv.org/abs/2311.09278",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/xufangzhi/ENVISIONS"
+      ],
+      "website_urls": [
+        "https://xufangzhi.github.io/symbol-llm-page/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/xufangzhi/ENVISIONS",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2311.09278",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://xufangzhi.github.io/symbol-llm-page/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2311.09278",
+        "https://github.com/xufangzhi/ENVISIONS",
+        "https://xufangzhi.github.io/symbol-llm-page/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "AssistGUI: Task-Oriented Desktop Graphical User Interface Automation",
+      "meta": "(Dec. 2023, CVPR 2024)",
+      "main_url": "https://arxiv.org/abs/2312.13108",
+      "paper_url": "https://arxiv.org/abs/2312.13108",
+      "ingest_url": "https://arxiv.org/abs/2312.13108",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/showlab/assistgui"
+      ],
+      "website_urls": [
+        "https://showlab.github.io/assistgui/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/assistgui",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2312.13108",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://showlab.github.io/assistgui/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2312.13108",
+        "https://github.com/showlab/assistgui",
+        "https://showlab.github.io/assistgui/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks",
+      "meta": "(Jan. 2024, ACL 2024)",
+      "main_url": "https://arxiv.org/abs/2401.13649",
+      "paper_url": "https://arxiv.org/abs/2401.13649",
+      "ingest_url": "https://arxiv.org/abs/2401.13649",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/jykoh/visualwebarena"
+      ],
+      "website_urls": [
+        "https://jykoh.com/vwa"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/jykoh/visualwebarena",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2401.13649",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://jykoh.com/vwa",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2401.13649",
+        "https://github.com/jykoh/visualwebarena",
+        "https://jykoh.com/vwa"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.17553",
+      "paper_url": "https://arxiv.org/abs/2402.17553",
+      "ingest_url": "https://arxiv.org/abs/2402.17553",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.17553",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.17553"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.05930",
+      "paper_url": "https://arxiv.org/abs/2402.05930",
+      "ingest_url": "https://arxiv.org/abs/2402.05930",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/mcgill-nlp/weblinx"
+      ],
+      "website_urls": [
+        "https://mcgill-nlp.github.io/weblinx/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/mcgill-nlp/weblinx",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.05930",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://mcgill-nlp.github.io/weblinx/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.05930",
+        "https://github.com/mcgill-nlp/weblinx",
+        "https://mcgill-nlp.github.io/weblinx/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "On the Multi-turn Instruction Following for Conversational Web Agents",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.15057",
+      "paper_url": "https://arxiv.org/abs/2402.15057",
+      "ingest_url": "https://arxiv.org/abs/2402.15057",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/magicgh/self-map"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/magicgh/self-map",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.15057",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.15057",
+        "https://github.com/magicgh/self-map"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "AgentStudio: A Toolkit for Building General Virtual Agents",
+      "meta": "(Mar. 2024)",
+      "main_url": "https://arxiv.org/abs/2403.17918",
+      "paper_url": "https://arxiv.org/abs/2403.17918",
+      "ingest_url": "https://arxiv.org/abs/2403.17918",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/skyworkai/agent-studio"
+      ],
+      "website_urls": [
+        "https://skyworkai.github.io/agent-studio/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/skyworkai/agent-studio",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.17918",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://skyworkai.github.io/agent-studio/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2403.17918",
+        "https://github.com/skyworkai/agent-studio",
+        "https://skyworkai.github.io/agent-studio/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.07972",
+      "paper_url": "https://arxiv.org/abs/2404.07972",
+      "ingest_url": "https://arxiv.org/abs/2404.07972",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/xlang-ai/OSWorld"
+      ],
+      "website_urls": [
+        "https://os-world.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/xlang-ai/OSWorld",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.07972",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://os-world.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.07972",
+        "https://github.com/xlang-ai/OSWorld",
+        "https://os-world.github.io/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Benchmarking Mobile Device Control Agents across Diverse Configurations",
+      "meta": "(Apr. 2024, ICLR 2024)",
+      "main_url": "https://arxiv.org/abs/2404.16660",
+      "paper_url": "https://arxiv.org/abs/2404.16660",
+      "ingest_url": "https://arxiv.org/abs/2404.16660",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/gimme1dollar/b-moca"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/gimme1dollar/b-moca",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.16660",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.16660",
+        "https://github.com/gimme1dollar/b-moca"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "MMInA: Benchmarking Multihop Multimodal Internet Agents",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.09992",
+      "paper_url": "https://arxiv.org/abs/2404.09992",
+      "ingest_url": "https://arxiv.org/abs/2404.09992",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/shulin16/MMInA"
+      ],
+      "website_urls": [
+        "https://mmina.cliangyu.com"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/shulin16/MMInA",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.09992",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://mmina.cliangyu.com",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.09992",
+        "https://github.com/shulin16/MMInA",
+        "https://mmina.cliangyu.com"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Autonomous Evaluation and Refinement of Digital Agents",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.06474",
+      "paper_url": "https://arxiv.org/abs/2404.06474",
+      "ingest_url": "https://arxiv.org/abs/2404.06474",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/Berkeley-NLP/Agent-Eval-Refine"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/Berkeley-NLP/Agent-Eval-Refine",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.06474",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.06474",
+        "https://github.com/Berkeley-NLP/Agent-Eval-Refine"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "LlamaTouch: A Faithful and Scalable Testbed for Mobile UI Automation Task Evaluation",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.16054",
+      "paper_url": "https://arxiv.org/abs/2404.16054",
+      "ingest_url": "https://arxiv.org/abs/2404.16054",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/LlamaTouch/LlamaTouch"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/LlamaTouch/LlamaTouch",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.16054",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.16054",
+        "https://github.com/LlamaTouch/LlamaTouch"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.05955",
+      "paper_url": "https://arxiv.org/abs/2404.05955",
+      "ingest_url": "https://arxiv.org/abs/2404.05955",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.05955",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.05955"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "GUICourse: From General Vision Language Models to Versatile GUI Agents",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.11317",
+      "paper_url": "https://arxiv.org/abs/2406.11317",
+      "ingest_url": "https://arxiv.org/abs/2406.11317",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/yiye3/GUICourse"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/yiye3/GUICourse",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.11317",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.11317",
+        "https://github.com/yiye3/GUICourse"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "GUI-WORLD: A Dataset for GUI-oriented Multimodal LLM-based Agents",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.10819",
+      "paper_url": "https://arxiv.org/abs/2406.10819",
+      "ingest_url": "https://arxiv.org/abs/2406.10819",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/Dongping-Chen/GUI-World"
+      ],
+      "website_urls": [
+        "https://gui-world.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/Dongping-Chen/GUI-World",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.10819",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://gui-world.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.10819",
+        "https://github.com/Dongping-Chen/GUI-World",
+        "https://gui-world.github.io/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.08451",
+      "paper_url": "https://arxiv.org/abs/2406.08451",
+      "ingest_url": "https://arxiv.org/abs/2406.08451",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OpenGVLab/GUI-Odyssey"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OpenGVLab/GUI-Odyssey",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.08451",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.08451",
+        "https://github.com/OpenGVLab/GUI-Odyssey"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "VideoGUI: A Benchmark for GUI Automation from Instructional Videos",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.10227",
+      "paper_url": "https://arxiv.org/abs/2406.10227",
+      "ingest_url": "https://arxiv.org/abs/2406.10227",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/showlab/videogui"
+      ],
+      "website_urls": [
+        "https://showlab.github.io/videogui/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/videogui",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.10227",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://showlab.github.io/videogui/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.10227",
+        "https://github.com/showlab/videogui",
+        "https://showlab.github.io/videogui/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.19263",
+      "paper_url": "https://arxiv.org/abs/2406.19263",
+      "ingest_url": "https://arxiv.org/abs/2406.19263",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/eric-ai-lab/Screen-Point-and-Read"
+      ],
+      "website_urls": [
+        "https://screen-point-and-read.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/eric-ai-lab/Screen-Point-and-Read",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.19263",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://screen-point-and-read.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.19263",
+        "https://github.com/eric-ai-lab/Screen-Point-and-Read",
+        "https://screen-point-and-read.github.io/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "MobileAgentBench: An Efficient and User-Friendly Benchmark for Mobile LLM Agents",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.08184",
+      "paper_url": "https://arxiv.org/abs/2406.08184",
+      "ingest_url": "https://arxiv.org/abs/2406.08184",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/MobileAgentBench/mobile-agent-bench"
+      ],
+      "website_urls": [
+        "https://mobileagentbench.github.io"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/MobileAgentBench/mobile-agent-bench",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.08184",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://mobileagentbench.github.io",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.08184",
+        "https://github.com/MobileAgentBench/mobile-agent-bench",
+        "https://mobileagentbench.github.io"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2405.14573",
+      "paper_url": "https://arxiv.org/abs/2405.14573",
+      "ingest_url": "https://arxiv.org/abs/2405.14573",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/google-research/android_world"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/google-research/android_world",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2405.14573",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2405.14573",
+        "https://github.com/google-research/android_world"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Practical, Automated Scenario-based Mobile App Testing",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.08340",
+      "paper_url": "https://arxiv.org/abs/2406.08340",
+      "ingest_url": "https://arxiv.org/abs/2406.08340",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.08340",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.08340"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebCanvas: Benchmarking Web Agents in Online Environments",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.12373",
+      "paper_url": "https://arxiv.org/abs/2406.12373",
+      "ingest_url": "https://arxiv.org/abs/2406.12373",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://www.imean.ai/web-canvas"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.12373",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.imean.ai/web-canvas",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.12373",
+        "https://www.imean.ai/web-canvas"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "On the Effects of Data Scale on Computer Control Agents",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.03679",
+      "paper_url": "https://arxiv.org/abs/2406.03679",
+      "ingest_url": "https://arxiv.org/abs/2406.03679",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/google-research/google-research/tree/master/android_control"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/google-research/google-research/tree/master/android_control",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.03679",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.03679",
+        "https://github.com/google-research/google-research/tree/master/android_control"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "CRAB: Cross-environment Agent Benchmark for Multimodal Language Model Agents",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.01511",
+      "paper_url": "https://arxiv.org/abs/2407.01511",
+      "ingest_url": "https://arxiv.org/abs/2407.01511",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/camel-ai/crab"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/camel-ai/crab",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.01511",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.01511",
+        "https://github.com/camel-ai/crab"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebVLN: Vision-and-Language Navigation on Websites",
+      "meta": "(AAAI 2024)",
+      "main_url": "https://ojs.aaai.org/index.php/AAAI/article/view/27878",
+      "paper_url": "https://ojs.aaai.org/index.php/AAAI/article/view/27878",
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/WebVLN/WebVLN"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/WebVLN/WebVLN",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/view/27878",
+          "kind": "paper_page"
+        }
+      ],
+      "all_urls": [
+        "https://ojs.aaai.org/index.php/AAAI/article/view/27878",
+        "https://github.com/WebVLN/WebVLN"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Spider2-V: How Far Are Multimodal Agents From Automating Data Science and Engineering Workflows?",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.10956",
+      "paper_url": "https://arxiv.org/abs/2407.10956",
+      "ingest_url": "https://arxiv.org/abs/2407.10956",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/xlang-ai/Spider2-V"
+      ],
+      "website_urls": [
+        "https://spider2-v.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/xlang-ai/Spider2-V",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.10956",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://spider2-v.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.10956",
+        "https://github.com/xlang-ai/Spider2-V",
+        "https://spider2-v.github.io/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "AMEX: Android Multi-annotation Expo Dataset for Mobile GUI Agents",
+      "meta": "[![Star](https://img.shields.io/github/stars/YuxiangChai/AMEX-codebase.svg?style=social&label=Star)](https://github.com/YuxiangChai/AMEX-codebase)",
+      "main_url": "https://arxiv.org/abs/2407.17490",
+      "paper_url": "https://arxiv.org/abs/2407.17490",
+      "ingest_url": "https://arxiv.org/abs/2407.17490",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/YuxiangChai/AMEX-codebase"
+      ],
+      "website_urls": [
+        "https://yuxiangchai.github.io/AMEX/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/YuxiangChai/AMEX-codebase",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.17490",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://yuxiangchai.github.io/AMEX/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.17490",
+        "https://github.com/YuxiangChai/AMEX-codebase",
+        "https://yuxiangchai.github.io/AMEX/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Windows Agent Arena",
+      "meta": "[![Star](https://img.shields.io/github/stars/microsoft/WindowsAgentArena.svg?style=social&label=Star)](https://github.com/microsoft/WindowsAgentArena)",
+      "main_url": "https://raw.githubusercontent.com/microsoft/WindowsAgentArena/website/static/files/windows_agent_arena.pdf",
+      "paper_url": "https://raw.githubusercontent.com/microsoft/WindowsAgentArena/website/static/files/windows_agent_arena.pdf",
+      "ingest_url": "https://raw.githubusercontent.com/microsoft/WindowsAgentArena/website/static/files/windows_agent_arena.pdf",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/microsoft/WindowsAgentArena"
+      ],
+      "website_urls": [
+        "https://microsoft.github.io/WindowsAgentArena/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/microsoft/WindowsAgentArena",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://microsoft.github.io/WindowsAgentArena/",
+          "kind": "website"
+        },
+        {
+          "label": "PDF",
+          "url": "https://raw.githubusercontent.com/microsoft/WindowsAgentArena/website/static/files/windows_agent_arena.pdf",
+          "kind": "pdf"
+        }
+      ],
+      "all_urls": [
+        "https://raw.githubusercontent.com/microsoft/WindowsAgentArena/website/static/files/windows_agent_arena.pdf",
+        "https://github.com/microsoft/WindowsAgentArena",
+        "https://microsoft.github.io/WindowsAgentArena/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Harnessing Webpage UIs for Text-Rich Visual Understanding",
+      "meta": "(Oct, 2024)",
+      "main_url": "https://arxiv.org/abs/2410.13824",
+      "paper_url": "https://arxiv.org/abs/2410.13824",
+      "ingest_url": "https://arxiv.org/abs/2410.13824",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/neulab/multiui"
+      ],
+      "website_urls": [
+        "https://neulab.github.io/MultiUI/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/neulab/multiui",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://neulab.github.io/MultiUI/",
+          "kind": "website"
+        },
+        {
+          "label": "Website",
+          "url": "https://neulab.github.io/MultiUI/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.13824",
+        "https://github.com/neulab/multiui",
+        "https://neulab.github.io/MultiUI/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "GUI Testing Arena: A Unified Benchmark for Advancing Autonomous GUI Testing Agent",
+      "meta": "(Dec, 2024)",
+      "main_url": "https://arxiv.org/abs/2412.18426",
+      "paper_url": "https://arxiv.org/abs/2412.18426",
+      "ingest_url": "https://arxiv.org/abs/2412.18426",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/ZJU-ACES-ISE/ChatUITest"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/ZJU-ACES-ISE/ChatUITest",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.18426",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.18426",
+        "https://github.com/ZJU-ACES-ISE/ChatUITest"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "A3: Android Agent Arena for Mobile GUI Agents",
+      "meta": "(Jan. 2025)",
+      "main_url": "https://arxiv.org/abs/2501.01149",
+      "paper_url": "https://arxiv.org/abs/2501.01149",
+      "ingest_url": "https://arxiv.org/abs/2501.01149",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://yuxiangchai.github.io/Android-Agent-Arena/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2501.01149",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://yuxiangchai.github.io/Android-Agent-Arena/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2501.01149",
+        "https://yuxiangchai.github.io/Android-Agent-Arena/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "ScreenSpot-Pro: GUI Grounding for Professional High-Resolution Computer Use",
+      "meta": "[![Star](https://img.shields.io/github/stars/likaixin2000/ScreenSpot-Pro-GUI-Grounding.svg?style=social&label=Star)](https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding)",
+      "main_url": "https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf",
+      "paper_url": "https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf",
+      "ingest_url": "https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding"
+      ],
+      "website_urls": [
+        "https://gui-agent.github.io/grounding-leaderboard/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://gui-agent.github.io/grounding-leaderboard/",
+          "kind": "website"
+        },
+        {
+          "label": "PDF",
+          "url": "https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf",
+          "kind": "pdf"
+        }
+      ],
+      "all_urls": [
+        "https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf",
+        "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+        "https://gui-agent.github.io/grounding-leaderboard/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WebWalker: Benchmarking LLMs in Web Traversal",
+      "meta": "[![Star](https://img.shields.io/github/stars/Alibaba-nlp/WebWalker.svg?style=social&label=Star)](https://github.com/Alibaba-nlp/WebWalker)",
+      "main_url": "https://github.com/Alibaba-nlp/WebWalker",
+      "paper_url": "https://arxiv.org/pdf/2501.07572",
+      "ingest_url": "https://arxiv.org/pdf/2501.07572",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/Alibaba-nlp/WebWalker"
+      ],
+      "website_urls": [
+        "https://alibaba-nlp.github.io/WebWalker/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/Alibaba-nlp/WebWalker",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://alibaba-nlp.github.io/WebWalker/",
+          "kind": "website"
+        },
+        {
+          "label": "PDF",
+          "url": "https://arxiv.org/pdf/2501.07572",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/Alibaba-nlp/WebWalker",
+        "https://alibaba-nlp.github.io/WebWalker/",
+        "https://arxiv.org/pdf/2501.07572"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation",
+      "meta": "(ICLR 2025)",
+      "main_url": "https://ai-agents-2030.github.io/SPA-Bench/",
+      "paper_url": "https://arxiv.org/abs/2410.15164",
+      "ingest_url": "https://arxiv.org/abs/2410.15164",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://ai-agents-2030.github.io/SPA-Bench/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.15164",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://ai-agents-2030.github.io/SPA-Bench/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://ai-agents-2030.github.io/SPA-Bench/",
+        "https://arxiv.org/abs/2410.15164"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "WorldGUI: Dynamic Testing for Comprehensive Desktop GUI Automation",
+      "meta": "(Feb. 2025)",
+      "main_url": "https://arxiv.org/abs/2502.08047",
+      "paper_url": "https://arxiv.org/abs/2502.08047",
+      "ingest_url": "https://arxiv.org/abs/2502.08047",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/showlab/GUI-Thinker"
+      ],
+      "website_urls": [
+        "https://showlab.github.io/GUI-Thinker/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/GUI-Thinker",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2502.08047",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://showlab.github.io/GUI-Thinker/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2502.08047",
+        "https://github.com/showlab/GUI-Thinker",
+        "https://showlab.github.io/GUI-Thinker/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark",
+      "meta": "(Apr. 2025)",
+      "main_url": "https://arxiv.org/abs/2504.13805",
+      "paper_url": "https://arxiv.org/abs/2504.13805",
+      "ingest_url": "https://arxiv.org/abs/2504.13805",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/lgy0404/LearnAct"
+      ],
+      "website_urls": [
+        "https://lgy0404.github.io/LearnAct/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/lgy0404/LearnAct",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.13805",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://lgy0404.github.io/LearnAct/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2504.13805",
+        "https://github.com/lgy0404/LearnAct",
+        "https://lgy0404.github.io/LearnAct/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows",
+      "meta": "(May. 2025)",
+      "main_url": "https://arxiv.org/abs/2505.19897",
+      "paper_url": "https://arxiv.org/abs/2505.19897",
+      "ingest_url": "https://arxiv.org/abs/2505.19897",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OS-Copilot/ScienceBoard"
+      ],
+      "website_urls": [
+        "https://qiushisun.github.io/ScienceBoard-Home/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OS-Copilot/ScienceBoard",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2505.19897",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://qiushisun.github.io/ScienceBoard-Home/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2505.19897",
+        "https://github.com/OS-Copilot/ScienceBoard",
+        "https://qiushisun.github.io/ScienceBoard-Home/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "MONDAY: Scalable Video-to-Dataset Generation for Cross-Platform Mobile Agents",
+      "meta": "(May., 2025, CVPR 2025)",
+      "main_url": "https://arxiv.org/abs/2505.12632",
+      "paper_url": "https://arxiv.org/abs/2505.12632",
+      "ingest_url": "https://arxiv.org/abs/2505.12632",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/runamu/monday"
+      ],
+      "website_urls": [
+        "https://lgy0404.github.io/LearnAct/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/runamu/monday",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2505.12632",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://lgy0404.github.io/LearnAct/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2505.12632",
+        "https://github.com/runamu/monday",
+        "https://lgy0404.github.io/LearnAct/"
+      ]
+    },
+    {
+      "section": "Datasets / Benchmarks",
+      "title": "Atomic-to-Compositional Generalization for Mobile Agents with A New Benchmark and Scheduling System",
+      "meta": "(June. 2025)",
+      "main_url": "https://arxiv.org/abs/2506.08972",
+      "paper_url": "https://arxiv.org/abs/2506.08972",
+      "ingest_url": "https://arxiv.org/abs/2506.08972",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://ui-nexus.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2506.08972",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://ui-nexus.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2506.08972",
+        "https://ui-nexus.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Grounding Open-Domain Instructions to Automate Web Support Tasks",
+      "meta": "(Mar. 2021)",
+      "main_url": "https://web3.arxiv.org/abs/2103.16057",
+      "paper_url": "https://web3.arxiv.org/abs/2103.16057",
+      "ingest_url": "https://arxiv.org/abs/2103.16057",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://web3.arxiv.org/abs/2103.16057",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://web3.arxiv.org/abs/2103.16057"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Screen2Words: Automatic Mobile UI Summarization with Multimodal Learning",
+      "meta": "(Aug. 2021)",
+      "main_url": "https://arxiv.org/abs/2108.03353",
+      "paper_url": "https://arxiv.org/abs/2108.03353",
+      "ingest_url": "https://arxiv.org/abs/2108.03353",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2108.03353",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2108.03353",
+        "http://arxiv.org/abs/2108.03353"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "A Data-Driven Approach for Learning to Control Computers",
+      "meta": "(Feb. 2022)",
+      "main_url": "https://arxiv.org/abs/2202.08137",
+      "paper_url": "https://arxiv.org/abs/2202.08137",
+      "ingest_url": "https://arxiv.org/abs/2202.08137",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2202.08137",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2202.08137"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Augmenting Autotelic Agents with Large Language Models",
+      "meta": "(May. 2023)",
+      "main_url": "https://arxiv.org/pdf/2305.12487",
+      "paper_url": "https://arxiv.org/pdf/2305.12487",
+      "ingest_url": "https://arxiv.org/pdf/2305.12487",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2305.12487",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2305.12487"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control",
+      "meta": "(Jun. 2023, ICLR 2024)",
+      "main_url": "https://arxiv.org/abs/2306.07863",
+      "paper_url": "https://arxiv.org/abs/2306.07863",
+      "ingest_url": "https://arxiv.org/abs/2306.07863",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/ltzheng/synapse"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/ltzheng/synapse",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2306.07863",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2306.07863",
+        "https://github.com/ltzheng/synapse"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis",
+      "meta": "(Jul. 2023, ICLR 2024)",
+      "main_url": "https://arxiv.org/abs/2307.12856",
+      "paper_url": "https://arxiv.org/abs/2307.12856",
+      "ingest_url": "https://arxiv.org/abs/2307.12856",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2307.12856",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2307.12856",
+        "http://arxiv.org/abs/2307.12856"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "LASER: LLM Agent with State-Space Exploration for Web Navigation",
+      "meta": "(Sep. 2023)",
+      "main_url": "https://arxiv.org/abs/2309.08172",
+      "paper_url": "https://arxiv.org/abs/2309.08172",
+      "ingest_url": "https://arxiv.org/abs/2309.08172",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2309.08172",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2309.08172"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "CogAgent: A Visual Language Model for GUI Agents",
+      "meta": "(Dec. 2023, CVPR 2024)",
+      "main_url": "https://arxiv.org/abs/2312.08914",
+      "paper_url": "https://arxiv.org/abs/2312.08914",
+      "ingest_url": "https://arxiv.org/abs/2312.08914",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/THUDM/CogVLM"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/THUDM/CogVLM",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2312.08914",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2312.08914",
+        "https://github.com/THUDM/CogVLM"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
+      "meta": "[![Star](https://img.shields.io/github/stars/MinorJerry/WebVoyager.svg?style=social&label=Star)](https://github.com/MinorJerry/WebVoyager)",
+      "main_url": "https://arxiv.org/abs/2401.13919",
+      "paper_url": "https://arxiv.org/abs/2401.13919",
+      "ingest_url": "https://arxiv.org/abs/2401.13919",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/MinorJerry/WebVoyager"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/MinorJerry/WebVoyager",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2401.13919",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2401.13919",
+        "https://github.com/MinorJerry/WebVoyager"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.07456",
+      "paper_url": "https://arxiv.org/abs/2402.07456",
+      "ingest_url": "https://arxiv.org/abs/2402.07456",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OS-Copilot/OS-Copilot"
+      ],
+      "website_urls": [
+        "https://os-copilot.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OS-Copilot/OS-Copilot",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.07456",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://os-copilot.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.07456",
+        "https://github.com/OS-Copilot/OS-Copilot",
+        "https://os-copilot.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "UFO: A UI-Focused Agent for Windows OS Interaction",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.07939",
+      "paper_url": "https://arxiv.org/abs/2402.07939",
+      "ingest_url": "https://arxiv.org/abs/2402.07939",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/microsoft/UFO"
+      ],
+      "website_urls": [
+        "https://microsoft.github.io/UFO/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/microsoft/UFO",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.07939",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://microsoft.github.io/UFO/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.07939",
+        "https://github.com/microsoft/UFO",
+        "https://microsoft.github.io/UFO/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Comprehensive Cognitive LLM Agent for Smartphone GUI Automation",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.11941",
+      "paper_url": "https://arxiv.org/abs/2402.11941",
+      "ingest_url": "https://arxiv.org/abs/2402.11941",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.11941",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.11941"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Improving Language Understanding from Screenshots",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.14073",
+      "paper_url": "https://arxiv.org/abs/2402.14073",
+      "ingest_url": "https://arxiv.org/abs/2402.14073",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.14073",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.14073"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AutoWebGLM: Bootstrap And Reinforce A Large Language Model-based Web Navigating Agent",
+      "meta": "(Apr. 2024, KDD 2024)",
+      "main_url": "https://arxiv.org/abs/2404.03648",
+      "paper_url": "https://arxiv.org/abs/2404.03648",
+      "ingest_url": "https://arxiv.org/abs/2404.03648",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/THUDM/AutoWebGLM"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/THUDM/AutoWebGLM",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.03648",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.03648",
+        "https://github.com/THUDM/AutoWebGLM"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "SheetCopilot: Bringing Software Productivity to the Next Level through Large Language Models",
+      "meta": "(May. 2023, NeurIPS 2023)",
+      "main_url": "https://arxiv.org/abs/2305.19308",
+      "paper_url": "https://arxiv.org/abs/2305.19308",
+      "ingest_url": "https://arxiv.org/abs/2305.19308",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/BraveGroup/SheetCopilot"
+      ],
+      "website_urls": [
+        "https://sheetcopilot.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/BraveGroup/SheetCopilot",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2305.19308",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://sheetcopilot.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2305.19308",
+        "https://github.com/BraveGroup/SheetCopilot",
+        "https://sheetcopilot.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "You Only Look at Screens: Multimodal Chain-of-Action Agents",
+      "meta": "(Sep. 2023)",
+      "main_url": "https://arxiv.org/abs/2309.11436",
+      "paper_url": "https://arxiv.org/abs/2309.11436",
+      "ingest_url": "https://arxiv.org/abs/2309.11436",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/cooelf/Auto-UI"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/cooelf/Auto-UI",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2309.11436",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2309.11436",
+        "https://github.com/cooelf/Auto-UI"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Reinforced UI Instruction Grounding: Towards a Generic UI Task Automation API",
+      "meta": "(Oct. 2023)",
+      "main_url": "https://arxiv.org/abs/2310.04716",
+      "paper_url": "https://arxiv.org/abs/2310.04716",
+      "ingest_url": "https://arxiv.org/abs/2310.04716",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2310.04716",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2310.04716"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "OpenAgents: AN OPEN PLATFORM FOR LANGUAGE AGENTS IN THE WILD",
+      "meta": "(Oct. 2023)",
+      "main_url": "https://arxiv.org/pdf/2310.10634",
+      "paper_url": "https://arxiv.org/pdf/2310.10634",
+      "ingest_url": "https://arxiv.org/pdf/2310.10634",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/xlang-ai/OpenAgents"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/xlang-ai/OpenAgents",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2310.10634",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2310.10634",
+        "https://github.com/xlang-ai/OpenAgents"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AgentStore: Scalable Integration of Heterogeneous Agents As Specialized Generalist Computer Assistant",
+      "meta": "(Oct. 2024)",
+      "main_url": "https://arxiv.org/abs/2410.18603",
+      "paper_url": "https://arxiv.org/abs/2410.18603",
+      "ingest_url": "https://arxiv.org/abs/2410.18603",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/chengyou-jia/AgentStore"
+      ],
+      "website_urls": [
+        "https://chengyou-jia.github.io/AgentStore-Home/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/chengyou-jia/AgentStore",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.18603",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://chengyou-jia.github.io/AgentStore-Home/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.18603",
+        "https://github.com/chengyou-jia/AgentStore",
+        "https://chengyou-jia.github.io/AgentStore-Home/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "GPT-4V in Wonderland: Large Multimodal Models for Zero-Shot Smartphone GUI Navigation",
+      "meta": "(Nov. 2023)",
+      "main_url": "https://arxiv.org/abs/2311.07562",
+      "paper_url": "https://arxiv.org/abs/2311.07562",
+      "ingest_url": "https://arxiv.org/abs/2311.07562",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/zzxslp/MM-Navigator"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/zzxslp/MM-Navigator",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2311.07562",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2311.07562",
+        "https://github.com/zzxslp/MM-Navigator"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AppAgent: Multimodal Agents as Smartphone Users",
+      "meta": "(Dec. 2023)",
+      "main_url": "https://arxiv.org/abs/2312.13771",
+      "paper_url": "https://arxiv.org/abs/2312.13771",
+      "ingest_url": "https://arxiv.org/abs/2312.13771",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/mnotgod96/AppAgent"
+      ],
+      "website_urls": [
+        "https://appagent-official.github.io"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/mnotgod96/AppAgent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2312.13771",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://appagent-official.github.io",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2312.13771",
+        "https://github.com/mnotgod96/AppAgent",
+        "https://appagent-official.github.io"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents",
+      "meta": "(Jan. 2024, ACL 2024)",
+      "main_url": "https://arxiv.org/abs/2401.10935",
+      "paper_url": "https://arxiv.org/abs/2401.10935",
+      "ingest_url": "https://arxiv.org/abs/2401.10935",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/njucckevin/SeeClick"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/njucckevin/SeeClick",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2401.10935",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2401.10935",
+        "https://github.com/njucckevin/SeeClick"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+      "meta": "(Jan. 2024, ICML 2024)",
+      "main_url": "https://arxiv.org/abs/2401.01614",
+      "paper_url": "https://arxiv.org/abs/2401.01614",
+      "ingest_url": "https://arxiv.org/abs/2401.01614",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OSU-NLP-Group/SeeAct"
+      ],
+      "website_urls": [
+        "https://osu-nlp-group.github.io/SeeAct/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OSU-NLP-Group/SeeAct",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2401.01614",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://osu-nlp-group.github.io/SeeAct/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2401.01614",
+        "https://github.com/OSU-NLP-Group/SeeAct",
+        "https://osu-nlp-group.github.io/SeeAct/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception",
+      "meta": "(Jan. 2024)",
+      "main_url": "http://arxiv.org/abs/2401.16158",
+      "paper_url": "http://arxiv.org/abs/2401.16158",
+      "ingest_url": "https://arxiv.org/abs/2401.16158",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "http://arxiv.org/abs/2401.16158",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "http://arxiv.org/abs/2401.16158"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Dual-View Visual Contextualization for Web Navigation",
+      "meta": "(Feb. 2024, CVPR 2024)",
+      "main_url": "https://arxiv.org/abs/2402.04476",
+      "paper_url": "https://arxiv.org/abs/2402.04476",
+      "ingest_url": "https://arxiv.org/abs/2402.04476",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.04476",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.04476"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.11896",
+      "paper_url": "https://arxiv.org/abs/2406.11896",
+      "ingest_url": "https://arxiv.org/abs/2406.11896",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/DigiRL-agent/digirl"
+      ],
+      "website_urls": [
+        "https://digirl-agent.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/DigiRL-agent/digirl",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.11896",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://digirl-agent.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.11896",
+        "https://github.com/DigiRL-agent/digirl",
+        "https://digirl-agent.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Visual Grounding for User Interfaces",
+      "meta": "(NAACL 2024)",
+      "main_url": "https://aclanthology.org/2024.naacl-industry.9.pdf",
+      "paper_url": "https://aclanthology.org/2024.naacl-industry.9.pdf",
+      "ingest_url": "https://aclanthology.org/2024.naacl-industry.9.pdf",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://aclanthology.org/2024.naacl-industry.9.pdf",
+          "kind": "pdf"
+        }
+      ],
+      "all_urls": [
+        "https://aclanthology.org/2024.naacl-industry.9.pdf"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "ScreenAgent: A Computer Control Agent Driven by Visual Language Large Model",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.07945",
+      "paper_url": "https://arxiv.org/abs/2402.07945",
+      "ingest_url": "https://arxiv.org/abs/2402.07945",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/niuzaisheng/ScreenAgent"
+      ],
+      "website_urls": [
+        "https://screenagent.pages.dev/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/niuzaisheng/ScreenAgent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.07945",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://screenagent.pages.dev/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.07945",
+        "https://github.com/niuzaisheng/ScreenAgent",
+        "https://screenagent.pages.dev/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "ScreenAI: A Vision-Language Model for UI and Infographics Understanding",
+      "meta": "(Feb. 2024)",
+      "main_url": "https://arxiv.org/abs/2402.04615",
+      "paper_url": "https://arxiv.org/abs/2402.04615",
+      "ingest_url": "https://arxiv.org/abs/2402.04615",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2402.04615",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2402.04615"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.05719",
+      "paper_url": "https://arxiv.org/abs/2404.05719",
+      "ingest_url": "https://arxiv.org/abs/2404.05719",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/apple/ml-ferret"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/apple/ml-ferret",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.05719",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.05719",
+        "https://github.com/apple/ml-ferret"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Octopus: On-device language model for function calling of software APIs",
+      "meta": "(Apr., 2024)",
+      "main_url": "https://arxiv.org/abs/2404.01549",
+      "paper_url": "https://arxiv.org/abs/2404.01549",
+      "ingest_url": "https://arxiv.org/abs/2404.01549",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.01549",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.01549"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Octopus v2: On-device language model for super agent",
+      "meta": "(Apr., 2024)",
+      "main_url": "https://arxiv.org/abs/2404.01744",
+      "paper_url": "https://arxiv.org/abs/2404.01744",
+      "ingest_url": "https://arxiv.org/abs/2404.01744",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.01744",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.01744"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Octopus v3: Technical Report for On-device Sub-billion Multimodal AI Agent",
+      "meta": "(Apr., 2024)",
+      "main_url": "https://arxiv.org/abs/2404.11459",
+      "paper_url": "https://arxiv.org/abs/2404.11459",
+      "ingest_url": "https://arxiv.org/abs/2404.11459",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://www.nexa4ai.com/octopus-v3"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.11459",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.nexa4ai.com/octopus-v3",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.11459",
+        "https://www.nexa4ai.com/octopus-v3"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Octopus v4: Graph of language models",
+      "meta": "(Apr., 2024)",
+      "main_url": "https://arxiv.org/abs/2404.19296",
+      "paper_url": "https://arxiv.org/abs/2404.19296",
+      "ingest_url": "https://arxiv.org/abs/2404.19296",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.19296",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.19296"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AutoWebGLM: Bootstrap and Reinforce a Large Language Model-based Web Navigating Agent",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.03648",
+      "paper_url": "https://arxiv.org/abs/2404.03648",
+      "ingest_url": "https://arxiv.org/abs/2404.03648",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/THUDM/AutoWebGLM"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/THUDM/AutoWebGLM",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.03648",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.03648",
+        "https://github.com/THUDM/AutoWebGLM"
+      ],
+      "duplicate_of": "arxiv:2404.03648"
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Search Beyond Queries: Training Smaller Language Models for Web Interactions via Reinforcement Learning",
+      "meta": "(Apr. 2024)",
+      "main_url": "https://arxiv.org/abs/2404.10887",
+      "paper_url": "https://arxiv.org/abs/2404.10887",
+      "ingest_url": "https://arxiv.org/abs/2404.10887",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2404.10887",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2404.10887"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Enhancing Mobile \"How-to\" Queries with Automated Search Results Verification and Reranking",
+      "meta": "(Apr. 2024, SIGIR 2024)",
+      "main_url": "https://arxiv.org/pdf/2404.08860v3",
+      "paper_url": "https://arxiv.org/pdf/2404.08860v3",
+      "ingest_url": "https://arxiv.org/pdf/2404.08860v3",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2404.08860v3",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2404.08860v3"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AutoDroid: LLM-powered Task Automation in Android",
+      "meta": "[![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2308.15272)",
+      "main_url": "https://arxiv.org/abs/2308.15272",
+      "paper_url": "https://arxiv.org/abs/2308.15272",
+      "ingest_url": "https://arxiv.org/abs/2308.15272",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2308.15272",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2308.15272"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Explore, Select, Derive, and Recall: Augmenting LLM with Human-like Memory for Mobile Task Automation",
+      "meta": "(Dec. 2023, MobiCom 2024)",
+      "main_url": "https://arxiv.org/abs/2312.03003",
+      "paper_url": "https://arxiv.org/abs/2312.03003",
+      "ingest_url": "https://arxiv.org/abs/2312.03003",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://mobile-gpt.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2312.03003",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://mobile-gpt.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2312.03003",
+        "https://mobile-gpt.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study",
+      "meta": "(Mar. 2024)",
+      "main_url": "https://arxiv.org/abs/2403.03186",
+      "paper_url": "https://arxiv.org/abs/2403.03186",
+      "ingest_url": "https://arxiv.org/abs/2403.03186",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/BAAI-Agents/Cradle"
+      ],
+      "website_urls": [
+        "https://baai-agents.github.io/Cradle/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/BAAI-Agents/Cradle",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.03186",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://baai-agents.github.io/Cradle/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2403.03186",
+        "https://github.com/BAAI-Agents/Cradle",
+        "https://baai-agents.github.io/Cradle/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Android in the Zoo: Chain-of-Action-Thought for GUI Agents",
+      "meta": "(Mar. 2024)",
+      "main_url": "https://arxiv.org/abs/2403.02713",
+      "paper_url": "https://arxiv.org/abs/2403.02713",
+      "ingest_url": "https://arxiv.org/abs/2403.02713",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/IMNearth/CoAT"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/IMNearth/CoAT",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2403.02713",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2403.02713",
+        "https://github.com/IMNearth/CoAT"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Navigating WebAI: Training Agents to Complete Web Tasks with Large Language Models and Reinforcement Learning",
+      "meta": "(May 2024)",
+      "main_url": "https://arxiv.org/abs/2405.00516v1",
+      "paper_url": "https://arxiv.org/abs/2405.00516v1",
+      "ingest_url": "https://arxiv.org/abs/2405.00516v1",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2405.00516v1",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2405.00516v1"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "GUI Action Narrator: Where and When Did That Action Take Place?",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.13719",
+      "paper_url": "https://arxiv.org/abs/2406.13719",
+      "ingest_url": "https://arxiv.org/abs/2406.13719",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/showlab/GUI-Action-Narrator"
+      ],
+      "website_urls": [
+        "https://showlab.github.io/GUI-Narrator"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/GUI-Action-Narrator",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.13719",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://showlab.github.io/GUI-Narrator",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.13719",
+        "https://github.com/showlab/GUI-Action-Narrator",
+        "https://showlab.github.io/GUI-Narrator"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Identifying User Goals from UI Trajectories",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.14314",
+      "paper_url": "https://arxiv.org/abs/2406.14314",
+      "ingest_url": "https://arxiv.org/abs/2406.14314",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.14314",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.14314"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "VGA: Vision GUI Assistant -- Minimizing Hallucinations through Image-Centric Fine-Tuning",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.14056",
+      "paper_url": "https://arxiv.org/abs/2406.14056",
+      "ingest_url": "https://arxiv.org/abs/2406.14056",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.14056",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.14056"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Octo-planner: On-device Language Model for Planner-Action Agents",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.18082",
+      "paper_url": "https://arxiv.org/abs/2406.18082",
+      "ingest_url": "https://arxiv.org/abs/2406.18082",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://www.nexa4ai.com/octo-planner#video"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.18082",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.nexa4ai.com/octo-planner#video",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.18082",
+        "https://www.nexa4ai.com/octo-planner#video"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "E-ANT: A Large-Scale Dataset for Efficient Automatic GUI NavigaTion",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.14250",
+      "paper_url": "https://arxiv.org/abs/2406.14250",
+      "ingest_url": "https://arxiv.org/abs/2406.14250",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.14250",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.14250"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration",
+      "meta": "(Jun. 2024)",
+      "main_url": "https://arxiv.org/abs/2406.01014",
+      "paper_url": "https://arxiv.org/abs/2406.01014",
+      "ingest_url": "https://arxiv.org/abs/2406.01014",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/X-PLUG/MobileAgent"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/X-PLUG/MobileAgent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2406.01014",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2406.01014",
+        "https://github.com/X-PLUG/MobileAgent"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "MobileFlow: A Multimodal LLM For Mobile GUI Agent",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.04346",
+      "paper_url": "https://arxiv.org/abs/2407.04346",
+      "ingest_url": "https://arxiv.org/abs/2407.04346",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.04346",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.04346"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Vision-driven Automated Mobile GUI Testing via Multimodal Large Language Model",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.03037",
+      "paper_url": "https://arxiv.org/abs/2407.03037",
+      "ingest_url": "https://arxiv.org/abs/2407.03037",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.03037",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.03037"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Internet of Agents: Weaving a Web of Heterogeneous Agents for Collaborative Intelligence",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.07061",
+      "paper_url": "https://arxiv.org/abs/2407.07061",
+      "ingest_url": "https://arxiv.org/abs/2407.07061",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OpenBMB/IoA"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OpenBMB/IoA",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.07061",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.07061",
+        "https://github.com/OpenBMB/IoA"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "MobileExperts: A Dynamic Tool-Enabled Agent Team in Mobile Devices",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.03913",
+      "paper_url": "https://arxiv.org/abs/2407.03913",
+      "ingest_url": "https://arxiv.org/abs/2407.03913",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.03913",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.03913"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AUITestAgent: Automatic Requirements Oriented GUI Function Testing",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.09018",
+      "paper_url": "https://arxiv.org/abs/2407.09018",
+      "ingest_url": "https://arxiv.org/abs/2407.09018",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/bz-lab/AUITestAgent"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/bz-lab/AUITestAgent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.09018",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.09018",
+        "https://github.com/bz-lab/AUITestAgent"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Agent-E: From Autonomous Web Navigation to Foundational Design Principles in Agentic Systems",
+      "meta": "(Jul. 2024)",
+      "main_url": "https://arxiv.org/abs/2407.13032",
+      "paper_url": "https://arxiv.org/abs/2407.13032",
+      "ingest_url": "https://arxiv.org/abs/2407.13032",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/EmergenceAI/Agent-E"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/EmergenceAI/Agent-E",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.13032",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.13032",
+        "https://github.com/EmergenceAI/Agent-E"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "OmniParser for Pure Vision Based GUI Agent",
+      "meta": "(Aug. 2024)",
+      "main_url": "https://arxiv.org/pdf/2408.00203",
+      "paper_url": "https://arxiv.org/pdf/2408.00203",
+      "ingest_url": "https://arxiv.org/pdf/2408.00203",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2408.00203",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2408.00203"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "VisualAgentBench: Towards Large Multimodal Models as Visual Foundation Agents",
+      "meta": "(Aug. 2024)",
+      "main_url": "https://arxiv.org/abs/2408.06327",
+      "paper_url": "https://arxiv.org/abs/2408.06327",
+      "ingest_url": "https://arxiv.org/abs/2408.06327",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/THUDM/VisualAgentBench"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/THUDM/VisualAgentBench",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2408.06327",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://github.com/THUDM/VisualAgentBench",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2408.06327",
+        "https://github.com/THUDM/VisualAgentBench"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents",
+      "meta": "(Aug. 2024)",
+      "main_url": "https://web3.arxiv.org/abs/2408.07199v1",
+      "paper_url": "https://web3.arxiv.org/abs/2408.07199v1",
+      "ingest_url": "https://arxiv.org/abs/2408.07199v1",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://www.multion.ai/blog/introducing-agent-q-research-breakthrough-for-the-next-generation-of-ai-agents-with-planning-and-self-healing-capabilities"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://web3.arxiv.org/abs/2408.07199v1",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.multion.ai/blog/introducing-agent-q-research-breakthrough-for-the-next-generation-of-ai-agents-with-planning-and-self-healing-capabilities",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://web3.arxiv.org/abs/2408.07199v1",
+        "https://www.multion.ai/blog/introducing-agent-q-research-breakthrough-for-the-next-generation-of-ai-agents-with-planning-and-self-healing-capabilities"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "MindSearch: Mimicking Human Minds Elicits Deep AI Searcher",
+      "meta": "(Jul. 2023)",
+      "main_url": "https://arxiv.org/abs/2407.20183",
+      "paper_url": "https://arxiv.org/abs/2407.20183",
+      "ingest_url": "https://arxiv.org/abs/2407.20183",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/InternLM/MindSearch"
+      ],
+      "website_urls": [
+        "https://mindsearch.netlify.app/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/InternLM/MindSearch",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2407.20183",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://mindsearch.netlify.app/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2407.20183",
+        "https://github.com/InternLM/MindSearch",
+        "https://mindsearch.netlify.app/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AppAgent v2: Advanced Agent for Flexible Mobile Interactions",
+      "meta": "(Aug. 2024)",
+      "main_url": "https://arxiv.org/abs/2408.11824",
+      "paper_url": "https://arxiv.org/abs/2408.11824",
+      "ingest_url": "https://arxiv.org/abs/2408.11824",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2408.11824",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2408.11824"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Caution for the Environment: Multimodal Agents are Susceptible to Environmental Distractions",
+      "meta": "(Aug. 2024)",
+      "main_url": "https://arxiv.org/abs/2408.02544",
+      "paper_url": "https://arxiv.org/abs/2408.02544",
+      "ingest_url": "https://arxiv.org/abs/2408.02544",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2408.02544",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2408.02544",
+        "https://arxiv.org/pdf/2408.02544"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Agent Workflow Memory",
+      "meta": "(Sep. 2024)",
+      "main_url": "https://arxiv.org/abs/2409.07429",
+      "paper_url": "https://arxiv.org/abs/2409.07429",
+      "ingest_url": "https://arxiv.org/abs/2409.07429",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/zorazrw/agent-workflow-memory"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/zorazrw/agent-workflow-memory",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2409.07429",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2409.07429",
+        "https://github.com/zorazrw/agent-workflow-memory"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "MobileVLM: A Vision-Language Model for Better Intra- and Inter-UI Understandin",
+      "meta": "(Sep. 2024)",
+      "main_url": "https://arxiv.org/abs/2409.14818",
+      "paper_url": "https://arxiv.org/abs/2409.14818",
+      "ingest_url": "https://arxiv.org/abs/2409.14818",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2409.14818",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2409.14818"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Agent S: An Open Agentic Framework that Uses Computers Like a Human",
+      "meta": "(Oct. 2024)",
+      "main_url": "https://arxiv.org/abs/2410.08164",
+      "paper_url": "https://arxiv.org/abs/2410.08164",
+      "ingest_url": "https://arxiv.org/abs/2410.08164",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/simular-ai/Agent-S"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/simular-ai/Agent-S",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.08164",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.08164",
+        "https://github.com/simular-ai/Agent-S"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "MobA: A Two-Level Agent System for Efficient Mobile Task Automation",
+      "meta": "(Oct. 2024)",
+      "main_url": "https://arxiv.org/abs/2410.13757",
+      "paper_url": "https://arxiv.org/abs/2410.13757",
+      "ingest_url": "https://arxiv.org/abs/2410.13757",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OpenDFM/MobA"
+      ],
+      "website_urls": [],
+      "dataset_urls": [
+        "https://huggingface.co/datasets/OpenDFM/MobA-MobBench"
+      ],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OpenDFM/MobA",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.13757",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/OpenDFM/MobA-MobBench",
+          "kind": "dataset"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.13757",
+        "https://github.com/OpenDFM/MobA",
+        "https://huggingface.co/datasets/OpenDFM/MobA-MobBench"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents",
+      "meta": "(Oct. 2024)",
+      "main_url": "https://arxiv.org/abs/2410.05243",
+      "paper_url": "https://arxiv.org/abs/2410.05243",
+      "ingest_url": "https://arxiv.org/abs/2410.05243",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OSU-NLP-Group/UGround"
+      ],
+      "website_urls": [
+        "https://osu-nlp-group.github.io/UGround/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OSU-NLP-Group/UGround",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://osu-nlp-group.github.io/UGround/",
+          "kind": "website"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.05243",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.05243",
+        "https://github.com/OSU-NLP-Group/UGround",
+        "https://osu-nlp-group.github.io/UGround/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "OS-ATLAS: A Foundation Action Model For Generalist GUI Agents",
+      "meta": "(Oct. 2024)",
+      "main_url": "https://arxiv.org/pdf/2410.23218",
+      "paper_url": "https://arxiv.org/pdf/2410.23218",
+      "ingest_url": "https://arxiv.org/pdf/2410.23218",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OS-Copilot/OS-Atlas"
+      ],
+      "website_urls": [
+        "https://osatlas.github.io/"
+      ],
+      "dataset_urls": [
+        "https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data"
+      ],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OS-Copilot/OS-Atlas",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.23218",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://osatlas.github.io/",
+          "kind": "website"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data",
+          "kind": "dataset"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2410.23218",
+        "https://github.com/OS-Copilot/OS-Atlas",
+        "https://arxiv.org/abs/2410.23218",
+        "https://osatlas.github.io/",
+        "https://huggingface.co/datasets/OS-Copilot/OS-Atlas-data"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Attacking Vision-Language Computer Agents via Pop-ups",
+      "meta": "(Nov. 2024)",
+      "main_url": "https://arxiv.org/abs/2411.02391",
+      "paper_url": "https://arxiv.org/abs/2411.02391",
+      "ingest_url": "https://arxiv.org/abs/2411.02391",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/SALT-NLP/PopupAttack"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/SALT-NLP/PopupAttack",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.02391",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2411.02391",
+        "https://github.com/SALT-NLP/PopupAttack"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AutoGLM: Autonomous Foundation Agents for GUIs",
+      "meta": "(Nov. 2024)",
+      "main_url": "https://arxiv.org/abs/2411.00820",
+      "paper_url": "https://arxiv.org/abs/2411.00820",
+      "ingest_url": "https://arxiv.org/abs/2411.00820",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/THUDM/AutoGLM"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/THUDM/AutoGLM",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.00820",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2411.00820",
+        "https://github.com/THUDM/AutoGLM"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AdaptAgent: Adapting Multimodal Web Agents with Few-Shot Learning from Human Demonstrations",
+      "meta": "(Nov. 2024)",
+      "main_url": "https://arxiv.org/abs/2411.13451",
+      "paper_url": "https://arxiv.org/abs/2411.13451",
+      "ingest_url": "https://arxiv.org/abs/2411.13451",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.13451",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2411.13451"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "ShowUI: One Vision-Language-Action Model for Generalist GUI Agent",
+      "meta": "(Nov. 2024)",
+      "main_url": "https://arxiv.org/abs/2411.17465",
+      "paper_url": "https://arxiv.org/abs/2411.17465",
+      "ingest_url": "https://arxiv.org/abs/2411.17465",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/showlab/ShowUI"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/ShowUI",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.17465",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2411.17465",
+        "https://github.com/showlab/ShowUI"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Aguvis: Unified Pure Vision Agents for Autonomous GUI Interaction",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/abs/2412.04454",
+      "paper_url": "https://arxiv.org/abs/2412.04454",
+      "ingest_url": "https://arxiv.org/abs/2412.04454",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/xlang-ai/aguvis"
+      ],
+      "website_urls": [
+        "https://aguvis-project.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Website",
+          "url": "https://aguvis-project.github.io/",
+          "kind": "website"
+        },
+        {
+          "label": "Star",
+          "url": "https://github.com/xlang-ai/aguvis",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.04454",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.04454",
+        "https://aguvis-project.github.io/",
+        "https://github.com/xlang-ai/aguvis"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Falcon-UI: Understanding GUI Before Following User Instructions",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/abs/2412.09362",
+      "paper_url": "https://arxiv.org/abs/2412.09362",
+      "ingest_url": "https://arxiv.org/abs/2412.09362",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.09362",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.09362"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/abs/2412.17589",
+      "paper_url": "https://arxiv.org/abs/2412.17589",
+      "ingest_url": "https://arxiv.org/abs/2412.17589",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/GAIR-NLP/PC-Agent"
+      ],
+      "website_urls": [
+        "https://gair-nlp.github.io/PC-Agent/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/GAIR-NLP/PC-Agent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.17589",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://gair-nlp.github.io/PC-Agent/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.17589",
+        "https://github.com/GAIR-NLP/PC-Agent",
+        "https://gair-nlp.github.io/PC-Agent/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Iris: Breaking GUI Complexity with Adaptive Focus and Self-Refining",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/pdf/2412.10342",
+      "paper_url": "https://arxiv.org/pdf/2412.10342",
+      "ingest_url": "https://arxiv.org/pdf/2412.10342",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2412.10342",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2412.10342"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Aria-UI: Visual Grounding for GUI Instructions",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/abs/2412.16256",
+      "paper_url": "https://arxiv.org/abs/2412.16256",
+      "ingest_url": "https://arxiv.org/abs/2412.16256",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/AriaUI/Aria-UI"
+      ],
+      "website_urls": [
+        "https://ariaui.github.io"
+      ],
+      "dataset_urls": [
+        "https://huggingface.co/datasets/Aria-UI/Aria-UI_Data"
+      ],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/AriaUI/Aria-UI",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.16256",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://ariaui.github.io",
+          "kind": "website"
+        },
+        {
+          "label": "Dataset",
+          "url": "https://huggingface.co/datasets/Aria-UI/Aria-UI_Data",
+          "kind": "dataset"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.16256",
+        "https://github.com/AriaUI/Aria-UI",
+        "https://ariaui.github.io",
+        "https://huggingface.co/datasets/Aria-UI/Aria-UI_Data"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "CogAgent v2",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://github.com/THUDM/CogAgent",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/THUDM/CogAgent"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/THUDM/CogAgent",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/THUDM/CogAgent"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse Task Synthesis",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/abs/2412.19723",
+      "paper_url": "https://arxiv.org/abs/2412.19723",
+      "ingest_url": "https://arxiv.org/abs/2412.19723",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OS-Copilot/OS-Genesis"
+      ],
+      "website_urls": [
+        "https://qiushisun.github.io/OS-Genesis-Home/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OS-Copilot/OS-Genesis",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.19723",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://qiushisun.github.io/OS-Genesis-Home/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.19723",
+        "https://github.com/OS-Copilot/OS-Genesis",
+        "https://qiushisun.github.io/OS-Genesis-Home/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection",
+      "meta": "(Jan. 2025)",
+      "main_url": "https://arxiv.org/pdf/2501.04575",
+      "paper_url": "https://arxiv.org/pdf/2501.04575",
+      "ingest_url": "https://arxiv.org/pdf/2501.04575",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/Reallm-Labs/InfiGUIAgent"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/Reallm-Labs/InfiGUIAgent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2501.04575",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2501.04575",
+        "https://github.com/Reallm-Labs/InfiGUIAgent"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "GUI-Bee : Align GUI Action Grounding to Novel Environments via Autonomous Exploration",
+      "meta": "(Jan. 2025)",
+      "main_url": "https://arxiv.org/pdf/2501.13896",
+      "paper_url": "https://arxiv.org/pdf/2501.13896",
+      "ingest_url": "https://arxiv.org/pdf/2501.13896",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://gui-bee.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/pdf/2501.13896",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://gui-bee.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/pdf/2501.13896",
+        "https://gui-bee.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Lightweight Neural App Control",
+      "meta": "(ICLR 2025)",
+      "main_url": "https://arxiv.org/abs/2410.17883",
+      "paper_url": "https://arxiv.org/abs/2410.17883",
+      "ingest_url": "https://arxiv.org/abs/2410.17883",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.17883",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.17883"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "DistRL: An Asynchronous Distributed Reinforcement Learning Framework for On-Device Control Agents",
+      "meta": "(ICLR 2025)",
+      "main_url": "https://arxiv.org/abs/2410.14803",
+      "paper_url": "https://arxiv.org/abs/2410.14803",
+      "ingest_url": "https://arxiv.org/abs/2410.14803",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://ai-agents-2030.github.io/DistRL/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2410.14803",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://ai-agents-2030.github.io/DistRL/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2410.14803",
+        "https://ai-agents-2030.github.io/DistRL/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AppVLM: A Lightweight Vision Language Model for Online App Control",
+      "meta": "(Feb. 2025)",
+      "main_url": "https://arxiv.org/abs/2502.06395",
+      "paper_url": "https://arxiv.org/abs/2502.06395",
+      "ingest_url": "https://arxiv.org/abs/2502.06395",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2502.06395",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2502.06395"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "VSC-RL: Advancing Autonomous Vision-Language Agents with Variational Subgoal-Conditioned Reinforcement Learning",
+      "meta": "(Feb. 2025)",
+      "main_url": "https://arxiv.org/abs/2502.07949",
+      "paper_url": "https://arxiv.org/abs/2502.07949",
+      "ingest_url": "https://arxiv.org/abs/2502.07949",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2502.07949",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2502.07949"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "GUI-Thinker: GUI-Thinker: A Basic yet Comprehensive GUI Agent Developed with Self-Reflection",
+      "meta": "(Feb. 2025)",
+      "main_url": "https://arxiv.org/abs/2502.08047",
+      "paper_url": "https://arxiv.org/abs/2502.08047",
+      "ingest_url": "https://arxiv.org/abs/2502.08047",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/showlab/GUI-Thinker"
+      ],
+      "website_urls": [
+        "https://showlab.github.io/GUI-Thinker/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/GUI-Thinker",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2502.08047",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://showlab.github.io/GUI-Thinker/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2502.08047",
+        "https://github.com/showlab/GUI-Thinker",
+        "https://showlab.github.io/GUI-Thinker/"
+      ],
+      "duplicate_of": "arxiv:2502.08047"
+    },
+    {
+      "section": "Models / Agents",
+      "title": "TongUI: Building Generalized GUI Agents by Learning from Multimodal Web Tutorials",
+      "meta": "(Apr. 2025)",
+      "main_url": "https://arxiv.org/abs/2504.12679v1",
+      "paper_url": "https://arxiv.org/abs/2504.12679v1",
+      "ingest_url": "https://arxiv.org/abs/2504.12679v1",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/TongUI-agent/TongUI-agent"
+      ],
+      "website_urls": [
+        "https://tongui-agent.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/TongUI-agent/TongUI-agent",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.12679v1",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://tongui-agent.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2504.12679v1",
+        "https://github.com/TongUI-agent/TongUI-agent",
+        "https://tongui-agent.github.io/"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "MobileA3gent: Training Mobile GUI Agents Using Decentralized Self-Sourced Data from Diverse Users",
+      "meta": "(Feb., 2025)",
+      "main_url": "https://arxiv.org/abs/2502.02982",
+      "paper_url": "https://arxiv.org/abs/2502.02982",
+      "ingest_url": "https://arxiv.org/abs/2502.02982",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2502.02982",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2502.02982"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "FedMABench: Benchmarking Mobile Agents on Decentralized Heterogeneous User Data",
+      "meta": "(Mar. 2025)",
+      "main_url": "https://arxiv.org/abs/2503.05143",
+      "paper_url": "https://arxiv.org/abs/2503.05143",
+      "ingest_url": "https://arxiv.org/abs/2503.05143",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/wwh0411/FedMABench"
+      ],
+      "website_urls": [],
+      "dataset_urls": [
+        "https://huggingface.co/datasets/wwh0411/FedMABench"
+      ],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/wwh0411/FedMABench",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2503.05143",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://huggingface.co/datasets/wwh0411/FedMABench",
+          "kind": "dataset"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2503.05143",
+        "https://github.com/wwh0411/FedMABench",
+        "https://huggingface.co/datasets/wwh0411/FedMABench"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "AgentCPM-GUI: Building Mobile-Use Agents with Reinforcement Fine-Tuning",
+      "meta": "(Jun., 2025)",
+      "main_url": "https://arxiv.org/abs/2506.01391",
+      "paper_url": "https://arxiv.org/abs/2506.01391",
+      "ingest_url": "https://arxiv.org/abs/2506.01391",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OpenBMB/AgentCPM-GUI"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OpenBMB/AgentCPM-GUI",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2506.01391",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://github.com/OpenBMB/AgentCPM-GUI",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2506.01391",
+        "https://github.com/OpenBMB/AgentCPM-GUI"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "EVA: Red-Teaming GUI Agents via Evolving Indirect Prompt Injection",
+      "meta": "(May. 2025)",
+      "main_url": "https://arxiv.org/abs/2505.14289",
+      "paper_url": "https://arxiv.org/abs/2505.14289",
+      "ingest_url": "https://arxiv.org/abs/2505.14289",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2505.14289",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2505.14289"
+      ]
+    },
+    {
+      "section": "Models / Agents",
+      "title": "Test‑Time Reinforcement Learning for GUI Grounding via Region Consistency",
+      "meta": "(Aug., 2025)",
+      "main_url": "https://arxiv.org/abs/2508.05615",
+      "paper_url": "https://arxiv.org/abs/2508.05615",
+      "ingest_url": "https://arxiv.org/abs/2508.05615",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/zju-real/gui-rcpo"
+      ],
+      "website_urls": [
+        "https://zju-real.github.io/gui-rcpo/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/zju-real/gui-rcpo",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2508.05615",
+          "kind": "arxiv"
+        },
+        {
+          "label": "Website",
+          "url": "https://zju-real.github.io/gui-rcpo/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2508.05615",
+        "https://github.com/zju-real/gui-rcpo",
+        "https://zju-real.github.io/gui-rcpo/"
+      ]
+    },
+    {
+      "section": "Surveys",
+      "title": "OS Agents: A Survey on MLLM-based Agents for General Computing Devices Use",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://github.com/OS-Agent-Survey/OS-Agent-Survey",
+      "paper_url": "https://github.com/OS-Agent-Survey/OS-Agent-Survey/blob/main/paper.pdf",
+      "ingest_url": "https://raw.githubusercontent.com/OS-Agent-Survey/OS-Agent-Survey/main/paper.pdf",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/OS-Agent-Survey/OS-Agent-Survey"
+      ],
+      "website_urls": [
+        "https://os-agent-survey.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OS-Agent-Survey/OS-Agent-Survey",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://github.com/OS-Agent-Survey/OS-Agent-Survey/blob/main/paper.pdf",
+          "kind": "pdf"
+        },
+        {
+          "label": "Website",
+          "url": "https://os-agent-survey.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/OS-Agent-Survey/OS-Agent-Survey",
+        "https://github.com/OS-Agent-Survey/OS-Agent-Survey/blob/main/paper.pdf",
+        "https://os-agent-survey.github.io/"
+      ]
+    },
+    {
+      "section": "Surveys",
+      "title": "GUI Agents with Foundation Models: A Comprehensive Survey",
+      "meta": "(Nov. 2024)",
+      "main_url": "https://arxiv.org/abs/2411.04890",
+      "paper_url": "https://arxiv.org/abs/2411.04890",
+      "ingest_url": "https://arxiv.org/abs/2411.04890",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.04890",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2411.04890"
+      ]
+    },
+    {
+      "section": "Surveys",
+      "title": "Large Language Model-Brained GUI Agents: A Survey",
+      "meta": "(Nov. 2024)",
+      "main_url": "https://arxiv.org/abs/2411.18279",
+      "paper_url": "https://arxiv.org/abs/2411.18279",
+      "ingest_url": "https://arxiv.org/abs/2411.18279",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [
+        "https://vyokky.github.io/LLM-Brained-GUI-Agents-Survey/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Website",
+          "url": "https://vyokky.github.io/LLM-Brained-GUI-Agents-Survey/",
+          "kind": "website"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2411.18279",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2411.18279",
+        "https://vyokky.github.io/LLM-Brained-GUI-Agents-Survey/"
+      ]
+    },
+    {
+      "section": "Surveys",
+      "title": "GUI Agents: A Survey",
+      "meta": "(Dec. 2024)",
+      "main_url": "https://arxiv.org/abs/2412.13501",
+      "paper_url": "https://arxiv.org/abs/2412.13501",
+      "ingest_url": "https://arxiv.org/abs/2412.13501",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2412.13501",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2412.13501"
+      ]
+    },
+    {
+      "section": "Surveys",
+      "title": "LLM-Powered GUI Agents in Phone Automation: Surveying Progress and Prospects",
+      "meta": "(Apr. 2025)",
+      "main_url": "https://arxiv.org/abs/2504.19838",
+      "paper_url": "https://arxiv.org/abs/2504.19838",
+      "ingest_url": "https://arxiv.org/abs/2504.19838",
+      "can_ingest": true,
+      "code_urls": [
+        "https://github.com/PhoneLLM/Awesome-LLM-Powered-Phone-GUI-Agents"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/PhoneLLM/Awesome-LLM-Powered-Phone-GUI-Agents",
+          "kind": "github"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2504.19838",
+          "kind": "arxiv"
+        }
+      ],
+      "all_urls": [
+        "https://arxiv.org/abs/2504.19838",
+        "https://github.com/PhoneLLM/Awesome-LLM-Powered-Phone-GUI-Agents"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "PyAutoGUI",
+      "meta": "[![Star](https://img.shields.io/github/stars/asweigart/pyautogui.svg?style=social&label=Star)](https://github.com/asweigart/pyautogui/tree/master)",
+      "main_url": "https://pyautogui.readthedocs.io/en/latest/index.html",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/asweigart/pyautogui/tree/master"
+      ],
+      "website_urls": [
+        "https://pyautogui.readthedocs.io/en/latest/index.html",
+        "https://pyautogui.readthedocs.io/en/latest/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/asweigart/pyautogui/tree/master",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://pyautogui.readthedocs.io/en/latest/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://pyautogui.readthedocs.io/en/latest/index.html",
+        "https://github.com/asweigart/pyautogui/tree/master",
+        "https://pyautogui.readthedocs.io/en/latest/"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "nut.js",
+      "meta": "[![Star](https://img.shields.io/github/stars/nut-tree/nut.js.svg?style=social&label=Star)](https://github.com/nut-tree/nut.js)",
+      "main_url": "https://nutjs.dev/",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/nut-tree/nut.js"
+      ],
+      "website_urls": [
+        "https://nutjs.dev/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/nut-tree/nut.js",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://nutjs.dev/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://nutjs.dev/",
+        "https://github.com/nut-tree/nut.js"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "GPT-4V-Act: AI agent using GPT-4V(ision) for web UI interaction",
+      "meta": "[![Star](https://img.shields.io/github/stars/ddupont808/GPT-4V-Act.svg?style=social&label=Star)](https://github.com/ddupont808/GPT-4V-Act)",
+      "main_url": "https://github.com/ddupont808/GPT-4V-Act",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/ddupont808/GPT-4V-Act"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/ddupont808/GPT-4V-Act",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/ddupont808/GPT-4V-Act"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "gpt-computer-assistant",
+      "meta": "[![Star](https://img.shields.io/github/stars/onuratakan/gpt-computer-assistant.svg?style=social&label=Star)](https://github.com/onuratakan/gpt-computer-assistant)",
+      "main_url": "https://github.com/onuratakan/gpt-computer-assistant",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/onuratakan/gpt-computer-assistant"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/onuratakan/gpt-computer-assistant",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/onuratakan/gpt-computer-assistant"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "Mobile-Agent: The Powerful Mobile Device Operation Assistant Family",
+      "meta": "[![Star](https://img.shields.io/github/stars/X-PLUG/MobileAgent.svg?style=social&label=Star)](https://github.com/X-PLUG/MobileAgent)",
+      "main_url": "https://github.com/X-PLUG/MobileAgent",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/X-PLUG/MobileAgent"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/X-PLUG/MobileAgent",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/X-PLUG/MobileAgent"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "OpenUI",
+      "meta": "[![Star](https://img.shields.io/github/stars/wandb/openui.svg?style=social&label=Star)](https://github.com/wandb/openui)",
+      "main_url": "https://github.com/wandb/openui",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/wandb/openui"
+      ],
+      "website_urls": [
+        "https://openui.fly.dev"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/wandb/openui",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://openui.fly.dev",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/wandb/openui",
+        "https://openui.fly.dev"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "ACT-1",
+      "meta": "[![Website](https://img.shields.io/badge/Website-9cf)](https://www.adept.ai/blog/act-1)",
+      "main_url": "https://www.adept.ai/blog/act-1",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [],
+      "website_urls": [
+        "https://www.adept.ai/blog/act-1"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Website",
+          "url": "https://www.adept.ai/blog/act-1",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://www.adept.ai/blog/act-1"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "NatBot",
+      "meta": "[![Star](https://img.shields.io/github/stars/nat/natbot.svg?style=social&label=Star)](https://github.com/nat/natbot)",
+      "main_url": "https://github.com/nat/natbot",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/nat/natbot"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/nat/natbot",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/nat/natbot"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "Multion",
+      "meta": "[![Website](https://img.shields.io/badge/Website-9cf)](https://www.multion.ai/)",
+      "main_url": "https://www.multion.ai",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [],
+      "website_urls": [
+        "https://www.multion.ai",
+        "https://www.multion.ai/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Website",
+          "url": "https://www.multion.ai/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://www.multion.ai",
+        "https://www.multion.ai/"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "Auto-GPT",
+      "meta": "[![Star](https://img.shields.io/github/stars/Significant-Gravitas/Auto-GPT.svg?style=social&label=Star)](https://github.com/Significant-Gravitas/Auto-GPT)",
+      "main_url": "https://github.com/Significant-Gravitas/Auto-GPT",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/Significant-Gravitas/Auto-GPT"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/Significant-Gravitas/Auto-GPT",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/Significant-Gravitas/Auto-GPT"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "WebLlama",
+      "meta": "[![Star](https://img.shields.io/github/stars/McGill-NLP/webllama.svg?style=social&label=Star)](https://github.com/McGill-NLP/webllama)",
+      "main_url": "https://github.com/McGill-NLP/webllama",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/McGill-NLP/webllama"
+      ],
+      "website_urls": [
+        "https://webllama.github.io"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/McGill-NLP/webllama",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://webllama.github.io",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/McGill-NLP/webllama",
+        "https://webllama.github.io"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "LaVague: Large Action Model Framework to Develop AI Web Agents",
+      "meta": "[![Star](https://img.shields.io/github/stars/lavague-ai/LaVague.svg?style=social&label=Star)](https://github.com/lavague-ai/LaVague)",
+      "main_url": "https://github.com/lavague-ai/LaVague",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/lavague-ai/LaVague"
+      ],
+      "website_urls": [
+        "https://docs.lavague.ai/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/lavague-ai/LaVague",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://docs.lavague.ai/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/lavague-ai/LaVague",
+        "https://docs.lavague.ai/"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "OpenAdapt: AI-First Process Automation with Large Multimodal Models",
+      "meta": "[![Star](https://img.shields.io/github/stars/OpenAdaptAI/OpenAdapt.svg?style=social&label=Star)](https://github.com/OpenAdaptAI/OpenAdapt)",
+      "main_url": "https://github.com/OpenAdaptAI/OpenAdapt",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/OpenAdaptAI/OpenAdapt"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OpenAdaptAI/OpenAdapt",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/OpenAdaptAI/OpenAdapt"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "Surfkit: A toolkit for building and sharing AI agents that operate on devices",
+      "meta": "[![Star](https://img.shields.io/github/stars/agentsea/surfkit.svg?style=social&label=Star)](https://github.com/agentsea/surfkit)",
+      "main_url": "https://github.com/agentsea/surfkit",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/agentsea/surfkit"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/agentsea/surfkit",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/agentsea/surfkit"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "AGI Computer Control",
+      "meta": "",
+      "main_url": "https://github.com/James4Ever0/agi_computer_control",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/James4Ever0/agi_computer_control"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [],
+      "all_urls": [
+        "https://github.com/James4Ever0/agi_computer_control"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "Open Interpreter",
+      "meta": "[![Star](https://img.shields.io/github/stars/OpenInterpreter/open-interpreter.svg?style=social&label=Star)](https://github.com/OpenInterpreter/open-interpreter)",
+      "main_url": "https://github.com/OpenInterpreter/open-interpreter",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/OpenInterpreter/open-interpreter"
+      ],
+      "website_urls": [
+        "https://openinterpreter.com/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OpenInterpreter/open-interpreter",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://openinterpreter.com/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/OpenInterpreter/open-interpreter",
+        "https://openinterpreter.com/"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "WebMarker: Mark web pages for use with vision-language models",
+      "meta": "[![Star](https://img.shields.io/github/stars/reidbarber/webmarker.svg?style=social&label=Star)](https://github.com/reidbarber/webmarker)",
+      "main_url": "https://github.com/reidbarber/webmarker",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/reidbarber/webmarker"
+      ],
+      "website_urls": [
+        "https://www.webmarkerjs.com/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/reidbarber/webmarker",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://www.webmarkerjs.com/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/reidbarber/webmarker",
+        "https://www.webmarkerjs.com/"
+      ]
+    },
+    {
+      "section": "Projects",
+      "title": "Computer Use Out-of-the-box",
+      "meta": "[![Star](https://img.shields.io/github/stars/showlab/computer_use_ootb.svg?style=social&label=Star)](https://github.com/showlab/computer_use_ootb/tree/master)",
+      "main_url": "https://github.com/showlab/computer_use_ootb",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/showlab/computer_use_ootb",
+        "https://github.com/showlab/computer_use_ootb/tree/master"
+      ],
+      "website_urls": [
+        "https://computer-use-ootb.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/showlab/computer_use_ootb/tree/master",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://computer-use-ootb.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/showlab/computer_use_ootb",
+        "https://github.com/showlab/computer_use_ootb/tree/master",
+        "https://computer-use-ootb.github.io/"
+      ]
+    },
+    {
+      "section": "Safety",
+      "title": "Adversarial Attacks on Multimodal Agents",
+      "meta": "[![Star](https://img.shields.io/github/stars/ChenWu98/agent-attack.svg?style=social&label=Star)](https://github.com/ChenWu98/agent-attack)",
+      "main_url": "https://github.com/ChenWu98/agent-attack",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/ChenWu98/agent-attack"
+      ],
+      "website_urls": [
+        "https://chenwu.io/attack-agent/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/ChenWu98/agent-attack",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://chenwu.io/attack-agent/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/ChenWu98/agent-attack",
+        "https://chenwu.io/attack-agent/"
+      ]
+    },
+    {
+      "section": "Safety",
+      "title": "AdvWeb: Controllable Black-box Attacks on VLM-powered Web Agents",
+      "meta": "[![Star](https://img.shields.io/github/stars/AI-secure/AdvWeb.svg?style=social&label=Star)](https://github.com/AI-secure/AdvWeb)",
+      "main_url": "https://github.com/AI-secure/AdvWeb",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/AI-secure/AdvWeb"
+      ],
+      "website_urls": [
+        "https://ai-secure.github.io/AdvWeb/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/AI-secure/AdvWeb",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://ai-secure.github.io/AdvWeb/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/AI-secure/AdvWeb",
+        "https://ai-secure.github.io/AdvWeb/"
+      ]
+    },
+    {
+      "section": "Safety",
+      "title": "MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control",
+      "meta": "[![Star](https://img.shields.io/github/stars/jylee425/mobilesafetybench.svg?style=social&label=Star)](https://github.com/jylee425/mobilesafetybench)",
+      "main_url": "https://github.com/jylee425/mobilesafetybench",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/jylee425/mobilesafetybench"
+      ],
+      "website_urls": [
+        "https://mobilesafetybench.github.io/"
+      ],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/jylee425/mobilesafetybench",
+          "kind": "github"
+        },
+        {
+          "label": "Website",
+          "url": "https://mobilesafetybench.github.io/",
+          "kind": "website"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/jylee425/mobilesafetybench",
+        "https://mobilesafetybench.github.io/"
+      ]
+    },
+    {
+      "section": "Safety",
+      "title": "EIA: Environmental Injection Attack on Generalist Web Agents for Privacy Leakage",
+      "meta": "[![Star](https://img.shields.io/github/stars/OSU-NLP-Group/EIA_against_webagent.svg?style=social&label=Star)](https://github.com/OSU-NLP-Group/EIA_against_webagent)",
+      "main_url": "https://github.com/OSU-NLP-Group/EIA_against_webagent",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/OSU-NLP-Group/EIA_against_webagent"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OSU-NLP-Group/EIA_against_webagent",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/OSU-NLP-Group/EIA_against_webagent"
+      ]
+    },
+    {
+      "section": "Safety",
+      "title": "Is Your LLM Secretly a World Model of the Internet? Model-Based Planning for Web Agents",
+      "meta": "[![Star](https://img.shields.io/github/stars/OSU-NLP-Group/WebDreamer.svg?style=social&label=Star)](https://github.com/OSU-NLP-Group/WebDreamer)",
+      "main_url": "https://github.com/OSU-NLP-Group/WebDreamer",
+      "paper_url": null,
+      "ingest_url": null,
+      "can_ingest": false,
+      "code_urls": [
+        "https://github.com/OSU-NLP-Group/WebDreamer"
+      ],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [
+        {
+          "label": "Star",
+          "url": "https://github.com/OSU-NLP-Group/WebDreamer",
+          "kind": "github"
+        }
+      ],
+      "all_urls": [
+        "https://github.com/OSU-NLP-Group/WebDreamer"
+      ]
+    },
+    {
+      "section": "Safety",
+      "title": "Caution for the Environment: Multimodal Agents are Susceptible to Environmental Distractions",
+      "meta": "",
+      "main_url": "https://arxiv.org/abs/2408.02544",
+      "paper_url": "https://arxiv.org/abs/2408.02544",
+      "ingest_url": "https://arxiv.org/abs/2408.02544",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [],
+      "all_urls": [
+        "https://arxiv.org/abs/2408.02544"
+      ],
+      "duplicate_of": "arxiv:2408.02544"
+    },
+    {
+      "section": "Safety",
+      "title": "Security Matrix for Multimodal Agents on Mobile Devices: A Systematic and Proof of Concept Study",
+      "meta": "",
+      "main_url": "https://arxiv.org/html/2407.09295v2",
+      "paper_url": "https://arxiv.org/html/2407.09295v2",
+      "ingest_url": "https://arxiv.org/abs/2407.09295v2",
+      "can_ingest": true,
+      "code_urls": [],
+      "website_urls": [],
+      "dataset_urls": [],
+      "badge_links": [],
+      "all_urls": [
+        "https://arxiv.org/html/2407.09295v2"
+      ]
+    }
+  ],
+  "unique_ingest_urls": [
+    {
+      "key": "https://proceedings.mlr.press/v70/shi17a/shi17a.pdf",
+      "url": "https://proceedings.mlr.press/v70/shi17a/shi17a.pdf",
+      "title": "World of Bits: An Open-Domain Platform for Web-Based Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:1802.08802",
+      "url": "https://arxiv.org/abs/1802.08802",
+      "title": "Reinforcement Learning on Web Interfaces using Workflow-Guided Exploration",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2005.03776",
+      "url": "https://arxiv.org/abs/2005.03776",
+      "title": "Mapping Natural Language Instructions to Mobile UI Action Sequences",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2101.09465",
+      "url": "https://arxiv.org/abs/2101.09465",
+      "title": "WebSRC: A Dataset for Web-Based Structural Reading Comprehension",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2105.13231",
+      "url": "https://arxiv.org/abs/2105.13231",
+      "title": "AndroidEnv: A Reinforcement Learning Platform for Android",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2202.02312",
+      "url": "https://arxiv.org/abs/2202.02312",
+      "title": "A Dataset for Interactive Vision-Language Navigation with Unknown Command Feasibility",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2205.11029",
+      "url": "https://arxiv.org/abs/2205.11029",
+      "title": "META-GUI: Towards Multi-modal Conversational Agents on Mobile GUI",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2207.01206",
+      "url": "https://arxiv.org/abs/2207.01206",
+      "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2303.17491",
+      "url": "https://arxiv.org/abs/2303.17491",
+      "title": "Language Models can Solve Computer Tasks",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2305.08144",
+      "url": "https://arxiv.org/abs/2305.08144",
+      "title": "Mobile-Env: Building Qualified Evaluation Benchmarks for LLM-GUI Interaction",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2306.06070",
+      "url": "https://arxiv.org/abs/2306.06070",
+      "title": "Mind2Web: Towards a Generalist Agent for the Web",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2307.10088",
+      "url": "https://arxiv.org/abs/2307.10088",
+      "title": "Android in the Wild: A Large-Scale Dataset for Android Device Control",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2307.13854",
+      "url": "https://arxiv.org/abs/2307.13854",
+      "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2311.09278",
+      "url": "https://arxiv.org/abs/2311.09278",
+      "title": "Interactive Evolution: A Neural-Symbolic Self-Training Framework For Large Language Models",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2312.13108",
+      "url": "https://arxiv.org/abs/2312.13108",
+      "title": "AssistGUI: Task-Oriented Desktop Graphical User Interface Automation",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2401.13649",
+      "url": "https://arxiv.org/abs/2401.13649",
+      "title": "VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2402.17553",
+      "url": "https://arxiv.org/abs/2402.17553",
+      "title": "OmniACT: A Dataset and Benchmark for Enabling Multimodal Generalist Autonomous Agents for Desktop and Web",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2402.05930",
+      "url": "https://arxiv.org/abs/2402.05930",
+      "title": "WebLINX: Real-World Website Navigation with Multi-Turn Dialogue",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2402.15057",
+      "url": "https://arxiv.org/abs/2402.15057",
+      "title": "On the Multi-turn Instruction Following for Conversational Web Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2403.17918",
+      "url": "https://arxiv.org/abs/2403.17918",
+      "title": "AgentStudio: A Toolkit for Building General Virtual Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2404.07972",
+      "url": "https://arxiv.org/abs/2404.07972",
+      "title": "OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2404.16660",
+      "url": "https://arxiv.org/abs/2404.16660",
+      "title": "Benchmarking Mobile Device Control Agents across Diverse Configurations",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2404.09992",
+      "url": "https://arxiv.org/abs/2404.09992",
+      "title": "MMInA: Benchmarking Multihop Multimodal Internet Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2404.06474",
+      "url": "https://arxiv.org/abs/2404.06474",
+      "title": "Autonomous Evaluation and Refinement of Digital Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2404.16054",
+      "url": "https://arxiv.org/abs/2404.16054",
+      "title": "LlamaTouch: A Faithful and Scalable Testbed for Mobile UI Automation Task Evaluation",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2404.05955",
+      "url": "https://arxiv.org/abs/2404.05955",
+      "title": "VisualWebBench: How Far Have Multimodal LLMs Evolved in Web Page Understanding and Grounding?",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.11317",
+      "url": "https://arxiv.org/abs/2406.11317",
+      "title": "GUICourse: From General Vision Language Models to Versatile GUI Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.10819",
+      "url": "https://arxiv.org/abs/2406.10819",
+      "title": "GUI-WORLD: A Dataset for GUI-oriented Multimodal LLM-based Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.08451",
+      "url": "https://arxiv.org/abs/2406.08451",
+      "title": "GUI Odyssey: A Comprehensive Dataset for Cross-App GUI Navigation on Mobile Devices",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.10227",
+      "url": "https://arxiv.org/abs/2406.10227",
+      "title": "VideoGUI: A Benchmark for GUI Automation from Instructional Videos",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.19263",
+      "url": "https://arxiv.org/abs/2406.19263",
+      "title": "Read Anywhere Pointed: Layout-aware GUI Screen Reading with Tree-of-Lens Grounding",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.08184",
+      "url": "https://arxiv.org/abs/2406.08184",
+      "title": "MobileAgentBench: An Efficient and User-Friendly Benchmark for Mobile LLM Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2405.14573",
+      "url": "https://arxiv.org/abs/2405.14573",
+      "title": "AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.08340",
+      "url": "https://arxiv.org/abs/2406.08340",
+      "title": "Practical, Automated Scenario-based Mobile App Testing",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.12373",
+      "url": "https://arxiv.org/abs/2406.12373",
+      "title": "WebCanvas: Benchmarking Web Agents in Online Environments",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2406.03679",
+      "url": "https://arxiv.org/abs/2406.03679",
+      "title": "On the Effects of Data Scale on Computer Control Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2407.01511",
+      "url": "https://arxiv.org/abs/2407.01511",
+      "title": "CRAB: Cross-environment Agent Benchmark for Multimodal Language Model Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2407.10956",
+      "url": "https://arxiv.org/abs/2407.10956",
+      "title": "Spider2-V: How Far Are Multimodal Agents From Automating Data Science and Engineering Workflows?",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2407.17490",
+      "url": "https://arxiv.org/abs/2407.17490",
+      "title": "AMEX: Android Multi-annotation Expo Dataset for Mobile GUI Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "https://raw.githubusercontent.com/microsoft/windowsagentarena/website/static/files/windows_agent_arena.pdf",
+      "url": "https://raw.githubusercontent.com/microsoft/WindowsAgentArena/website/static/files/windows_agent_arena.pdf",
+      "title": "Windows Agent Arena",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2410.13824",
+      "url": "https://arxiv.org/abs/2410.13824",
+      "title": "Harnessing Webpage UIs for Text-Rich Visual Understanding",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2412.18426",
+      "url": "https://arxiv.org/abs/2412.18426",
+      "title": "GUI Testing Arena: A Unified Benchmark for Advancing Autonomous GUI Testing Agent",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2501.01149",
+      "url": "https://arxiv.org/abs/2501.01149",
+      "title": "A3: Android Agent Arena for Mobile GUI Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "https://likaixin2000.github.io/papers/screenspot_pro.pdf",
+      "url": "https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf",
+      "title": "ScreenSpot-Pro: GUI Grounding for Professional High-Resolution Computer Use",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2501.07572",
+      "url": "https://arxiv.org/pdf/2501.07572",
+      "title": "WebWalker: Benchmarking LLMs in Web Traversal",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2410.15164",
+      "url": "https://arxiv.org/abs/2410.15164",
+      "title": "SPA-Bench: A Comprehensive Benchmark for SmartPhone Agent Evaluation",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2502.08047",
+      "url": "https://arxiv.org/abs/2502.08047",
+      "title": "WorldGUI: Dynamic Testing for Comprehensive Desktop GUI Automation",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2504.13805",
+      "url": "https://arxiv.org/abs/2504.13805",
+      "title": "LearnAct: Few-Shot Mobile GUI Agent with a Unified Demonstration Benchmark",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2505.19897",
+      "url": "https://arxiv.org/abs/2505.19897",
+      "title": "ScienceBoard: Evaluating Multimodal Autonomous Agents in Realistic Scientific Workflows",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2505.12632",
+      "url": "https://arxiv.org/abs/2505.12632",
+      "title": "MONDAY: Scalable Video-to-Dataset Generation for Cross-Platform Mobile Agents",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2506.08972",
+      "url": "https://arxiv.org/abs/2506.08972",
+      "title": "Atomic-to-Compositional Generalization for Mobile Agents with A New Benchmark and Scheduling System",
+      "section": "Datasets / Benchmarks"
+    },
+    {
+      "key": "arxiv:2103.16057",
+      "url": "https://arxiv.org/abs/2103.16057",
+      "title": "Grounding Open-Domain Instructions to Automate Web Support Tasks",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2108.03353",
+      "url": "https://arxiv.org/abs/2108.03353",
+      "title": "Screen2Words: Automatic Mobile UI Summarization with Multimodal Learning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2202.08137",
+      "url": "https://arxiv.org/abs/2202.08137",
+      "title": "A Data-Driven Approach for Learning to Control Computers",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2305.12487",
+      "url": "https://arxiv.org/pdf/2305.12487",
+      "title": "Augmenting Autotelic Agents with Large Language Models",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2306.07863",
+      "url": "https://arxiv.org/abs/2306.07863",
+      "title": "Synapse: Trajectory-as-Exemplar Prompting with Memory for Computer Control",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2307.12856",
+      "url": "https://arxiv.org/abs/2307.12856",
+      "title": "A Real-World WebAgent with Planning, Long Context Understanding, and Program Synthesis",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2309.08172",
+      "url": "https://arxiv.org/abs/2309.08172",
+      "title": "LASER: LLM Agent with State-Space Exploration for Web Navigation",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2312.08914",
+      "url": "https://arxiv.org/abs/2312.08914",
+      "title": "CogAgent: A Visual Language Model for GUI Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2401.13919",
+      "url": "https://arxiv.org/abs/2401.13919",
+      "title": "WebVoyager: Building an End-to-End Web Agent with Large Multimodal Models",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.07456",
+      "url": "https://arxiv.org/abs/2402.07456",
+      "title": "OS-Copilot: Towards Generalist Computer Agents with Self-Improvement",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.07939",
+      "url": "https://arxiv.org/abs/2402.07939",
+      "title": "UFO: A UI-Focused Agent for Windows OS Interaction",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.11941",
+      "url": "https://arxiv.org/abs/2402.11941",
+      "title": "Comprehensive Cognitive LLM Agent for Smartphone GUI Automation",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.14073",
+      "url": "https://arxiv.org/abs/2402.14073",
+      "title": "Improving Language Understanding from Screenshots",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.03648",
+      "url": "https://arxiv.org/abs/2404.03648",
+      "title": "AutoWebGLM: Bootstrap And Reinforce A Large Language Model-based Web Navigating Agent",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2305.19308",
+      "url": "https://arxiv.org/abs/2305.19308",
+      "title": "SheetCopilot: Bringing Software Productivity to the Next Level through Large Language Models",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2309.11436",
+      "url": "https://arxiv.org/abs/2309.11436",
+      "title": "You Only Look at Screens: Multimodal Chain-of-Action Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2310.04716",
+      "url": "https://arxiv.org/abs/2310.04716",
+      "title": "Reinforced UI Instruction Grounding: Towards a Generic UI Task Automation API",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2310.10634",
+      "url": "https://arxiv.org/pdf/2310.10634",
+      "title": "OpenAgents: AN OPEN PLATFORM FOR LANGUAGE AGENTS IN THE WILD",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.18603",
+      "url": "https://arxiv.org/abs/2410.18603",
+      "title": "AgentStore: Scalable Integration of Heterogeneous Agents As Specialized Generalist Computer Assistant",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2311.07562",
+      "url": "https://arxiv.org/abs/2311.07562",
+      "title": "GPT-4V in Wonderland: Large Multimodal Models for Zero-Shot Smartphone GUI Navigation",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2312.13771",
+      "url": "https://arxiv.org/abs/2312.13771",
+      "title": "AppAgent: Multimodal Agents as Smartphone Users",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2401.10935",
+      "url": "https://arxiv.org/abs/2401.10935",
+      "title": "SeeClick: Harnessing GUI Grounding for Advanced Visual GUI Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2401.01614",
+      "url": "https://arxiv.org/abs/2401.01614",
+      "title": "GPT-4V(ision) is a Generalist Web Agent, if Grounded",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2401.16158",
+      "url": "https://arxiv.org/abs/2401.16158",
+      "title": "Mobile-Agent: Autonomous Multi-Modal Mobile Device Agent with Visual Perception",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.04476",
+      "url": "https://arxiv.org/abs/2402.04476",
+      "title": "Dual-View Visual Contextualization for Web Navigation",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.11896",
+      "url": "https://arxiv.org/abs/2406.11896",
+      "title": "DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "https://aclanthology.org/2024.naacl-industry.9.pdf",
+      "url": "https://aclanthology.org/2024.naacl-industry.9.pdf",
+      "title": "Visual Grounding for User Interfaces",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.07945",
+      "url": "https://arxiv.org/abs/2402.07945",
+      "title": "ScreenAgent: A Computer Control Agent Driven by Visual Language Large Model",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2402.04615",
+      "url": "https://arxiv.org/abs/2402.04615",
+      "title": "ScreenAI: A Vision-Language Model for UI and Infographics Understanding",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.05719",
+      "url": "https://arxiv.org/abs/2404.05719",
+      "title": "Ferret-UI: Grounded Mobile UI Understanding with Multimodal LLMs",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.01549",
+      "url": "https://arxiv.org/abs/2404.01549",
+      "title": "Octopus: On-device language model for function calling of software APIs",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.01744",
+      "url": "https://arxiv.org/abs/2404.01744",
+      "title": "Octopus v2: On-device language model for super agent",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.11459",
+      "url": "https://arxiv.org/abs/2404.11459",
+      "title": "Octopus v3: Technical Report for On-device Sub-billion Multimodal AI Agent",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.19296",
+      "url": "https://arxiv.org/abs/2404.19296",
+      "title": "Octopus v4: Graph of language models",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.10887",
+      "url": "https://arxiv.org/abs/2404.10887",
+      "title": "Search Beyond Queries: Training Smaller Language Models for Web Interactions via Reinforcement Learning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2404.08860",
+      "url": "https://arxiv.org/pdf/2404.08860v3",
+      "title": "Enhancing Mobile \"How-to\" Queries with Automated Search Results Verification and Reranking",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2308.15272",
+      "url": "https://arxiv.org/abs/2308.15272",
+      "title": "AutoDroid: LLM-powered Task Automation in Android",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2312.03003",
+      "url": "https://arxiv.org/abs/2312.03003",
+      "title": "Explore, Select, Derive, and Recall: Augmenting LLM with Human-like Memory for Mobile Task Automation",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2403.03186",
+      "url": "https://arxiv.org/abs/2403.03186",
+      "title": "Towards General Computer Control: A Multimodal Agent for Red Dead Redemption II as a Case Study",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2403.02713",
+      "url": "https://arxiv.org/abs/2403.02713",
+      "title": "Android in the Zoo: Chain-of-Action-Thought for GUI Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2405.00516",
+      "url": "https://arxiv.org/abs/2405.00516v1",
+      "title": "Navigating WebAI: Training Agents to Complete Web Tasks with Large Language Models and Reinforcement Learning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.13719",
+      "url": "https://arxiv.org/abs/2406.13719",
+      "title": "GUI Action Narrator: Where and When Did That Action Take Place?",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.14314",
+      "url": "https://arxiv.org/abs/2406.14314",
+      "title": "Identifying User Goals from UI Trajectories",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.14056",
+      "url": "https://arxiv.org/abs/2406.14056",
+      "title": "VGA: Vision GUI Assistant -- Minimizing Hallucinations through Image-Centric Fine-Tuning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.18082",
+      "url": "https://arxiv.org/abs/2406.18082",
+      "title": "Octo-planner: On-device Language Model for Planner-Action Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.14250",
+      "url": "https://arxiv.org/abs/2406.14250",
+      "title": "E-ANT: A Large-Scale Dataset for Efficient Automatic GUI NavigaTion",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2406.01014",
+      "url": "https://arxiv.org/abs/2406.01014",
+      "title": "Mobile-Agent-v2: Mobile Device Operation Assistant with Effective Navigation via Multi-Agent Collaboration",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.04346",
+      "url": "https://arxiv.org/abs/2407.04346",
+      "title": "MobileFlow: A Multimodal LLM For Mobile GUI Agent",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.03037",
+      "url": "https://arxiv.org/abs/2407.03037",
+      "title": "Vision-driven Automated Mobile GUI Testing via Multimodal Large Language Model",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.07061",
+      "url": "https://arxiv.org/abs/2407.07061",
+      "title": "Internet of Agents: Weaving a Web of Heterogeneous Agents for Collaborative Intelligence",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.03913",
+      "url": "https://arxiv.org/abs/2407.03913",
+      "title": "MobileExperts: A Dynamic Tool-Enabled Agent Team in Mobile Devices",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.09018",
+      "url": "https://arxiv.org/abs/2407.09018",
+      "title": "AUITestAgent: Automatic Requirements Oriented GUI Function Testing",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.13032",
+      "url": "https://arxiv.org/abs/2407.13032",
+      "title": "Agent-E: From Autonomous Web Navigation to Foundational Design Principles in Agentic Systems",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2408.00203",
+      "url": "https://arxiv.org/pdf/2408.00203",
+      "title": "OmniParser for Pure Vision Based GUI Agent",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2408.06327",
+      "url": "https://arxiv.org/abs/2408.06327",
+      "title": "VisualAgentBench: Towards Large Multimodal Models as Visual Foundation Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2408.07199",
+      "url": "https://arxiv.org/abs/2408.07199v1",
+      "title": "Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2407.20183",
+      "url": "https://arxiv.org/abs/2407.20183",
+      "title": "MindSearch: Mimicking Human Minds Elicits Deep AI Searcher",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2408.11824",
+      "url": "https://arxiv.org/abs/2408.11824",
+      "title": "AppAgent v2: Advanced Agent for Flexible Mobile Interactions",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2408.02544",
+      "url": "https://arxiv.org/abs/2408.02544",
+      "title": "Caution for the Environment: Multimodal Agents are Susceptible to Environmental Distractions",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2409.07429",
+      "url": "https://arxiv.org/abs/2409.07429",
+      "title": "Agent Workflow Memory",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2409.14818",
+      "url": "https://arxiv.org/abs/2409.14818",
+      "title": "MobileVLM: A Vision-Language Model for Better Intra- and Inter-UI Understandin",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.08164",
+      "url": "https://arxiv.org/abs/2410.08164",
+      "title": "Agent S: An Open Agentic Framework that Uses Computers Like a Human",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.13757",
+      "url": "https://arxiv.org/abs/2410.13757",
+      "title": "MobA: A Two-Level Agent System for Efficient Mobile Task Automation",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.05243",
+      "url": "https://arxiv.org/abs/2410.05243",
+      "title": "Navigating the Digital World as Humans Do: Universal Visual Grounding for GUI Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.23218",
+      "url": "https://arxiv.org/pdf/2410.23218",
+      "title": "OS-ATLAS: A Foundation Action Model For Generalist GUI Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2411.02391",
+      "url": "https://arxiv.org/abs/2411.02391",
+      "title": "Attacking Vision-Language Computer Agents via Pop-ups",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2411.00820",
+      "url": "https://arxiv.org/abs/2411.00820",
+      "title": "AutoGLM: Autonomous Foundation Agents for GUIs",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2411.13451",
+      "url": "https://arxiv.org/abs/2411.13451",
+      "title": "AdaptAgent: Adapting Multimodal Web Agents with Few-Shot Learning from Human Demonstrations",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2411.17465",
+      "url": "https://arxiv.org/abs/2411.17465",
+      "title": "ShowUI: One Vision-Language-Action Model for Generalist GUI Agent",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2412.04454",
+      "url": "https://arxiv.org/abs/2412.04454",
+      "title": "Aguvis: Unified Pure Vision Agents for Autonomous GUI Interaction",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2412.09362",
+      "url": "https://arxiv.org/abs/2412.09362",
+      "title": "Falcon-UI: Understanding GUI Before Following User Instructions",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2412.17589",
+      "url": "https://arxiv.org/abs/2412.17589",
+      "title": "PC Agent: While You Sleep, AI Works - A Cognitive Journey into Digital World",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2412.10342",
+      "url": "https://arxiv.org/pdf/2412.10342",
+      "title": "Iris: Breaking GUI Complexity with Adaptive Focus and Self-Refining",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2412.16256",
+      "url": "https://arxiv.org/abs/2412.16256",
+      "title": "Aria-UI: Visual Grounding for GUI Instructions",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2412.19723",
+      "url": "https://arxiv.org/abs/2412.19723",
+      "title": "OS-Genesis: Automating GUI Agent Trajectory Construction via Reverse Task Synthesis",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2501.04575",
+      "url": "https://arxiv.org/pdf/2501.04575",
+      "title": "InfiGUIAgent: A Multimodal Generalist GUI Agent with Native Reasoning and Reflection",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2501.13896",
+      "url": "https://arxiv.org/pdf/2501.13896",
+      "title": "GUI-Bee : Align GUI Action Grounding to Novel Environments via Autonomous Exploration",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.17883",
+      "url": "https://arxiv.org/abs/2410.17883",
+      "title": "Lightweight Neural App Control",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2410.14803",
+      "url": "https://arxiv.org/abs/2410.14803",
+      "title": "DistRL: An Asynchronous Distributed Reinforcement Learning Framework for On-Device Control Agents",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2502.06395",
+      "url": "https://arxiv.org/abs/2502.06395",
+      "title": "AppVLM: A Lightweight Vision Language Model for Online App Control",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2502.07949",
+      "url": "https://arxiv.org/abs/2502.07949",
+      "title": "VSC-RL: Advancing Autonomous Vision-Language Agents with Variational Subgoal-Conditioned Reinforcement Learning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2504.12679",
+      "url": "https://arxiv.org/abs/2504.12679v1",
+      "title": "TongUI: Building Generalized GUI Agents by Learning from Multimodal Web Tutorials",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2502.02982",
+      "url": "https://arxiv.org/abs/2502.02982",
+      "title": "MobileA3gent: Training Mobile GUI Agents Using Decentralized Self-Sourced Data from Diverse Users",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2503.05143",
+      "url": "https://arxiv.org/abs/2503.05143",
+      "title": "FedMABench: Benchmarking Mobile Agents on Decentralized Heterogeneous User Data",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2506.01391",
+      "url": "https://arxiv.org/abs/2506.01391",
+      "title": "AgentCPM-GUI: Building Mobile-Use Agents with Reinforcement Fine-Tuning",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2505.14289",
+      "url": "https://arxiv.org/abs/2505.14289",
+      "title": "EVA: Red-Teaming GUI Agents via Evolving Indirect Prompt Injection",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "arxiv:2508.05615",
+      "url": "https://arxiv.org/abs/2508.05615",
+      "title": "Test‑Time Reinforcement Learning for GUI Grounding via Region Consistency",
+      "section": "Models / Agents"
+    },
+    {
+      "key": "https://raw.githubusercontent.com/os-agent-survey/os-agent-survey/main/paper.pdf",
+      "url": "https://raw.githubusercontent.com/OS-Agent-Survey/OS-Agent-Survey/main/paper.pdf",
+      "title": "OS Agents: A Survey on MLLM-based Agents for General Computing Devices Use",
+      "section": "Surveys"
+    },
+    {
+      "key": "arxiv:2411.04890",
+      "url": "https://arxiv.org/abs/2411.04890",
+      "title": "GUI Agents with Foundation Models: A Comprehensive Survey",
+      "section": "Surveys"
+    },
+    {
+      "key": "arxiv:2411.18279",
+      "url": "https://arxiv.org/abs/2411.18279",
+      "title": "Large Language Model-Brained GUI Agents: A Survey",
+      "section": "Surveys"
+    },
+    {
+      "key": "arxiv:2412.13501",
+      "url": "https://arxiv.org/abs/2412.13501",
+      "title": "GUI Agents: A Survey",
+      "section": "Surveys"
+    },
+    {
+      "key": "arxiv:2504.19838",
+      "url": "https://arxiv.org/abs/2504.19838",
+      "title": "LLM-Powered GUI Agents in Phone Automation: Surveying Progress and Prospects",
+      "section": "Surveys"
+    },
+    {
+      "key": "arxiv:2407.09295",
+      "url": "https://arxiv.org/abs/2407.09295v2",
+      "title": "Security Matrix for Multimodal Agents on Mobile Devices: A Systematic and Proof of Concept Study",
+      "section": "Safety"
+    }
+  ],
+  "link_corrections": [
+    {
+      "title": "AssistGUI: Task-Oriented Desktop Graphical User Interface Automation",
+      "old_url": "https://arxiv.org/abs/2401.07781",
+      "new_url": "https://arxiv.org/abs/2312.13108",
+      "reason": "README list URL resolves to an unrelated arXiv title; README intro example uses the AssistGUI arXiv URL."
+    }
+  ]
+}

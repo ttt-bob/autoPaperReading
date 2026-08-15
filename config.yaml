@@ -1,0 +1,158 @@
+# ========== arXiv 抓取配置 ==========
+sources:
+  arxiv:
+    max_results_per_day: 10   # 每天最多抓取 10 篇
+    categories:
+      - cs.CV                # 计算机视觉
+
+# ========== 代理配置 ==========
+# 支持多种代理模式：
+# 1. single_proxy: 单个代理地址（Clash/V2Ray 默认端口 7890）
+# 2. proxy_pool: 代理池列表，随机选择使用
+# 3. mode: proxy_mode 或 direct（是否启用代理）
+proxy:
+  enabled: true                # 是否启用代理
+  mode: "single"               # single | pool | direct
+  single_proxy: "http://127.0.0.1:7890"  # Clash/V2Ray 默认地址
+  # proxy_pool:               # 代理池模式
+  #   - "http://proxy1.example.com:8080"
+  #   - "http://proxy2.example.com:8080"
+  #   - "http://proxy3.example.com:8080"
+  # 请求间隔（秒），防止触发限流
+  min_delay: 3.0
+  max_delay: 8.0
+
+# ========== 关注的 CV 方向关键词 ==========
+# 可根据自己研究领域增删
+topics:
+  # 检测 / 分割 / 跟踪
+  - "object detection"
+  - "semantic segmentation"
+  - "instance segmentation"
+  - "panoptic segmentation"
+  - "video segmentation"
+  - "tracking"
+  - "multi-object tracking"
+  # 图像 / 视频生成
+  - "image generation"
+  - "text-to-image"
+  - "video generation"
+  - "diffusion model"
+  - "image editing"
+  # 3D / 重建
+  - "3D detection"
+  - "3D reconstruction"
+  - "NeRF"
+  - "point cloud"
+  - "scene understanding"
+  # 视觉大模型 / 多模态
+  - "vision-language model"
+  - "multimodal learning"
+  - "visual question answering"
+  - "image captioning"
+  - "visual grounding"
+  - "CLIP"
+  - "Segment Anything"
+  - "GPT-4V"
+  - "large multimodal model"
+  # 姿态 / 人体
+  - "pose estimation"
+  - "human pose estimation"
+  # 自动驾驶感知
+  - "autonomous driving perception"
+  - "BEV perception"
+  - "LiDAR"
+  - "occupancy prediction"
+  # 医学影像
+  - "medical image segmentation"
+  - "medical image classification"
+  # 通用
+  - "vision transformer"
+  - "self-supervised learning"
+  - "image classification"
+  - "OCR"
+  - "depth estimation"
+  - "image retrieval"
+
+# ========== 总结语言 ==========
+summary_language: "zh"   # 中文总结
+
+# ========== 论文标签规范化 ==========
+# 生成总结时 LLM 只能从以下列表中选择标签，不会自创新标签
+# 可在此增删标签以控制论文分类
+allowed_tags:
+  - "gui"
+  - "video search"
+  - "object detection"
+  - "semantic segmentation"
+  - "instance segmentation"
+  - "panoptic segmentation"
+  - "video segmentation"
+  - "tracking"
+  - "image generation"
+  - "video generation"
+  - "text-to-image"
+  - "image-to-image"
+  - "image-to-video"
+  - "diffusion model"
+  - "3D reconstruction"
+  - "point cloud"
+  - "NeRF"
+  - "scene understanding"
+  - "vision-language model"
+  - "multimodal learning"
+  - "visual question answering"
+  - "image captioning"
+  - "visual grounding"
+  - "CLIP"
+  - "Segment Anything"
+  - "pose estimation"
+  - "autonomous driving"
+  - "BEV perception"
+  - "LiDAR"
+  - "medical image"
+  - "image classification"
+  - "self-supervised learning"
+  - "vision transformer"
+  - "depth estimation"
+  - "OCR"
+  - "image retrieval"
+  - "YOLO"
+  - "edge deployment"
+
+# ========== RAG 配置 ==========
+rag:
+  vector_db:
+    host: "localhost"
+    port: 6333
+    collection_name: "cv_papers"
+  embedding:
+    model: "nomic-embed-text"      # 本地 embedding 模型（Ollama）
+    # model: "text-embedding-3-small"  # OpenAI embedding（云端）
+    dimension: 768                  # nomic-embed-text=768, text-embedding-3-small=1536
+  chunk:
+    size: 1200        # 每个 chunk 字符数
+    overlap: 200      # chunk 重叠字符数
+  retrieval:
+    top_k: 8          # 检索返回的 top-k 结果
+
+# ========== LLM 配置 ==========
+llm:
+  # 推荐：DeepSeek API（便宜 + 中文强）
+  # deepseek-chat：稳定的非推理模型，适合批量结构化摘要
+  # 如需使用其他兼容模型，直接修改 model 字段
+  # 切换方式：改 model 字段即可自动切换后端
+  model: "deepseek-chat"
+  temperature: 0.2
+  max_text_chars: 20000        # 截取论文正文前 N 字符用于总结
+  max_tokens: 2048             # LLM 最大生成长度
+
+# ========== Ollama 配置 ==========
+ollama:
+  base_url: "http://localhost:11434"
+  # 注意：gemma4:e4b 需要 Ollama 0.5+ 版本，请访问 https://ollama.com/download 更新
+
+# ========== 每日摘要报告 ==========
+digest:
+  language: "zh"
+  output_dir: "data/digests"

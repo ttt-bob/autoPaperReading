@@ -1,0 +1,6 @@
+interface:
+  display_name: "Paper Summary PPT"
+  short_description: "Professional paper-reading slide decks"
+  default_prompt: "Use $paper-summary-ppt to create a professional 10-paper reading PPT with cropped figures, structured critique, and verification."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,58 @@
+# Extra recent GUI/computer-use papers from:
+# - https://github.com/opendilab/awesome-ui-agents/#2026
+# - https://github.com/OSU-NLP-Group/GUI-Agents-Paper-List/
+# Selected on 2026-06-17 for desktop/general GUI, computer-use control,
+# grounding, reward, safety, training, and benchmark relevance.
+https://arxiv.org/abs/2606.11042
+https://arxiv.org/abs/2601.15876
+https://arxiv.org/abs/2601.21123
+https://arxiv.org/abs/2510.17790
+https://arxiv.org/abs/2601.09923
+https://arxiv.org/abs/2601.20650
+https://arxiv.org/abs/2602.17049
+https://arxiv.org/abs/2603.24440
+https://arxiv.org/abs/2508.04037
+https://arxiv.org/abs/2510.19949
+https://arxiv.org/abs/2603.26266
+https://arxiv.org/abs/2604.18847
+https://arxiv.org/abs/2510.18596
+https://arxiv.org/abs/2603.07978
+https://arxiv.org/abs/2604.05157
+https://arxiv.org/abs/2604.06126
+https://arxiv.org/abs/2604.21375
+https://arxiv.org/abs/2509.15221
+https://arxiv.org/abs/2602.03255
+https://arxiv.org/abs/2603.10178
+https://arxiv.org/abs/2603.10577
+https://arxiv.org/abs/2604.10577
+https://arxiv.org/abs/2602.07283
+https://arxiv.org/abs/2604.09937
+https://arxiv.org/abs/2509.04198
+https://arxiv.org/abs/2512.15431
+https://arxiv.org/abs/2512.22047
+https://arxiv.org/abs/2602.08995
+https://arxiv.org/abs/2602.08235
+https://arxiv.org/abs/2603.08938
+https://arxiv.org/abs/2604.09815
+https://arxiv.org/abs/2508.14040
+https://arxiv.org/abs/2604.08005
+https://arxiv.org/abs/2510.19488
+https://arxiv.org/abs/2512.11611
+https://arxiv.org/abs/2606.14106
+https://arxiv.org/abs/2606.03951
+https://arxiv.org/abs/2606.01790
+https://arxiv.org/abs/2605.30884
+https://arxiv.org/abs/2605.18652
+https://arxiv.org/abs/2605.14747
+https://arxiv.org/abs/2605.12294
+https://arxiv.org/abs/2605.07505
+https://arxiv.org/abs/2606.05697
+https://arxiv.org/abs/2603.10505
+https://arxiv.org/abs/2601.20732
+https://arxiv.org/abs/2508.11360
+https://arxiv.org/abs/2508.10833
+https://openreview.net/pdf?id=dsQHm7YX9c
+https://openreview.net/pdf?id=xtysskccFc
+https://openreview.net/pdf?id=NakMHPljT7
+https://openreview.net/pdf?id=IpzRWE52yw
+https://openreview.net/pdf?id=cgIDqcJcoI

@@ -1,0 +1,34 @@
+[project]
+name = "auto-paper-reading"
+version = "0.1.0"
+description = "自动抓取 arXiv CV 论文 + DeepSeek 中文总结 + GitHub Pages 展示"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "arxiv>=1.4.8",
+    "pymupdf>=1.23.0",
+    "openai>=1.12.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.1",
+    "streamlit>=1.30.0",
+    "requests>=2.31.0",
+    "socksio>=1.0.0",
+    "tqdm>=4.66.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.1.0",
+    "mypy>=1.8.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]
+
+[dependency-groups]
+dev = []

@@ -1,0 +1,12 @@
+# GUI benchmark / dataset / evaluation top 10, prepared 2026-06-30
+# Scope: grounding, perception, action/control, output format, RL/data training and testing.
+https://arxiv.org/abs/2401.10935
+https://likaixin2000.github.io/papers/ScreenSpot_Pro.pdf
+https://arxiv.org/abs/2503.15661
+https://arxiv.org/abs/2511.07332
+https://arxiv.org/abs/2511.04307
+https://arxiv.org/abs/2507.19478
+https://arxiv.org/abs/2404.07972
+https://arxiv.org/abs/2401.13649
+https://arxiv.org/abs/2405.14573
+https://arxiv.org/abs/2402.17553

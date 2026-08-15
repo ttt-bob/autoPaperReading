@@ -1,0 +1,57 @@
+# Runtime state (per-run state tracking)
+.run_state
+.run_state.prev
+.daily_done
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment (keep .env.example)
+.env
+
+# Data (local working data)
+papers.db
+data/papers.db
+data/pdfs/
+data/digests/
+data/obsidian_vault/
+docs/data
+outputs/
+# Logs (all log files, summary json, paper logs)
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Docker
+qdrant_storage/
+
+# uv lock (optional - keep if you want exact reproducibility)
+uv.lock
+.claude
+
+.obsidian
+zotero_import
+docs/favorites.json
+
+# Local-only documentation and infrastructure helpers
+README_LOCAL.md
+scripts/sync_workspace_to_remote.sh
+scripts/update_page_from_git.sh
