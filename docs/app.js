@@ -16,12 +16,20 @@ let selectedSidebarTag = '';
 let favoriteTags = {};
 let usedTags = [];
 let currentSort = 'date-desc';
+const detailCache = new Map();
+let manifest = null;
+const pageCache = new Map();
+let browseMode = true;
+let authApiAvailable = false;
+let currentUser = null;
+let authConfig = { emailVerification: false, passwordReset: false };
+let pendingFavoriteAfterLogin = '';
 
 // ========== Init ==========
-document.addEventListener('DOMContentLoaded', () => {
-  loadPapers();
-  loadFavorites();
+document.addEventListener('DOMContentLoaded', async () => {
   bindEvents();
+  await initializeAuth();
+  await loadPapers();
 });
 
 function bindEvents() {
@@ -46,39 +54,69 @@ function bindEvents() {
   });
 }
 
-// ========== Favorites (localStorage) ==========
-function loadFavorites() {
-  try {
-    const stored = localStorage.getItem('apr_favorites');
-    if (stored) favoriteTags = JSON.parse(stored).tags || {};
-  } catch { favoriteTags = {}; }
+// ========== Account and private favorites ==========
+async function apiFetch(path, options = {}) {
+  const response = await fetch(path, {
+    credentials: 'same-origin',
+    headers: { 'Content-Type': 'application/json', ...(options.headers || {}) },
+    ...options,
+  });
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error(payload.error || '请求失败');
+    error.code = payload.code;
+    throw error;
+  }
+  return payload;
 }
 
-function saveFavorites() {
+async function initializeAuth() {
   try {
-    localStorage.setItem('apr_favorites', JSON.stringify({ tags: favoriteTags }));
-  } catch {}
+    authConfig = await apiFetch('api/config');
+    authApiAvailable = true;
+    const data = await apiFetch('api/auth/me');
+    currentUser = data.user;
+    await loadFavorites();
+  } catch (error) {
+    console.info('Account API is unavailable for this static deployment.', error);
+    authApiAvailable = false;
+    currentUser = null;
+    favoriteTags = {};
+  }
+  updateAccountUi();
+}
+
+async function loadFavorites() {
+  favoriteTags = {};
+  if (!authApiAvailable || !currentUser) {
+    updateUsedTags();
+    return;
+  }
+  const data = await apiFetch('api/favorites');
+  favoriteTags = data.favorites || {};
+  updateUsedTags();
 }
 
 function isFavorited(paperId) {
-  return paperId in favoriteTags && favoriteTags[paperId].length > 0;
+  return Object.prototype.hasOwnProperty.call(favoriteTags, paperId);
 }
 
 function getPaperTags(paperId) {
   return favoriteTags[paperId] || [];
 }
 
-function addToFavorites(paperId, tags) {
-  const existing = favoriteTags[paperId] || [];
-  const newTags = tags.filter(t => !existing.includes(t));
-  favoriteTags[paperId] = [...existing, ...newTags];
-  saveFavorites();
+async function addToFavorites(paperId, tags) {
+  const data = await apiFetch(`api/favorites/${encodeURIComponent(paperId)}`, {
+    method: 'PUT',
+    body: JSON.stringify({ tags }),
+  });
+  favoriteTags[paperId] = data.tags || [];
   updateUsedTags();
 }
 
-function removeFromFavorites(paperId) {
+async function removeFromFavorites(paperId) {
+  await apiFetch(`api/favorites/${encodeURIComponent(paperId)}`, { method: 'DELETE' });
   delete favoriteTags[paperId];
-  saveFavorites();
   updateUsedTags();
 }
 
@@ -106,8 +144,200 @@ function getFavoritesByTag(tag) {
   });
 }
 
+function updateAccountUi() {
+  const loginButton = document.getElementById('loginButton');
+  const accountMenu = document.getElementById('accountMenu');
+  const accountEmail = document.getElementById('accountEmail');
+  if (!loginButton || !accountMenu || !accountEmail) return;
+  loginButton.hidden = Boolean(currentUser);
+  accountMenu.hidden = !currentUser;
+  accountEmail.textContent = currentUser?.email || '';
+}
+
+function openAuthModal(mode = 'login') {
+  if (!authApiAvailable) {
+    showToast('当前静态页面未启用账户服务，请使用服务器上的 /autopaperreading/ 页面。', 'error');
+    return;
+  }
+  document.getElementById('authModalOverlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  renderAuthForm(mode);
+}
+
+function closeAuthModal(event) {
+  if (event && event.target !== event.currentTarget) return;
+  document.getElementById('authModalOverlay').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+function renderAuthForm(mode, email = '') {
+  const title = document.getElementById('authModalTitle');
+  const body = document.getElementById('authModalBody');
+  const escapedEmail = escHtml(email);
+  const emailField = `
+    <label class="auth-field">邮箱
+      <input id="authEmail" type="email" autocomplete="email" required value="${escapedEmail}" placeholder="name@example.com">
+    </label>`;
+  const passwordField = (id = 'authPassword', label = '密码', autocomplete = 'current-password') => `
+    <label class="auth-field">${label}
+      <input id="${id}" type="password" autocomplete="${autocomplete}" required minlength="8" placeholder="至少 8 个字符">
+    </label>`;
+
+  if (mode === 'register') {
+    title.textContent = '创建账户';
+    body.innerHTML = `<p class="auth-note">收藏和个人标签只保存在你的账户中，不会同步给其他人。</p>
+      <form class="auth-form" onsubmit="submitRegister(event)">${emailField}${passwordField('authPassword', '设置密码', 'new-password')}${passwordField('authPasswordConfirm', '确认密码', 'new-password')}
+      <button class="btn-primary auth-submit" type="submit">注册并继续</button></form>
+      <p class="auth-switch">已有账户？<button type="button" onclick="renderAuthForm('login')">登录</button></p>`;
+  } else if (mode === 'verify') {
+    title.textContent = '验证邮箱';
+    body.innerHTML = `<p class="auth-note">验证码已发送至 <strong>${escapedEmail}</strong>，有效期 15 分钟。</p>
+      <form class="auth-form" onsubmit="submitEmailVerification(event)">${emailField}
+      <label class="auth-field">6 位验证码<input id="authCode" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" required placeholder="000000"></label>
+      <button class="btn-primary auth-submit" type="submit">验证并登录</button></form>`;
+      body.innerHTML += `<p class="auth-switch">没收到？<button type="button" onclick="resendVerification()">重新发送验证码</button></p>`;
+  } else if (mode === 'reset-request') {
+    title.textContent = '找回密码';
+    const hint = authConfig.passwordReset ? '我们会向你的邮箱发送 6 位验证码。' : '邮件服务暂未配置，当前无法通过邮箱找回密码。';
+    body.innerHTML = `<p class="auth-note">${hint}</p><form class="auth-form" onsubmit="submitResetRequest(event)">${emailField}
+      <button class="btn-primary auth-submit" type="submit" ${authConfig.passwordReset ? '' : 'disabled'}>发送验证码</button></form>
+      <p class="auth-switch"><button type="button" onclick="renderAuthForm('login')">返回登录</button></p>`;
+  } else if (mode === 'reset-confirm') {
+    title.textContent = '设置新密码';
+    body.innerHTML = `<p class="auth-note">输入邮箱验证码和新密码。</p><form class="auth-form" onsubmit="submitResetConfirm(event)">${emailField}
+      <label class="auth-field">6 位验证码<input id="authCode" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" required placeholder="000000"></label>
+      ${passwordField('authPassword', '新密码', 'new-password')}${passwordField('authPasswordConfirm', '确认新密码', 'new-password')}
+      <button class="btn-primary auth-submit" type="submit">更新密码</button></form>`;
+  } else {
+    title.textContent = '登录';
+    body.innerHTML = `<p class="auth-note">登录后即可保存私有收藏和自定义标签。</p><form class="auth-form" onsubmit="submitLogin(event)">${emailField}${passwordField()}
+      <button class="btn-primary auth-submit" type="submit">登录</button></form>
+      <p class="auth-switch"><button type="button" onclick="renderAuthForm('register')">创建账户</button><span>·</span><button type="button" onclick="renderAuthForm('reset-request')">忘记密码</button></p>`;
+  }
+  document.getElementById('authEmail')?.focus();
+}
+
+async function submitLogin(event) {
+  event.preventDefault();
+  const email = document.getElementById('authEmail').value;
+  const password = document.getElementById('authPassword').value;
+  try {
+    const data = await apiFetch('api/auth/login', { method: 'POST', body: JSON.stringify({ email, password }) });
+    await finishLogin(data.user);
+  } catch (error) { showToast(error.message, 'error'); }
+}
+
+async function submitRegister(event) {
+  event.preventDefault();
+  const email = document.getElementById('authEmail').value;
+  const password = document.getElementById('authPassword').value;
+  if (password !== document.getElementById('authPasswordConfirm').value) {
+    showToast('两次输入的密码不一致', 'error');
+    return;
+  }
+  try {
+    const data = await apiFetch('api/auth/register', { method: 'POST', body: JSON.stringify({ email, password }) });
+    if (data.verificationRequired) {
+      renderAuthForm('verify', data.email);
+      showToast('验证码已发送，请检查邮箱');
+    } else {
+      await finishLogin(data.user);
+      showToast('账户已创建');
+    }
+  } catch (error) { showToast(error.message, 'error'); }
+}
+
+async function submitEmailVerification(event) {
+  event.preventDefault();
+  const email = document.getElementById('authEmail').value;
+  const code = document.getElementById('authCode').value;
+  try {
+    const data = await apiFetch('api/auth/verify-email', { method: 'POST', body: JSON.stringify({ email, code }) });
+    await finishLogin(data.user);
+    showToast('邮箱验证完成');
+  } catch (error) { showToast(error.message, 'error'); }
+}
+
+async function resendVerification() {
+  const email = document.getElementById('authEmail').value;
+  try {
+    const data = await apiFetch('api/auth/verification/resend', {
+      method: 'POST', body: JSON.stringify({ email }),
+    });
+    showToast(data.message);
+  } catch (error) { showToast(error.message, 'error'); }
+}
+
+async function submitResetRequest(event) {
+  event.preventDefault();
+  const email = document.getElementById('authEmail').value;
+  try {
+    const data = await apiFetch('api/auth/password-reset/request', { method: 'POST', body: JSON.stringify({ email }) });
+    showToast(data.message);
+    renderAuthForm('reset-confirm', email);
+  } catch (error) { showToast(error.message, 'error'); }
+}
+
+async function submitResetConfirm(event) {
+  event.preventDefault();
+  const email = document.getElementById('authEmail').value;
+  const password = document.getElementById('authPassword').value;
+  if (password !== document.getElementById('authPasswordConfirm').value) {
+    showToast('两次输入的密码不一致', 'error');
+    return;
+  }
+  try {
+    await apiFetch('api/auth/password-reset/confirm', {
+      method: 'POST', body: JSON.stringify({ email, code: document.getElementById('authCode').value, password }),
+    });
+    showToast('密码已更新，请使用新密码登录');
+    renderAuthForm('login', email);
+  } catch (error) { showToast(error.message, 'error'); }
+}
+
+async function finishLogin(user) {
+  currentUser = user;
+  await loadFavorites();
+  updateAccountUi();
+  closeAuthModal();
+  updateFavBadge();
+  renderPapers();
+  if (pendingFavoriteAfterLogin) {
+    const paperId = pendingFavoriteAfterLogin;
+    pendingFavoriteAfterLogin = '';
+    openFavoriteModal(paperId);
+  }
+}
+
+async function logout() {
+  try { await apiFetch('api/auth/logout', { method: 'POST', body: JSON.stringify({}) }); } catch (error) { console.error(error); }
+  currentUser = null;
+  favoriteTags = {};
+  updateUsedTags();
+  updateAccountUi();
+  updateFavBadge();
+  if (currentTab === 'favorites') switchTab('all');
+  else renderPapers();
+  showToast('已退出登录');
+}
+
+function showToast(message, type = 'success') {
+  const toast = document.getElementById('appToast');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.className = `app-toast ${type} visible`;
+  window.clearTimeout(showToast.timeout);
+  showToast.timeout = window.setTimeout(() => toast.classList.remove('visible'), 3200);
+}
+
 // ========== Tab Switching ==========
-function switchTab(tab) {
+async function switchTab(tab) {
+  if (tab === 'favorites' && !currentUser) {
+    openAuthModal('login');
+    showToast('登录后查看你的收藏与标签', 'error');
+    return;
+  }
+  if (tab === 'favorites') await enableSearchMode();
   currentTab = tab;
   document.querySelectorAll('.nav-tab').forEach(t => {
     t.classList.toggle('active', t.dataset.tab === tab);
@@ -172,12 +402,7 @@ function buildSidebar() {
   const container = document.getElementById('sidebarTags');
   if (!container) return;
 
-  const tagCounts = {};
-  allPapers.forEach(p => {
-    (p.tags || '').split(',').map(t => t.trim().toLowerCase()).filter(Boolean).forEach(t => {
-      tagCounts[t] = (tagCounts[t] || 0) + 1;
-    });
-  });
+  const tagCounts = manifest?.stats?.tagCounts || {};
 
   const sorted = Object.entries(tagCounts)
     .map(([tag, count]) => ({ tag, count }))
@@ -204,9 +429,10 @@ function buildSidebar() {
   container.innerHTML = html || '<span style="font-size:.8rem;color:var(--text-muted);padding:4px 0;">暂无标签数据</span>';
 }
 
-function filterBySidebarTag(tag) {
+async function filterBySidebarTag(tag) {
   selectedSidebarTag = selectedSidebarTag === tag ? '' : tag;
   currentPage = 1;
+  if (selectedSidebarTag) await enableSearchMode();
   applyFilters();
   buildSidebar();
 }
@@ -221,22 +447,16 @@ function clearSidebarTag() {
 // ========== Data Loading ==========
 async function loadPapers() {
   try {
-    const resp = await fetch('papers.json?' + Date.now());
+    const resp = await fetch('paper-data/manifest.json');
     if (!resp.ok) throw new Error('not found: ' + resp.status);
-    const data = await resp.json();
-    allPapers = data.papers || [];
-    updateStats(data.stats);
+    manifest = await resp.json();
+    updateStats(manifest.stats);
+    await loadBrowsePage(1);
   } catch (err) {
     console.error('Load papers error:', err);
     const stored = localStorage.getItem('apr_papers');
-    if (stored) {
-      const data = JSON.parse(stored);
-      allPapers = data.papers || [];
-      updateStats(data.stats);
-    } else {
-      showEmpty('暂无论文数据，请先运行每日抓取任务');
-      return;
-    }
+    showEmpty('暂无论文数据，请先运行每日抓取任务');
+    return;
   }
 
   updateUsedTags();
@@ -256,7 +476,7 @@ function updateStats(stats) {
 }
 
 function updateFavBadge() {
-  const count = getFavoritePapers().length;
+  const count = Object.keys(favoriteTags).length;
   const badge = document.getElementById('favCount');
   badge.textContent = count;
   badge.style.display = count > 0 ? 'inline-block' : 'none';
@@ -264,8 +484,7 @@ function updateFavBadge() {
 
 // ========== Filters ==========
 function buildDateFilter() {
-  const dates = [...new Set(allPapers.map(p => (p.published || '').slice(0, 10)))]
-    .filter(Boolean).sort().reverse();
+  const dates = manifest?.stats?.dates || [];
   const select = document.getElementById('dateFilter');
   select.innerHTML = '<option value="">全部日期</option>';
   dates.forEach(d => {
@@ -277,10 +496,7 @@ function buildDateFilter() {
 }
 
 function buildTopicFilter() {
-  const tags = new Set();
-  allPapers.forEach(p => {
-    (p.tags || '').split(',').map(t => t.trim()).filter(Boolean).forEach(t => tags.add(t));
-  });
+  const tags = Object.keys(manifest?.stats?.tagCounts || {});
   const select = document.getElementById('topicFilter');
   select.innerHTML = '<option value="">全部方向</option>';
   [...tags].sort().forEach(t => {
@@ -305,14 +521,16 @@ function buildSortFilter() {
   });
 }
 
-function handleSearch() {
+async function handleSearch() {
   currentPage = 1;
+  if (document.getElementById('searchInput').value.trim()) await enableSearchMode();
   applyFilters();
 }
 
-function handleFilter() {
+async function handleFilter() {
   selectedDate = document.getElementById('dateFilter').value;
   currentPage = 1;
+  if (selectedDate || document.getElementById('topicFilter').value) await enableSearchMode();
   applyFilters();
 }
 
@@ -341,10 +559,42 @@ function clearFilters() {
   selectedDate = '';
   selectedSidebarTag = '';
   currentPage = 1;
-  applyFilters();
+  if (browseMode) loadBrowsePage(1);
+  else applyFilters();
   buildSidebar();
   updateSortButtons();
   document.getElementById('searchInput').focus();
+}
+
+async function loadBrowsePage(pageNumber) {
+  if (!manifest) return;
+  try {
+    let page = pageCache.get(pageNumber);
+    if (!page) {
+      const resp = await fetch(`paper-data/pages/${pageNumber}.json`);
+      if (!resp.ok) throw new Error(`page request failed: ${resp.status}`);
+      page = await resp.json();
+      pageCache.set(pageNumber, page);
+    }
+    browseMode = true;
+    currentPage = pageNumber;
+    allPapers = page.papers || [];
+    filteredPapers = allPapers;
+    renderPapers();
+    updateFavBadge();
+  } catch (err) {
+    console.error('Load paper page error:', err);
+    showEmpty('论文列表加载失败，请稍后重试');
+  }
+}
+
+async function enableSearchMode() {
+  if (!browseMode) return;
+  const resp = await fetch('paper-data/search-index.json');
+  if (!resp.ok) throw new Error(`search index request failed: ${resp.status}`);
+  const data = await resp.json();
+  allPapers = data.papers || [];
+  browseMode = false;
 }
 
 function applyFilters() {
@@ -357,14 +607,14 @@ function applyFilters() {
     filteredPapers = getFavoritesByTag(selectedFavTag);
     if (query) {
       filteredPapers = filteredPapers.filter(p => {
-        const haystack = [p.title, p.authors, p.tags || '', p.summary || ''].join(' ').toLowerCase();
+        const haystack = [p.title, p.authors, p.tags || '', p.intro || ''].join(' ').toLowerCase();
         return haystack.includes(query);
       });
     }
   } else {
     filteredPapers = allPapers.filter(p => {
       if (query) {
-        const haystack = [p.title, p.authors, p.tags || '', p.summary || ''].join(' ').toLowerCase();
+        const haystack = [p.title, p.authors, p.tags || '', p.intro || ''].join(' ').toLowerCase();
         if (!haystack.includes(query)) return false;
       }
       if (topic) {
@@ -394,11 +644,16 @@ function renderPapers() {
   const list = document.getElementById('paperList');
   const empty = document.getElementById('emptyState');
   const count = document.getElementById('resultsCount');
-  const totalPages = Math.ceil(filteredPapers.length / PAGE_SIZE) || 1;
+  const totalPages = browseMode && currentTab === 'all'
+    ? (manifest?.page_count || 1)
+    : (Math.ceil(filteredPapers.length / PAGE_SIZE) || 1);
   if (currentPage > totalPages) currentPage = totalPages;
 
   const tabLabel = currentTab === 'favorites' ? '（收藏）' : '';
-  count.textContent = `${filteredPapers.length} 篇论文${tabLabel}`;
+  const countTotal = browseMode && currentTab === 'all'
+    ? (manifest?.stats?.total || 0)
+    : filteredPapers.length;
+  count.textContent = `${countTotal} 篇论文${tabLabel}`;
   empty.style.display = filteredPapers.length === 0 ? 'block' : 'none';
 
   if (filteredPapers.length === 0) {
@@ -414,11 +669,13 @@ function renderPapers() {
     return;
   }
 
-  const pagePapers = filteredPapers.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const pagePapers = browseMode && currentTab === 'all'
+    ? filteredPapers
+    : filteredPapers.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
 
   list.innerHTML = pagePapers.map(paper => {
     const tags = (paper.tags || '').split(',').map(t => t.trim()).filter(Boolean);
-    const intro = extractIntro(paper.summary);
+    const intro = paper.intro || '暂无总结';
     const date = formatDate(paper.published);
     const faved = isFavorited(paper.paper_id);
     const favPaperTags = getPaperTags(paper.paper_id);
@@ -481,10 +738,6 @@ function renderPapers() {
 
   renderPagination(totalPages);
 
-  // 渲染 LaTeX 公式
-  if (window.MathJax && window.MathJax.typesetPromise) {
-    MathJax.typesetPromise([list]).catch(console.warn);
-  }
 }
 
 function renderPagination(totalPages) {
@@ -498,14 +751,24 @@ function renderPagination(totalPages) {
 
 function prevPage() {
   if (currentPage <= 1) return;
+  if (browseMode && currentTab === 'all') {
+    loadBrowsePage(currentPage - 1).then(scrollToTop);
+    return;
+  }
   currentPage--;
   renderPapers();
   scrollToTop();
 }
 
 function nextPage() {
-  const totalPages = Math.ceil(filteredPapers.length / PAGE_SIZE) || 1;
+  const totalPages = browseMode && currentTab === 'all'
+    ? (manifest?.page_count || 1)
+    : (Math.ceil(filteredPapers.length / PAGE_SIZE) || 1);
   if (currentPage >= totalPages) return;
+  if (browseMode && currentTab === 'all') {
+    loadBrowsePage(currentPage + 1).then(scrollToTop);
+    return;
+  }
   currentPage++;
   renderPapers();
   scrollToTop();
@@ -520,6 +783,12 @@ let currentFavPaperId = '';
 let pendingSelectedTags = [];
 
 function openFavoriteModal(paperId) {
+  if (!currentUser) {
+    pendingFavoriteAfterLogin = paperId;
+    openAuthModal('login');
+    showToast('收藏前请先登录', 'error');
+    return;
+  }
   currentFavPaperId = paperId;
   const paper = allPapers.find(p => p.paper_id === paperId);
   if (!paper) return;
@@ -590,16 +859,30 @@ function addNewTag() {
   input.focus();
 }
 
-function confirmFavorite() {
-  if (pendingSelectedTags.length === 0) removeFromFavorites(currentFavPaperId);
-  else addToFavorites(currentFavPaperId, pendingSelectedTags);
-  closeFavoriteModal();
-  renderPapers();
-  if (currentTab === 'favorites') renderFavTagFilters();
+async function confirmFavorite() {
+  try {
+    if (pendingSelectedTags.length === 0 && isFavorited(currentFavPaperId)) {
+      await removeFromFavorites(currentFavPaperId);
+      showToast('已取消收藏');
+    } else {
+      await addToFavorites(currentFavPaperId, pendingSelectedTags);
+      showToast('已保存到你的收藏');
+    }
+    closeFavoriteModal();
+    renderPapers();
+    updateFavBadge();
+    if (currentTab === 'favorites') renderFavTagFilters();
+  } catch (error) {
+    if (error.code === 'login_required') {
+      closeFavoriteModal();
+      openAuthModal('login');
+    }
+    showToast(error.message, 'error');
+  }
 }
 
 // ========== Paper Detail Modal ==========
-function openModal(paperId) {
+async function openModal(paperId) {
   const paper = allPapers.find(p => p.paper_id === paperId);
   if (!paper) return;
 
@@ -676,15 +959,31 @@ function openModal(paperId) {
       arXiv 页面
     </a>`;
   document.getElementById('modalLinks').innerHTML = linksHtml;
-
-  document.getElementById('modalSummary').innerHTML = renderSummary(paper.summary || '暂无总结');
+  const summaryEl = document.getElementById('modalSummary');
+  summaryEl.innerHTML = '<p>正在加载论文详情…</p>';
   document.getElementById('modalOverlay').classList.add('active');
   document.body.style.overflow = 'hidden';
-  // 通知 MathJax 渲染新内容
-  // Typeset LaTeX in the modal
-  if (window.MathJax && window.MathJax.typesetPromise) {
-    MathJax.typesetPromise([document.getElementById('modalSummary')]).catch(console.warn);
+
+  try {
+    const detail = await loadPaperDetail(paper);
+    // The user may have opened a different paper while this request was in flight.
+    if (!document.getElementById('modalOverlay').classList.contains('active')) return;
+    summaryEl.innerHTML = renderSummary(detail.summary || '暂无总结');
+  } catch (err) {
+    console.error('Load paper detail error:', err);
+    summaryEl.innerHTML = '<p>论文详情加载失败，请稍后重试。</p>';
   }
+}
+
+async function loadPaperDetail(paper) {
+  if (!paper.detail_path) return paper;
+  if (detailCache.has(paper.paper_id)) return detailCache.get(paper.paper_id);
+
+  const resp = await fetch(paper.detail_path);
+  if (!resp.ok) throw new Error(`detail request failed: ${resp.status}`);
+  const detail = await resp.json();
+  detailCache.set(paper.paper_id, detail);
+  return detail;
 }
 
 function closeModal(e) {
@@ -694,25 +993,192 @@ function closeModal(e) {
 }
 
 // ========== Summary Render ==========
+const SUMMARY_METADATA_FIELDS = new Set([
+  '标题',
+  '作者列表',
+  '作者列表（原文）',
+  '所属机构',
+  '发表时间',
+  '开源代码地址',
+  '开源许可证',
+  '开源许可证类型',
+]);
+
+const SUMMARY_BREAK_FIELDS = [
+  ...SUMMARY_METADATA_FIELDS,
+  '该研究要解决什么问题',
+  '目前最好的方法存在哪些不足',
+  '为什么这个问题重要',
+  '数据集（全称）',
+  '数据集规模',
+  'Baseline 方法（全称）',
+  'Baseline方法（全称）',
+  '评估指标',
+];
+
+function escapeSummaryHtml(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function renderSummaryInline(value) {
+  return escapeSummaryHtml(value)
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+?)\*/g, '<em>$1</em>')
+    .replace(
+      /https?:\/\/[^\s<，。；、）》）\]]+/g,
+      url => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`,
+    );
+}
+
+function normalizeSummaryText(text) {
+  let normalized = String(text).replace(/\r\n?/g, '\n').trim();
+  // 兼容旧总结中被模型合并到同一物理行的固定字段。
+  SUMMARY_BREAK_FIELDS.forEach(field => {
+    const escapedField = field.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    normalized = normalized.replace(
+      // 不拆分标准 Markdown 列表中的 "- 字段：内容" 和 "* 字段：内容"。
+      new RegExp(`([^\\n*-])\\s+(?=${escapedField}[：:])`, 'g'),
+      '$1\n',
+    );
+  });
+  return normalized;
+}
+
+function splitSummaryField(value, metadataOnly = false) {
+  const match = value.match(/^(.{1,48}?)[：:]\s*(.+)$/);
+  if (!match) return null;
+  const label = match[1].replace(/\*\*/g, '').trim();
+  if (metadataOnly && !SUMMARY_METADATA_FIELDS.has(label)) return null;
+  if (!metadataOnly && /[。！？；]/.test(label)) return null;
+  return { label, content: match[2].trim() };
+}
+
 function renderSummary(text) {
   if (!text) return '<p>暂无总结</p>';
-  return text
-    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
-    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
-    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em>$1</em>')
-    .replace(/^- (.+)$/gm, '<li>$1</li>')
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/^---$/gm, '<hr>')
-    .split(/\n\n+/)
-    .map(block => {
-      block = block.trim();
-      if (!block) return '';
-      if (block.startsWith('<h') || block.startsWith('<li') || block.startsWith('<hr')) return block;
-      return `<p>${block.replace(/\n/g, '<br>')}</p>`;
-    })
-    .join('\n');
+  const lines = normalizeSummaryText(text).split('\n');
+  const html = ['<div class="summary-document">'];
+  let sectionOpen = false;
+  let sectionKind = '';
+  let listTag = '';
+
+  const closeList = () => {
+    if (!listTag) return;
+    html.push(`</${listTag}>`);
+    listTag = '';
+  };
+  const closeSection = () => {
+    if (!sectionOpen) return;
+    closeList();
+    html.push('</div></section>');
+    sectionOpen = false;
+    sectionKind = '';
+  };
+  const openList = tag => {
+    if (listTag === tag) return;
+    closeList();
+    listTag = tag;
+    html.push(`<${tag} class="summary-list">`);
+  };
+
+  lines.forEach(rawLine => {
+    const line = rawLine.trim().replace(/\s{2,}$/, '');
+    if (!line) {
+      closeList();
+      return;
+    }
+
+    const headingMatch = line.match(/^(#{1,3})\s+(.+)$/);
+    if (headingMatch) {
+      closeList();
+      const level = headingMatch[1].length;
+      const heading = headingMatch[2].trim();
+      const isNumberedSubheading = level === 2 && /^\d+[.、]\s*/.test(heading) && sectionOpen;
+
+      if (level === 2 && !isNumberedSubheading) {
+        closeSection();
+        sectionKind = /论文基本信息/.test(heading)
+          ? 'metadata'
+          : (/一句话总结/.test(heading) ? 'highlight' : '');
+        const kindClass = sectionKind ? ` summary-section--${sectionKind}` : '';
+        html.push(
+          `<section class="summary-section${kindClass}">`,
+          `<h2>${renderSummaryInline(heading)}</h2>`,
+          '<div class="summary-section-body">',
+        );
+        sectionOpen = true;
+        return;
+      }
+
+      if (level === 1) {
+        closeSection();
+        html.push(`<h1>${renderSummaryInline(heading)}</h1>`);
+        return;
+      }
+
+      const insight = heading.match(/^(\d+[.、]\s*)?\*\*(.+?)\*\*[：:]\s*(.+)$/);
+      if (insight) {
+        html.push(
+          '<div class="summary-insight">',
+          `<h3>${renderSummaryInline(`${insight[1] || ''}${insight[2]}`)}</h3>`,
+          `<p>${renderSummaryInline(insight[3])}</p>`,
+          '</div>',
+        );
+      } else {
+        html.push(`<h3>${renderSummaryInline(heading)}</h3>`);
+      }
+      return;
+    }
+
+    if (/^---+$/.test(line)) {
+      closeList();
+      html.push('<hr>');
+      return;
+    }
+
+    const listMatch = line.match(/^[-*]\s+(.+)$/);
+    const orderedMatch = line.match(/^\d+[.)、]\s+(.+)$/);
+    if (listMatch || orderedMatch) {
+      openList(orderedMatch ? 'ol' : 'ul');
+      const content = (listMatch || orderedMatch)[1].trim();
+      const field = splitSummaryField(content);
+      if (field) {
+        html.push(
+          '<li class="summary-list-field">',
+          `<strong class="summary-field-label">${renderSummaryInline(field.label)}：</strong>`,
+          `<span>${renderSummaryInline(field.content)}</span>`,
+          '</li>',
+        );
+      } else {
+        html.push(`<li>${renderSummaryInline(content)}</li>`);
+      }
+      return;
+    }
+
+    closeList();
+    const field = splitSummaryField(line, sectionKind === 'metadata');
+    if (field) {
+      html.push(
+        '<div class="summary-field">',
+        `<strong class="summary-field-label">${renderSummaryInline(field.label)}</strong>`,
+        `<div class="summary-field-value">${renderSummaryInline(field.content)}</div>`,
+        '</div>',
+      );
+      return;
+    }
+
+    html.push(`<p>${renderSummaryInline(line)}</p>`);
+  });
+
+  closeSection();
+  closeList();
+  html.push('</div>');
+  return html.join('\n');
 }
 
 function showEmpty(msg) {
@@ -789,4 +1255,3 @@ function escapeHtmlForLatex(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
 }
-

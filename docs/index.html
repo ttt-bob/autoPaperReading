@@ -4,26 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AutoPaperReading - CV 论文智能阅读</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260815003104">
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)']],
-        displayMath: [['\\[', '\\]']],
-      },
-      startup: {
-        ready: () => {
-          MathJax.startup.defaultReady();
-          MathJax.startup.promise.then(() => {
-            window.__mathJaxReady = true;
-          });
-        }
-      }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <link rel="stylesheet" href="style.css?v=20260819115400">
 </head>
 <body>
 
@@ -57,12 +38,18 @@
           </svg>
         </a>
         <span class="header-badge">CS.CV · arXiv</span>
+        <button id="loginButton" class="header-login" type="button" onclick="openAuthModal('login')">登录</button>
+        <div id="accountMenu" class="account-menu" hidden>
+          <span id="accountEmail" class="account-email"></span>
+          <button class="account-logout" type="button" onclick="logout()">退出</button>
+        </div>
       </div>
     </div>
   </header>
 
   <!-- Hero Banner -->
   <section class="hero-banner">
+    <canvas class="hero-snow" id="heroSnow" aria-hidden="true"></canvas>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-content">
@@ -249,6 +236,24 @@
     </div>
   </div>
 
+  <!-- Account Modal -->
+  <div class="modal-overlay" id="authModalOverlay" onclick="closeAuthModal(event)">
+    <div class="modal auth-modal" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <h3 class="modal-subtitle">个人账户</h3>
+          <h2 class="modal-title" id="authModalTitle">登录</h2>
+        </div>
+        <button class="modal-close-btn" type="button" onclick="closeAuthModal()" aria-label="关闭登录窗口">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body" id="authModalBody"></div>
+    </div>
+  </div>
+
   <!-- Paper Detail Modal -->
   <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
     <div class="modal modal-wide" onclick="event.stopPropagation()">
@@ -281,6 +286,9 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260806174500"></script>
+  <div id="appToast" class="app-toast" role="status" aria-live="polite"></div>
+
+  <script src="ambient.js?v=20260819115400"></script>
+  <script src="app.js?v=20260819115400"></script>
 </body>
 </html>
