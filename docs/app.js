@@ -464,6 +464,11 @@ async function loadPapers() {
   buildSortFilter();
   buildTopicFilter();
   buildSidebar();
+  const initialQuery = new URLSearchParams(window.location.search).get('q');
+  if (initialQuery) {
+    document.getElementById('searchInput').value = initialQuery;
+    await enableSearchMode();
+  }
   applyFilters();
   console.log('loadPapers completed');
 }

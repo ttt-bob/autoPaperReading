@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f8f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
 <title>Video Search Papers Landscape</title>
 <style>
 :root { --bg:#f6f8f7; --ink:#17212b; --muted:#53636c; --line:#dfe8e4; --teal:#0f8378; --teal2:#086a61; --mint:#e7f3ef; --blue:#2a6f97; --amber:#b57925; --red:#9a4d4d; --white:#fff; }
@@ -128,6 +130,22 @@ summary span { color:var(--muted); font-weight:600; font-size:13px; }
 .modal-summary code { background:#eef3f1; border:1px solid var(--line); border-radius:4px; padding:1px 5px; font-size:.92em; }
 @media (max-width:900px) { .controls { grid-template-columns:1fr auto; } .view-tabs { grid-column:1 / -1; } }
 @media (max-width:720px) { header, main { padding-left:18px; padding-right:18px; } .header-top { flex-direction:column; } .header-actions { justify-content:flex-start; } .controls { grid-template-columns:1fr; position:static; } .bar-row { grid-template-columns:1fr; } }
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme:dark; --bg:#09110f; --ink:#edf7f3; --muted:#a9bdb5; --line:rgba(213,232,224,.16); --teal:#0b6e4f; --teal2:#5edba7; --mint:#143226; --blue:#75acd1; --amber:#e7b766; --red:#e58b8b; --white:#11201b; }
+  .survey-panel, .panel, .system-flow, .step, .note-card, details, .card, .group-card, .modal, button, .chip, .modal-link { background:var(--white); }
+  .survey-col, .source-link, .flow-feedback, summary, .modal-header { background:#0d1815; }
+  .survey-col.capabilities, .flow-node.main { background:#10201e; }
+  .survey-box, .survey-cap, .flow-node { background:#11201b; }
+  .survey-agent { background:radial-gradient(circle,#11201b 0 45%,#3b321b 46% 58%,#11201b 59%); color:#f3c76a; }
+  .survey-platforms { border-color:#3b5132; background:#1a2d19; color:#b9d893; }
+  .bar { background:#20342d; }
+  .controls { background:rgba(9,17,15,.94); }
+  input[type="search"] { border-color:var(--line); background:#11201b; color:var(--ink); }
+  .tag.stage { background:#172836; color:#9bc8e6; }
+  .modal-close:hover, .modal-link:hover { background:#173027; }
+  .modal-link.local-pdf { border-color:#276749; background:#102d21; }
+  .modal-summary code { background:#192a24; }
+}
 </style>
 </head>
 <body>
@@ -135,7 +153,7 @@ summary span { color:var(--muted); font-weight:600; font-size:13px; }
   <div class="header-top">
     <h1>Video Search Papers Landscape</h1>
     <nav class="header-actions" aria-label="page links">
-      <a class="header-action" href="index.html">
+      <a class="header-action" href="papers.html">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>
         </svg>
