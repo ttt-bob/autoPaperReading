@@ -21,8 +21,8 @@ function updateCanvasEffect() {
   canvasNest = new window.CanvasNest(effect, {
     color,
     pointColor: color,
-    opacity: darkMode.matches ? 0.18 : 0.16,
-    count: window.innerWidth < 600 ? 38 : 68,
+    opacity: darkMode.matches ? 0.24 : 0.22,
+    count: window.innerWidth < 600 ? 42 : 72,
     zIndex: 0,
   });
 }
