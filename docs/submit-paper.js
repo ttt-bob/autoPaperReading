@@ -150,31 +150,14 @@ async function loadSubmissions() {
     renderSubmissions(data.submissions || []);
   } catch (error) {
     window.clearTimeout(pollTimer);
-    if (error.code === 'login_required') {
-      showAccessMessage('请先登录', '请先在论文库登录管理员账户，然后返回本页面。', '前往论文库登录', 'papers.html');
-    } else if (error.code === 'admin_not_configured') {
-      showAccessMessage('提交功能尚未启用', '服务器尚未配置管理员邮箱。');
-    } else if (error.code === 'forbidden') {
-      showAccessMessage('没有提交权限', '当前登录账户不在管理员白名单中。', '返回论文库', 'papers.html');
-    } else {
-      showAccessMessage('暂时无法读取任务', error.message);
-    }
+    showAccessMessage('暂时无法读取任务', error.message);
   }
 }
 
 async function initializePage() {
+  accessElement.hidden = true;
+  workspaceElement.hidden = false;
   try {
-    const auth = await apiFetch('api/auth/me');
-    if (!auth.user) {
-      showAccessMessage('请先登录', '请先在论文库登录管理员账户，然后返回本页面。', '前往论文库登录', 'papers.html');
-      return;
-    }
-    if (!auth.permissions?.submitPapers) {
-      showAccessMessage('没有提交权限', '当前登录账户不在管理员白名单中。', '返回论文库', 'papers.html');
-      return;
-    }
-    accessElement.hidden = true;
-    workspaceElement.hidden = false;
     await loadSubmissions();
   } catch (error) {
     showAccessMessage('服务暂时不可用', error.message);
