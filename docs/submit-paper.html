@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
   <title>添加论文 · AutoPaperReading</title>
   <link rel="stylesheet" href="style.css?v=20260901">
-  <link rel="stylesheet" href="submit-paper.css?v=20260901">
+  <link rel="stylesheet" href="submit-paper.css?v=20260901-2">
 </head>
 <body class="submission-page">
   <header class="site-header">
@@ -28,7 +28,7 @@
     <section class="submission-intro">
       <p class="submission-kicker">PAPER INGESTION</p>
       <h1>添加一篇论文</h1>
-      <p>提交后，服务器会依次下载 PDF、解析正文、生成中文总结并立即同步到论文库。</p>
+      <p>粘贴论文网址即可，服务器会自动识别标题和分类，并依次下载、总结和立即发布。</p>
     </section>
 
     <section class="submission-access" id="accessState" aria-live="polite">
@@ -47,26 +47,13 @@
         </div>
         <form id="submissionForm" class="submission-form">
           <label>
-            <span>论文原名</span>
-            <input id="paperTitleInput" name="title" type="text" maxlength="300" required
-                   placeholder="例如：Attention Is All You Need" autocomplete="off">
-          </label>
-          <label>
             <span>论文网址</span>
             <input id="paperUrlInput" name="url" type="text" maxlength="2000" required
                    placeholder="https://arxiv.org/abs/1706.03762" autocomplete="url">
           </label>
-          <label>
-            <span>归档分类</span>
-            <select id="paperCategoryInput" name="category">
-              <option value="">自动判断</option>
-              <option value="gui">GUI</option>
-              <option value="video-search">Video Search</option>
-            </select>
-          </label>
           <div class="submission-note">
-            <strong>提交后无需停留在本页。</strong>
-            任务会在服务器后台继续运行，再次打开本页也能查看最近状态。
+            <strong>标题、作者和分类都会自动识别。</strong>
+            提交后无需停留在本页，任务会在服务器后台继续运行。
           </div>
           <button class="submission-submit" id="submitButton" type="submit">
             开始下载并总结
@@ -94,6 +81,6 @@
     </div>
   </footer>
 
-  <script src="submit-paper.js?v=20260901"></script>
+  <script src="submit-paper.js?v=20260901-2"></script>
 </body>
 </html>

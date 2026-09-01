@@ -112,8 +112,7 @@
   font-weight: 700;
 }
 
-.submission-form input,
-.submission-form select {
+.submission-form input {
   width: 100%;
   min-height: 43px;
   border: 1px solid var(--border-strong);
@@ -125,8 +124,7 @@
   font-size: .88rem;
 }
 
-.submission-form input:focus,
-.submission-form select:focus {
+.submission-form input:focus {
   border-color: var(--primary);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 14%, transparent);
 }

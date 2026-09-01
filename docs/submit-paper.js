@@ -170,9 +170,7 @@ formElement.addEventListener('submit', async event => {
     await apiFetch('api/paper-submissions', {
       method: 'POST',
       body: JSON.stringify({
-        title: document.querySelector('#paperTitleInput').value,
         url: document.querySelector('#paperUrlInput').value,
-        category: document.querySelector('#paperCategoryInput').value,
       }),
     });
     formElement.reset();
