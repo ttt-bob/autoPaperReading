@@ -24,6 +24,7 @@ let authApiAvailable = false;
 let currentUser = null;
 let authConfig = { emailVerification: false, passwordReset: false };
 let pendingFavoriteAfterLogin = '';
+let canSubmitPapers = false;
 
 // ========== Init ==========
 document.addEventListener('DOMContentLoaded', async () => {
@@ -76,11 +77,13 @@ async function initializeAuth() {
     authApiAvailable = true;
     const data = await apiFetch('api/auth/me');
     currentUser = data.user;
+    canSubmitPapers = Boolean(data.permissions?.submitPapers);
     await loadFavorites();
   } catch (error) {
     console.info('Account API is unavailable for this static deployment.', error);
     authApiAvailable = false;
     currentUser = null;
+    canSubmitPapers = false;
     favoriteTags = {};
   }
   updateAccountUi();
@@ -148,10 +151,12 @@ function updateAccountUi() {
   const loginButton = document.getElementById('loginButton');
   const accountMenu = document.getElementById('accountMenu');
   const accountEmail = document.getElementById('accountEmail');
+  const submitPaperLink = document.getElementById('submitPaperLink');
   if (!loginButton || !accountMenu || !accountEmail) return;
   loginButton.hidden = Boolean(currentUser);
   accountMenu.hidden = !currentUser;
   accountEmail.textContent = currentUser?.email || '';
+  if (submitPaperLink) submitPaperLink.hidden = !canSubmitPapers;
 }
 
 function openAuthModal(mode = 'login') {
@@ -297,6 +302,12 @@ async function submitResetConfirm(event) {
 
 async function finishLogin(user) {
   currentUser = user;
+  try {
+    const auth = await apiFetch('api/auth/me');
+    canSubmitPapers = Boolean(auth.permissions?.submitPapers);
+  } catch {
+    canSubmitPapers = false;
+  }
   await loadFavorites();
   updateAccountUi();
   closeAuthModal();
@@ -312,6 +323,7 @@ async function finishLogin(user) {
 async function logout() {
   try { await apiFetch('api/auth/logout', { method: 'POST', body: JSON.stringify({}) }); } catch (error) { console.error(error); }
   currentUser = null;
+  canSubmitPapers = false;
   favoriteTags = {};
   updateUsedTags();
   updateAccountUi();

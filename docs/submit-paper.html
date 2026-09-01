@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="向 AutoPaperReading 提交论文并实时生成中文总结">
+  <meta name="theme-color" content="#f6f8f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
+  <title>添加论文 · AutoPaperReading</title>
+  <link rel="stylesheet" href="style.css?v=20260901">
+  <link rel="stylesheet" href="submit-paper.css?v=20260901">
+</head>
+<body class="submission-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">📚</span>
+        <span class="logo-text">AutoPaperReading</span>
+      </a>
+      <nav class="submission-nav" aria-label="页面导航">
+        <a href="index.html" class="header-map-link">搜索首页</a>
+        <a href="papers.html" class="header-map-link">论文库</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="submission-main">
+    <section class="submission-intro">
+      <p class="submission-kicker">PAPER INGESTION</p>
+      <h1>添加一篇论文</h1>
+      <p>提交后，服务器会依次下载 PDF、解析正文、生成中文总结并立即同步到论文库。</p>
+    </section>
+
+    <section class="submission-access" id="accessState" aria-live="polite">
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <p>正在检查提交权限…</p>
+    </section>
+
+    <div class="submission-workspace" id="submissionWorkspace" hidden>
+      <section class="submission-card">
+        <div class="submission-card-heading">
+          <span>01</span>
+          <div>
+            <h2>论文信息</h2>
+            <p>推荐使用 arXiv 摘要页或 PDF 链接。</p>
+          </div>
+        </div>
+        <form id="submissionForm" class="submission-form">
+          <label>
+            <span>论文原名</span>
+            <input id="paperTitleInput" name="title" type="text" maxlength="300" required
+                   placeholder="例如：Attention Is All You Need" autocomplete="off">
+          </label>
+          <label>
+            <span>论文网址</span>
+            <input id="paperUrlInput" name="url" type="text" maxlength="2000" required
+                   placeholder="https://arxiv.org/abs/1706.03762" autocomplete="url">
+          </label>
+          <label>
+            <span>归档分类</span>
+            <select id="paperCategoryInput" name="category">
+              <option value="">自动判断</option>
+              <option value="gui">GUI</option>
+              <option value="video-search">Video Search</option>
+            </select>
+          </label>
+          <div class="submission-note">
+            <strong>提交后无需停留在本页。</strong>
+            任务会在服务器后台继续运行，再次打开本页也能查看最近状态。
+          </div>
+          <button class="submission-submit" id="submitButton" type="submit">
+            开始下载并总结
+          </button>
+        </form>
+      </section>
+
+      <section class="submission-card submission-history">
+        <div class="submission-card-heading">
+          <span>02</span>
+          <div>
+            <h2>处理进度</h2>
+            <p>任务完成后会直接出现论文详情链接。</p>
+          </div>
+        </div>
+        <div class="submission-empty" id="submissionEmpty">还没有提交记录</div>
+        <div class="submission-list" id="submissionList" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>下载、总结和发布凭据仅保存在服务器端</p>
+    </div>
+  </footer>
+
+  <script src="submit-paper.js?v=20260901"></script>
+</body>
+</html>
