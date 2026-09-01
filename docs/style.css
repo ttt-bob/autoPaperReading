@@ -1335,6 +1335,34 @@ input, select { font-family: inherit; outline: none; }
 
 .auth-form { display: grid; gap: 13px; }
 
+.auth-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--text);
+  color: var(--bg);
+  font-size: .86rem;
+  font-weight: 700;
+}
+
+.auth-github:hover { opacity: .9; text-decoration: none; }
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 0;
+  color: var(--text-muted);
+  font-size: .75rem;
+}
+
+.auth-divider::before,
+.auth-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
 .auth-field {
   display: grid;
   gap: 6px;

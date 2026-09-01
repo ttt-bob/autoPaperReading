@@ -22,7 +22,7 @@ const pageCache = new Map();
 let browseMode = true;
 let authApiAvailable = false;
 let currentUser = null;
-let authConfig = { emailVerification: false, passwordReset: false };
+let authConfig = { emailVerification: false, passwordReset: false, githubLogin: false };
 let pendingFavoriteAfterLogin = '';
 
 // ========== Init ==========
@@ -84,6 +84,22 @@ async function initializeAuth() {
     favoriteTags = {};
   }
   updateAccountUi();
+  handleGithubLoginResult();
+}
+
+function handleGithubLoginResult() {
+  const url = new URL(window.location.href);
+  const result = url.searchParams.get('github_login');
+  if (!result) return;
+  const messages = {
+    success: 'GitHub 登录成功',
+    cancelled: '已取消 GitHub 登录',
+    state_error: 'GitHub 登录校验失败，请重试',
+    failed: 'GitHub 登录失败，请重试',
+  };
+  showToast(messages[result] || 'GitHub 登录未完成', result === 'success' ? 'success' : 'error');
+  url.searchParams.delete('github_login');
+  window.history.replaceState({}, '', `${url.pathname}${url.search}${url.hash}`);
 }
 
 async function loadFavorites() {
@@ -182,6 +198,14 @@ function renderAuthForm(mode, email = '') {
     <label class="auth-field">${label}
       <input id="${id}" type="password" autocomplete="${autocomplete}" required minlength="8" placeholder="至少 8 个字符">
     </label>`;
+  const githubLogin = authConfig.githubLogin ? `
+    <a class="auth-github" href="api/auth/github/start">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.38.97.1-.75.4-1.27.74-1.56-2.57-.3-5.27-1.29-5.27-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.16 1.18a10.96 10.96 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.77.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.28 5.68.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"/>
+      </svg>
+      使用 GitHub 登录
+    </a>
+    <div class="auth-divider"><span>或使用邮箱</span></div>` : '';
 
   if (mode === 'register') {
     title.textContent = '创建账户';
@@ -210,7 +234,7 @@ function renderAuthForm(mode, email = '') {
       <button class="btn-primary auth-submit" type="submit">更新密码</button></form>`;
   } else {
     title.textContent = '登录';
-    body.innerHTML = `<p class="auth-note">登录后即可保存私有收藏和自定义标签。</p><form class="auth-form" onsubmit="submitLogin(event)">${emailField}${passwordField()}
+    body.innerHTML = `<p class="auth-note">登录后即可保存私有收藏和自定义标签。</p>${githubLogin}<form class="auth-form" onsubmit="submitLogin(event)">${emailField}${passwordField()}
       <button class="btn-primary auth-submit" type="submit">登录</button></form>
       <p class="auth-switch"><button type="button" onclick="renderAuthForm('register')">创建账户</button><span>·</span><button type="button" onclick="renderAuthForm('reset-request')">忘记密码</button></p>`;
   }
