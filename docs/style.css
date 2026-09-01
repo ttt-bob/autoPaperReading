@@ -733,6 +733,29 @@ input, select { font-family: inherit; outline: none; }
   color: var(--text-secondary);
 }
 
+.search-submission-prompt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid var(--primary-light);
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  padding: 13px 16px;
+  background: var(--primary-lighter);
+  color: var(--text-secondary);
+  font-size: .84rem;
+}
+
+.search-submission-prompt[hidden] { display: none; }
+
+.search-submission-prompt a {
+  flex: 0 0 auto;
+  color: var(--primary);
+  font-weight: 650;
+}
+
 /* ---------- Paper List ---------- */
 .paper-list { display: flex; flex-direction: column; gap: 12px; }
 

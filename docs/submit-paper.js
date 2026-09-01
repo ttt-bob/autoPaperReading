@@ -4,6 +4,8 @@ const formElement = document.querySelector('#submissionForm');
 const submitButton = document.querySelector('#submitButton');
 const listElement = document.querySelector('#submissionList');
 const emptyElement = document.querySelector('#submissionEmpty');
+const paperUrlInput = document.querySelector('#paperUrlInput');
+const prefillNotice = document.querySelector('#prefillNotice');
 
 const stageProgress = {
   queued: 4,
@@ -26,6 +28,21 @@ const statusText = {
 };
 
 let pollTimer;
+
+function initializePrefill() {
+  const value = new URLSearchParams(window.location.search).get('url')?.trim() || '';
+  if (!value || value.length > 2000) return;
+  const isArxivId = /^\d{4}\.\d{4,5}(?:v\d+)?$/i.test(value);
+  let isHttpUrl = false;
+  try {
+    isHttpUrl = ['http:', 'https:'].includes(new URL(value).protocol);
+  } catch {
+    isHttpUrl = false;
+  }
+  if (!isArxivId && !isHttpUrl) return;
+  paperUrlInput.value = value;
+  prefillNotice.hidden = false;
+}
 
 async function apiFetch(path, options = {}) {
   const response = await fetch(path, {
@@ -172,7 +189,7 @@ formElement.addEventListener('submit', async event => {
     await apiFetch('api/paper-submissions', {
       method: 'POST',
       body: JSON.stringify({
-        url: document.querySelector('#paperUrlInput').value,
+        url: paperUrlInput.value,
       }),
     });
     formElement.reset();
@@ -188,7 +205,7 @@ formElement.addEventListener('submit', async event => {
     }
   } finally {
     submitButton.disabled = false;
-    submitButton.textContent = '开始下载并总结';
+    submitButton.textContent = '确认并开始下载总结';
   }
 });
 
@@ -196,4 +213,5 @@ document.addEventListener('visibilitychange', () => {
   if (!document.hidden && !workspaceElement.hidden) loadSubmissions();
 });
 
+initializePrefill();
 initializePage();

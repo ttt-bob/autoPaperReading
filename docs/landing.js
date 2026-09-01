@@ -2,6 +2,7 @@ const form = document.querySelector('#paperSearchForm');
 const input = document.querySelector('#paperSearchInput');
 const resultsElement = document.querySelector('#searchResults');
 const statusElement = document.querySelector('#searchStatus');
+const addPromptElement = document.querySelector('#searchAddPrompt');
 
 let papers = [];
 let searchTimer;
@@ -60,6 +61,32 @@ function findExactPaper(rawQuery) {
   return papers.find(paper => isExactPaperMatch(paper, rawQuery));
 }
 
+function isSubmissionQuery(value) {
+  const query = String(value || '').trim();
+  if (/^\d{4}\.\d{4,5}(?:v\d+)?$/i.test(query)) return true;
+  try {
+    const url = new URL(query);
+    return ['http:', 'https:'].includes(url.protocol) && Boolean(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+function updateAddPrompt(query, exactPaper) {
+  addPromptElement.replaceChildren();
+  if (!isSubmissionQuery(query) || exactPaper) return;
+
+  const link = document.createElement('a');
+  const message = document.createElement('span');
+  const action = document.createElement('strong');
+  link.className = 'search-add-paper';
+  link.href = `submit-paper.html?url=${encodeURIComponent(query)}`;
+  message.textContent = '没有找到完全匹配的论文，可以带入该网址并在下一页确认。';
+  action.textContent = '添加并总结 →';
+  link.append(message, action);
+  addPromptElement.append(link);
+}
+
 function paperScore(paper, rawQuery) {
   const query = normalize(rawQuery);
   if (!query) return 0;
@@ -98,6 +125,7 @@ function paperScore(paper, rawQuery) {
 
 function clearResults() {
   resultsElement.replaceChildren();
+  addPromptElement.replaceChildren();
   statusElement.textContent = '';
 }
 
@@ -154,8 +182,13 @@ function renderResults() {
 
   resultsElement.replaceChildren(...matches.map(item => buildResult(item.paper, query)));
   const exactPaper = findExactPaper(query);
+  updateAddPrompt(query, exactPaper);
   statusElement.textContent = exactPaper
     ? `已匹配已有论文：${exactPaper.title}`
+    : isSubmissionQuery(query)
+      ? matches.length
+        ? '未找到完全匹配的论文；以下是可能相关的结果'
+        : '论文库中暂未收录这个网址'
     : matches.length
       ? rankedMatches.length > matches.length
         ? `找到 ${rankedMatches.length} 条结果，当前展示最相关的 ${matches.length} 条；按 Enter 查看全部`

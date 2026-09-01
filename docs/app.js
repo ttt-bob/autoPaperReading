@@ -633,6 +633,24 @@ function isExactSearchMatch(paper, rawQuery) {
   return [paper.entry_url, paper.code_url].some(value => canonicalSearchUrl(value) === queryUrl);
 }
 
+function isSubmissionSearchQuery(value) {
+  const query = String(value || '').trim();
+  if (/^\d{4}\.\d{4,5}(?:v\d+)?$/i.test(query)) return true;
+  return Boolean(canonicalSearchUrl(query));
+}
+
+function updateSearchSubmissionPrompt() {
+  const prompt = document.getElementById('searchSubmissionPrompt');
+  const link = document.getElementById('searchSubmissionLink');
+  const query = document.getElementById('searchInput').value.trim();
+  const hasExactMatch = query && allPapers.some(paper => isExactSearchMatch(paper, query));
+  const shouldOfferSubmission = isSubmissionSearchQuery(query) && !hasExactMatch;
+  prompt.hidden = !shouldOfferSubmission;
+  if (shouldOfferSubmission) {
+    link.href = `submit-paper.html?url=${encodeURIComponent(query)}`;
+  }
+}
+
 function paperRelevanceScore(paper, rawQuery) {
   const query = normalizeSearchText(rawQuery);
   if (!query) return 0;
@@ -729,6 +747,7 @@ function renderPapers() {
   const list = document.getElementById('paperList');
   const empty = document.getElementById('emptyState');
   const count = document.getElementById('resultsCount');
+  updateSearchSubmissionPrompt();
   const totalPages = browseMode && currentTab === 'all'
     ? (manifest?.page_count || 1)
     : (Math.ceil(filteredPapers.length / PAGE_SIZE) || 1);
