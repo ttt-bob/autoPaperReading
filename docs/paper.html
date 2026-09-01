@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AutoPaperReading 论文总结详情">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
+  <title>论文详情 · AutoPaperReading</title>
+  <link rel="stylesheet" href="style.css?v=20260901">
+  <link rel="stylesheet" href="paper-detail.css?v=20260901">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']],
+      },
+      startup: {
+        ready: () => {
+          MathJax.startup.defaultReady();
+          MathJax.startup.promise.then(() => {
+            window.__mathJaxReady = true;
+            window.dispatchEvent(new Event('mathjax-ready'));
+          });
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+</head>
+<body class="paper-detail-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="返回搜索首页">
+        <span class="logo-icon">📚</span>
+        <span class="logo-text">AutoPaperReading</span>
+      </a>
+      <nav class="paper-detail-nav" aria-label="页面导航">
+        <a href="index.html" class="header-map-link">搜索首页</a>
+        <a href="papers.html" class="header-map-link">论文库</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="paper-detail-main">
+    <nav class="paper-detail-breadcrumb" aria-label="面包屑导航">
+      <a href="index.html">搜索首页</a>
+      <span aria-hidden="true">/</span>
+      <a href="papers.html">论文库</a>
+      <span aria-hidden="true">/</span>
+      <span>论文总结</span>
+    </nav>
+
+    <div class="paper-detail-loading" id="paperLoading" role="status">
+      <span class="loading-spinner" aria-hidden="true"></span>
+      <p>正在加载论文总结…</p>
+    </div>
+
+    <section class="paper-detail-error" id="paperError" hidden>
+      <p class="paper-detail-kicker">PAPER NOT FOUND</p>
+      <h1 id="paperErrorTitle">无法打开这篇论文</h1>
+      <p id="paperErrorMessage">论文链接无效或详情数据暂时不可用。</p>
+      <div class="paper-detail-error-actions">
+        <button type="button" class="paper-detail-button" id="retryButton">重新加载</button>
+        <a href="index.html" class="paper-detail-button paper-detail-button--secondary">返回搜索首页</a>
+      </div>
+    </section>
+
+    <article class="paper-detail-article" id="paperArticle" hidden>
+      <header class="paper-detail-hero">
+        <p class="paper-detail-kicker" id="paperId"></p>
+        <h1 id="paperTitle"></h1>
+        <div class="paper-detail-meta">
+          <span id="paperAuthors"></span>
+          <time id="paperDate"></time>
+        </div>
+        <p class="paper-detail-affiliations" id="paperAffiliations" hidden></p>
+        <div class="paper-detail-tags" id="paperTags"></div>
+        <div class="paper-detail-actions" id="paperActions"></div>
+      </header>
+
+      <section class="paper-detail-abstract" id="paperAbstractSection" hidden>
+        <h2>原文摘要</h2>
+        <p id="paperAbstract"></p>
+      </section>
+
+      <section class="paper-detail-summary-wrap" aria-labelledby="summaryTitle">
+        <div class="paper-detail-section-heading">
+          <p>AI STRUCTURED NOTES</p>
+          <h2 id="summaryTitle">论文总结</h2>
+        </div>
+        <div class="modal-summary paper-detail-summary" id="paperSummary"></div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>AutoPaperReading · 论文总结独立页面</p>
+    </div>
+  </footer>
+
+  <script src="summary-renderer.js?v=20260901"></script>
+  <script src="paper-detail.js?v=20260901"></script>
+</body>
+</html>

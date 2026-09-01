@@ -68,7 +68,9 @@ function buildResult(paper, query) {
   const open = document.createElement('span');
 
   link.className = 'search-result';
-  link.href = `papers.html?q=${encodeURIComponent(paper.title || query)}`;
+  link.href = paper.paper_id
+    ? `paper.html?id=${encodeURIComponent(paper.paper_id)}`
+    : `papers.html?q=${encodeURIComponent(paper.title || query)}`;
   content.className = 'search-result__content';
   meta.className = 'search-result__meta';
   title.textContent = paper.title || '未命名论文';
