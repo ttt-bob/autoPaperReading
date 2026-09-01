@@ -131,7 +131,17 @@ async function loadPaper() {
       }
       throw new Error(`HTTP ${response.status}`);
     }
-    renderPaper(await response.json());
+    const detail = await response.json();
+    let paper = detail;
+    if (!detail.title) {
+      const indexResponse = await fetch('paper-data/search-index.json');
+      if (!indexResponse.ok) throw new Error(`index request failed: ${indexResponse.status}`);
+      const indexData = await indexResponse.json();
+      const indexPapers = Array.isArray(indexData) ? indexData : (indexData.papers || []);
+      const metadata = indexPapers.find(item => item.paper_id === paperId);
+      if (metadata) paper = { ...metadata, ...detail };
+    }
+    renderPaper(paper);
   } catch (error) {
     console.error('Load paper detail failed:', error);
     showError('论文详情加载失败', '网络暂时不可用，请稍后重新加载。', true);
