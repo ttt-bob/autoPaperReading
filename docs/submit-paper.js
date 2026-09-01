@@ -37,6 +37,8 @@ async function apiFetch(path, options = {}) {
   if (!response.ok) {
     const error = new Error(payload.error || '请求失败');
     error.code = payload.code;
+    error.paperId = payload.paperId;
+    error.paperTitle = payload.paperTitle;
     throw error;
   }
   return payload;
@@ -176,7 +178,14 @@ formElement.addEventListener('submit', async event => {
     formElement.reset();
     await loadSubmissions();
   } catch (error) {
-    window.alert(error.message);
+    if (error.code === 'duplicate_paper' && error.paperId) {
+      const openExisting = window.confirm(`${error.message}\n\n点击“确定”查看已有总结。`);
+      if (openExisting) {
+        window.location.href = `paper.html?id=${encodeURIComponent(error.paperId)}`;
+      }
+    } else {
+      window.alert(error.message);
+    }
   } finally {
     submitButton.disabled = false;
     submitButton.textContent = '开始下载并总结';

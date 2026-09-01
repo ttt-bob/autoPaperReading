@@ -31,6 +31,35 @@ function normalize(value) {
   return String(value || '').toLocaleLowerCase().replace(/[\s，,。；;：:、/_-]+/g, '');
 }
 
+function extractArxivId(value) {
+  const match = String(value || '').match(/(?:arxiv\.org\/(?:abs|pdf|html)\/)?(\d{4}\.\d{4,5})(?:v\d+)?/i);
+  return match ? match[1].toLocaleLowerCase() : '';
+}
+
+function canonicalUrl(value) {
+  try {
+    const url = new URL(String(value || '').trim());
+    if (!['http:', 'https:'].includes(url.protocol)) return '';
+    const path = url.pathname.replace(/\/$/, '');
+    return `${url.hostname.toLocaleLowerCase()}${path}${url.search}`;
+  } catch {
+    return '';
+  }
+}
+
+function isExactPaperMatch(paper, rawQuery) {
+  const arxivId = extractArxivId(rawQuery);
+  const paperId = String(paper.paper_id || '').toLocaleLowerCase();
+  if (arxivId && (paperId === arxivId || paperId.startsWith(`${arxivId}v`))) return true;
+  const queryUrl = canonicalUrl(rawQuery);
+  if (!queryUrl) return false;
+  return [paper.entry_url, paper.code_url].some(value => canonicalUrl(value) === queryUrl);
+}
+
+function findExactPaper(rawQuery) {
+  return papers.find(paper => isExactPaperMatch(paper, rawQuery));
+}
+
 function paperScore(paper, rawQuery) {
   const query = normalize(rawQuery);
   if (!query) return 0;
@@ -38,14 +67,27 @@ function paperScore(paper, rawQuery) {
   const authors = normalize(paper.authors);
   const tags = normalize(paper.tags);
   const details = normalize(`${paper.intro || ''} ${paper.abstract || ''} ${paper.summary || ''}`);
-  const tokens = rawQuery.split(/[\s，,。；;：:、/_-]+/).filter(Boolean).map(normalize);
+  const identifiers = normalize(`${paper.paper_id || ''} ${paper.entry_url || ''} ${paper.code_url || ''}`);
+  const ignoredTokens = new Set([
+    'a', 'an', 'and', 'are', 'for', 'in', 'is', 'of', 'on', 'the', 'to', 'with',
+    'http', 'https', 'www', 'org', 'com', 'arxiv', 'abs', 'pdf', 'html',
+  ]);
+  const arxivId = extractArxivId(rawQuery);
+  const tokens = arxivId
+    ? [normalize(arxivId)]
+    : rawQuery
+      .split(/[\s，,。；;：:、/_.?&=#-]+/)
+      .map(normalize)
+      .filter(token => token.length > 1 && !ignoredTokens.has(token));
   let score = 0;
 
+  if (isExactPaperMatch(paper, rawQuery)) score += 2500;
   if (title === query) score += 1000;
   if (title.includes(query)) score += 500;
   if (tags.includes(query)) score += 320;
   if (authors.includes(query)) score += 240;
   if (details.includes(query)) score += 100;
+  if (identifiers.includes(query)) score += 420;
   tokens.forEach(token => {
     if (title.includes(token)) score += 80;
     if (tags.includes(token)) score += 45;
@@ -103,22 +145,32 @@ function renderResults() {
     return;
   }
 
-  const matches = papers
+  const rankedMatches = papers
     .map(paper => ({ paper, score: paperScore(paper, query) }))
     .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 8);
+    .sort((a, b) => b.score - a.score
+      || (b.paper.published || '').localeCompare(a.paper.published || ''));
+  const matches = rankedMatches.slice(0, 8);
 
   resultsElement.replaceChildren(...matches.map(item => buildResult(item.paper, query)));
-  statusElement.textContent = matches.length
-    ? `找到 ${matches.length} 个优先结果，按 Enter 查看全部匹配`
-    : '没有找到相关论文，可以换一个关键词试试';
+  const exactPaper = findExactPaper(query);
+  statusElement.textContent = exactPaper
+    ? `已匹配已有论文：${exactPaper.title}`
+    : matches.length
+      ? rankedMatches.length > matches.length
+        ? `找到 ${rankedMatches.length} 条结果，当前展示最相关的 ${matches.length} 条；按 Enter 查看全部`
+        : `找到 ${rankedMatches.length} 条结果，已按相关度排序`
+      : '没有找到相关论文，可以换一个关键词试试';
 }
 
 form.addEventListener('submit', event => {
   event.preventDefault();
   const query = input.value.trim();
-  if (query) window.location.href = `papers.html?q=${encodeURIComponent(query)}`;
+  if (!query) return;
+  const exactPaper = findExactPaper(query);
+  window.location.href = exactPaper
+    ? `paper.html?id=${encodeURIComponent(exactPaper.paper_id)}`
+    : `papers.html?q=${encodeURIComponent(query)}`;
 });
 
 input.addEventListener('input', () => {

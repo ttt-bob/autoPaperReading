@@ -602,25 +602,102 @@ async function enableSearchMode() {
   browseMode = false;
 }
 
+function normalizeSearchText(value) {
+  return String(value || '').toLocaleLowerCase().replace(/[\s，,。；;：:、/_-]+/g, '');
+}
+
+function extractSearchArxivId(value) {
+  const match = String(value || '').match(
+    /(?:arxiv\.org\/(?:abs|pdf|html)\/)?(\d{4}\.\d{4,5})(?:v\d+)?/i,
+  );
+  return match ? match[1].toLocaleLowerCase() : '';
+}
+
+function canonicalSearchUrl(value) {
+  try {
+    const url = new URL(String(value || '').trim());
+    if (!['http:', 'https:'].includes(url.protocol)) return '';
+    const path = url.pathname.replace(/\/$/, '');
+    return `${url.hostname.toLocaleLowerCase()}${path}${url.search}`;
+  } catch {
+    return '';
+  }
+}
+
+function isExactSearchMatch(paper, rawQuery) {
+  const arxivId = extractSearchArxivId(rawQuery);
+  const paperId = String(paper.paper_id || '').toLocaleLowerCase();
+  if (arxivId && (paperId === arxivId || paperId.startsWith(`${arxivId}v`))) return true;
+  const queryUrl = canonicalSearchUrl(rawQuery);
+  if (!queryUrl) return false;
+  return [paper.entry_url, paper.code_url].some(value => canonicalSearchUrl(value) === queryUrl);
+}
+
+function paperRelevanceScore(paper, rawQuery) {
+  const query = normalizeSearchText(rawQuery);
+  if (!query) return 0;
+
+  const title = normalizeSearchText(paper.title);
+  const authors = normalizeSearchText(paper.authors);
+  const tags = normalizeSearchText(paper.tags);
+  const details = normalizeSearchText(
+    `${paper.intro || ''} ${paper.abstract || ''} ${paper.summary || ''}`,
+  );
+  const identifiers = normalizeSearchText(
+    `${paper.paper_id || ''} ${paper.entry_url || ''} ${paper.code_url || ''}`,
+  );
+  const ignoredTokens = new Set([
+    'a', 'an', 'and', 'are', 'for', 'in', 'is', 'of', 'on', 'the', 'to', 'with',
+    'http', 'https', 'www', 'org', 'com', 'arxiv', 'abs', 'pdf', 'html',
+  ]);
+  const arxivId = extractSearchArxivId(rawQuery);
+  const tokens = arxivId
+    ? [normalizeSearchText(arxivId)]
+    : String(rawQuery)
+      .split(/[\s，,。；;：:、/_.?&=#-]+/)
+      .map(normalizeSearchText)
+      .filter(token => token.length > 1 && !ignoredTokens.has(token));
+  let score = 0;
+
+  if (isExactSearchMatch(paper, rawQuery)) score += 2500;
+  if (title === query) score += 1000;
+  if (title.includes(query)) score += 500;
+  if (identifiers.includes(query)) score += 420;
+  if (tags.includes(query)) score += 320;
+  if (authors.includes(query)) score += 240;
+  if (details.includes(query)) score += 100;
+  tokens.forEach(token => {
+    if (title.includes(token)) score += 80;
+    if (identifiers.includes(token)) score += 70;
+    if (tags.includes(token)) score += 45;
+    if (authors.includes(token)) score += 35;
+    if (details.includes(token)) score += 15;
+  });
+  return score;
+}
+
 function applyFilters() {
-  const query = document.getElementById('searchInput').value.trim().toLowerCase();
+  const query = document.getElementById('searchInput').value.trim();
   const topic = document.getElementById('topicFilter').value;
   const sort = currentSort;
   const date = document.getElementById('dateFilter').value || selectedDate;
+  const scores = new Map();
 
   if (currentTab === 'favorites') {
     filteredPapers = getFavoritesByTag(selectedFavTag);
     if (query) {
-      filteredPapers = filteredPapers.filter(p => {
-        const haystack = [p.title, p.authors, p.tags || '', p.intro || ''].join(' ').toLowerCase();
-        return haystack.includes(query);
+      filteredPapers = filteredPapers.filter(paper => {
+        const score = paperRelevanceScore(paper, query);
+        scores.set(paper.paper_id, score);
+        return score > 0;
       });
     }
   } else {
     filteredPapers = allPapers.filter(p => {
       if (query) {
-        const haystack = [p.title, p.authors, p.tags || '', p.intro || ''].join(' ').toLowerCase();
-        if (!haystack.includes(query)) return false;
+        const score = paperRelevanceScore(p, query);
+        scores.set(p.paper_id, score);
+        if (score <= 0) return false;
       }
       if (topic) {
         if (!(p.tags || '').split(',').map(t => t.trim()).includes(topic)) return false;
@@ -635,7 +712,10 @@ function applyFilters() {
     });
   }
 
-  if (sort === 'date-desc') filteredPapers.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
+  if (query) {
+    filteredPapers.sort((a, b) => (scores.get(b.paper_id) || 0) - (scores.get(a.paper_id) || 0)
+      || (b.published || '').localeCompare(a.published || ''));
+  } else if (sort === 'date-desc') filteredPapers.sort((a, b) => (b.published || '').localeCompare(a.published || ''));
   else if (sort === 'date-asc') filteredPapers.sort((a, b) => (a.published || '').localeCompare(b.published || ''));
   else if (sort === 'title-asc') filteredPapers.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
   else if (sort === 'title-desc') filteredPapers.sort((a, b) => (b.title || '').localeCompare(a.title || ''));
