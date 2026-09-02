@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f6f8f7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
   <title>AutoPaperReading - CV 论文智能阅读</title>
-  <link rel="stylesheet" href="style.css?v=20260901165657">
+  <link rel="stylesheet" href="style.css?v=20260902120943">
 </head>
 <body>
 
@@ -236,14 +236,24 @@
         </button>
       </div>
       <div class="modal-body">
-        <p class="modal-hint">选择或添加标签</p>
+        <div class="modal-hint-row">
+          <p class="modal-hint">选择或添加标签</p>
+          <button class="show-new-tag" id="showNewTagButton" type="button"
+                  aria-controls="newTagRow" aria-expanded="false" onclick="showNewTagInput()">
+            ＋ 添加标签
+          </button>
+        </div>
         <div id="existingTags" class="tag-grid"></div>
-        <div class="new-tag-row">
-          <input type="text" id="newTagInput" class="tag-input" placeholder="输入新标签后按回车">
+        <div class="new-tag-row" id="newTagRow" hidden>
+          <input type="text" id="newTagInput" class="tag-input" maxlength="40"
+                 placeholder="输入新标签后点击“加入选择”">
+          <button class="new-tag-add" type="button" onclick="addNewTag()">加入选择</button>
         </div>
         <div id="selectedTags" class="selected-tags"></div>
       </div>
       <div class="modal-footer">
+        <button class="favorite-remove" id="removeFavoriteButton" type="button"
+                onclick="removeCurrentFavorite()" hidden>取消收藏</button>
         <button class="btn-outline" onclick="closeFavoriteModal()">取消</button>
         <button class="btn-primary" onclick="confirmFavorite()">确认收藏</button>
       </div>
@@ -302,7 +312,7 @@
 
   <div id="appToast" class="app-toast" role="status" aria-live="polite"></div>
 
-  <script src="ambient.js?v=20260901165657"></script>
-  <script src="app.js?v=20260901165657"></script>
+  <script src="ambient.js?v=20260902120943"></script>
+  <script src="app.js?v=20260902120943"></script>
 </body>
 </html>

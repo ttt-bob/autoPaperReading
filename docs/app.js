@@ -160,6 +160,15 @@ function getFavoritesByTag(tag) {
   });
 }
 
+function maskAccountIdentifier(value) {
+  const characters = Array.from(String(value || ''));
+  if (characters.length <= 2) return '*'.repeat(characters.length);
+  if (characters.length <= 6) {
+    return `${characters[0]}***${characters.at(-1)}`;
+  }
+  return `${characters.slice(0, 3).join('')}***${characters.slice(-3).join('')}`;
+}
+
 function updateAccountUi() {
   const loginButton = document.getElementById('loginButton');
   const accountMenu = document.getElementById('accountMenu');
@@ -167,7 +176,7 @@ function updateAccountUi() {
   if (!loginButton || !accountMenu || !accountEmail) return;
   loginButton.hidden = Boolean(currentUser);
   accountMenu.hidden = !currentUser;
-  accountEmail.textContent = currentUser?.email || '';
+  accountEmail.textContent = maskAccountIdentifier(currentUser?.email);
 }
 
 function openAuthModal(mode = 'login') {
@@ -922,19 +931,26 @@ function openFavoriteModal(paperId) {
   if (!paper) return;
 
   document.getElementById('favoriteModalTitle').textContent = paper.title;
+  document.getElementById('newTagRow').hidden = true;
+  document.getElementById('newTagInput').value = '';
+  document.getElementById('showNewTagButton').setAttribute('aria-expanded', 'false');
+  document.getElementById('removeFavoriteButton').hidden = !isFavorited(paperId);
   pendingSelectedTags = [...getPaperTags(paperId)];
   renderExistingTags();
   renderSelectedTags();
 
   document.getElementById('favoriteModalOverlay').classList.add('active');
   document.body.style.overflow = 'hidden';
-  document.getElementById('newTagInput').focus();
+  document.getElementById('showNewTagButton').focus();
 }
 
 function closeFavoriteModal(e) {
   if (e && e.target !== e.currentTarget) return;
   document.getElementById('favoriteModalOverlay').classList.remove('active');
   document.body.style.overflow = '';
+  document.getElementById('newTagRow').hidden = true;
+  document.getElementById('newTagInput').value = '';
+  document.getElementById('showNewTagButton').setAttribute('aria-expanded', 'false');
   currentFavPaperId = '';
   pendingSelectedTags = [];
 }
@@ -974,28 +990,36 @@ function toggleTag(tag) {
   renderSelectedTags();
 }
 
-function addNewTag() {
+function showNewTagInput() {
+  document.getElementById('newTagRow').hidden = false;
+  document.getElementById('showNewTagButton').setAttribute('aria-expanded', 'true');
+  document.getElementById('newTagInput').focus();
+}
+
+function addNewTag(shouldFocus = true) {
   const input = document.getElementById('newTagInput');
   const tag = input.value.trim();
-  if (!tag) return;
+  if (!tag) return false;
   if (!pendingSelectedTags.includes(tag)) {
     pendingSelectedTags.push(tag);
     renderExistingTags();
     renderSelectedTags();
   }
   input.value = '';
-  input.focus();
+  if (shouldFocus) input.focus();
+  return true;
 }
 
 async function confirmFavorite() {
+  const pendingInput = document.getElementById('newTagInput');
+  if (!document.getElementById('newTagRow').hidden && pendingInput.value.trim()) {
+    showToast('请先点击“加入选择”确认新标签', 'error');
+    pendingInput.focus();
+    return;
+  }
   try {
-    if (pendingSelectedTags.length === 0 && isFavorited(currentFavPaperId)) {
-      await removeFromFavorites(currentFavPaperId);
-      showToast('已取消收藏');
-    } else {
-      await addToFavorites(currentFavPaperId, pendingSelectedTags);
-      showToast('已保存到你的收藏');
-    }
+    await addToFavorites(currentFavPaperId, pendingSelectedTags);
+    showToast('已保存到你的收藏');
     closeFavoriteModal();
     renderPapers();
     updateFavBadge();
@@ -1005,6 +1029,21 @@ async function confirmFavorite() {
       closeFavoriteModal();
       openAuthModal('login');
     }
+    showToast(error.message, 'error');
+  }
+}
+
+async function removeCurrentFavorite() {
+  const paperId = currentFavPaperId;
+  if (!paperId || !isFavorited(paperId)) return;
+  try {
+    await removeFromFavorites(paperId);
+    closeFavoriteModal();
+    renderPapers();
+    updateFavBadge();
+    if (currentTab === 'favorites') renderFavTagFilters();
+    showToast('已取消收藏');
+  } catch (error) {
     showToast(error.message, 'error');
   }
 }

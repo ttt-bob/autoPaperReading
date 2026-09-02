@@ -28,6 +28,7 @@ const statusText = {
 };
 
 let pollTimer;
+let submissionAllowed = false;
 
 function initializePrefill() {
   const value = new URLSearchParams(window.location.search).get('url')?.trim() || '';
@@ -62,6 +63,7 @@ async function apiFetch(path, options = {}) {
 }
 
 function showAccessMessage(title, message, actionLabel = '', actionUrl = '') {
+  accessElement.classList.remove('submission-access--notice');
   accessElement.replaceChildren();
   const heading = document.createElement('h2');
   const description = document.createElement('p');
@@ -76,6 +78,23 @@ function showAccessMessage(title, message, actionLabel = '', actionUrl = '') {
   }
   accessElement.hidden = false;
   workspaceElement.hidden = true;
+}
+
+function showLoginRequired() {
+  submissionAllowed = false;
+  showAccessMessage(
+    '请先登录或注册',
+    '你仍可浏览全部论文和总结；登录后才能提交自己的论文进行处理。',
+    '前往首页登录 / 注册',
+    'index.html?login=1',
+  );
+  accessElement.classList.add('submission-access--notice');
+  workspaceElement.hidden = false;
+  submitButton.disabled = true;
+  submitButton.textContent = '登录后才能提交';
+  listElement.replaceChildren();
+  emptyElement.hidden = false;
+  emptyElement.textContent = '登录后可查看自己的处理记录';
 }
 
 function formatTime(value) {
@@ -150,14 +169,23 @@ async function loadSubmissions() {
     renderSubmissions(data.submissions || []);
   } catch (error) {
     window.clearTimeout(pollTimer);
-    showAccessMessage('暂时无法读取任务', error.message);
+    if (error.code === 'login_required') showLoginRequired();
+    else showAccessMessage('暂时无法读取任务', error.message);
   }
 }
 
 async function initializePage() {
-  accessElement.hidden = true;
-  workspaceElement.hidden = false;
   try {
+    const auth = await apiFetch('api/auth/me');
+    if (!auth.user || !auth.permissions?.submitPapers) {
+      showLoginRequired();
+      return;
+    }
+    submissionAllowed = true;
+    accessElement.hidden = true;
+    workspaceElement.hidden = false;
+    submitButton.disabled = false;
+    submitButton.textContent = '确认并开始下载总结';
     await loadSubmissions();
   } catch (error) {
     showAccessMessage('服务暂时不可用', error.message);
@@ -166,6 +194,10 @@ async function initializePage() {
 
 formElement.addEventListener('submit', async event => {
   event.preventDefault();
+  if (!submissionAllowed) {
+    showLoginRequired();
+    return;
+  }
   submitButton.disabled = true;
   submitButton.textContent = '正在提交…';
   try {
@@ -183,12 +215,14 @@ formElement.addEventListener('submit', async event => {
       if (openExisting) {
         window.location.href = `paper.html?id=${encodeURIComponent(error.paperId)}`;
       }
+    } else if (error.code === 'login_required') {
+      showLoginRequired();
     } else {
       window.alert(error.message);
     }
   } finally {
-    submitButton.disabled = false;
-    submitButton.textContent = '确认并开始下载总结';
+    submitButton.disabled = !submissionAllowed;
+    submitButton.textContent = submissionAllowed ? '确认并开始下载总结' : '登录后才能提交';
   }
 });
 

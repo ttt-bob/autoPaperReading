@@ -7,10 +7,23 @@
   <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
   <title>AutoPaperReading · 论文搜索</title>
-  <link rel="stylesheet" href="landing.css?v=20260901-2">
+  <link rel="stylesheet" href="landing.css?v=20260901-3">
 </head>
 <body>
   <div class="landing-effect" id="landingEffect" aria-hidden="true"></div>
+  <header class="landing-header" aria-label="账户入口">
+    <button class="landing-login" id="landingLoginButton" type="button" aria-haspopup="dialog">
+      <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M20 21a8 8 0 0 0-16 0"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+      <span>登录 / 注册</span>
+    </button>
+    <div class="landing-account" id="landingAccount" hidden>
+      <span class="landing-account__email" id="landingAccountEmail"></span>
+      <button class="landing-logout" id="landingLogoutButton" type="button">退出</button>
+    </div>
+  </header>
   <main class="landing-main">
     <section class="search-home" aria-labelledby="site-title">
       <div class="search-home__intro">
@@ -69,7 +82,27 @@
   <footer class="landing-footer">
     <span>颜色自动跟随系统</span>
   </footer>
+
+  <div class="landing-auth-overlay" id="landingAuthOverlay" aria-hidden="true">
+    <section class="landing-auth-dialog" role="dialog" aria-modal="true" aria-labelledby="landingAuthTitle">
+      <div class="landing-auth-dialog__header">
+        <div>
+          <p>个人账户</p>
+          <h2 id="landingAuthTitle">登录或注册</h2>
+        </div>
+        <button class="landing-auth-close" id="landingAuthClose" type="button" aria-label="关闭登录窗口">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m6 6 12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="landing-auth-dialog__body" id="landingAuthBody"></div>
+    </section>
+  </div>
+  <div class="landing-toast" id="landingToast" role="status" aria-live="polite"></div>
+
   <script src="vendor/canvas-nest.umd.js?v=2.0.4-apr2"></script>
   <script src="landing.js?v=20260901-5"></script>
+  <script src="landing-auth.js?v=20260901-3"></script>
 </body>
 </html>

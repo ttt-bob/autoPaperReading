@@ -63,6 +63,18 @@
   text-decoration: none;
 }
 
+.submission-access--notice {
+  min-height: 0;
+  align-items: flex-start;
+  margin-bottom: 22px;
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.submission-access--notice p { max-width: none; }
+
+.submission-access--notice a { margin-top: 2px; }
+
 .submission-workspace {
   display: grid;
   grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
@@ -149,8 +161,8 @@
   font-weight: 700;
 }
 
-.submission-submit:hover { background: var(--primary-dark); }
-.submission-submit:disabled { cursor: wait; opacity: .62; }
+.submission-submit:not(:disabled):hover { background: var(--primary-dark); }
+.submission-submit:disabled { cursor: not-allowed; opacity: .55; }
 
 .submission-list { display: grid; gap: 0; }
 

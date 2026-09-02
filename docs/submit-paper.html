@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
   <title>添加论文 · AutoPaperReading</title>
   <link rel="stylesheet" href="style.css?v=20260901">
-  <link rel="stylesheet" href="submit-paper.css?v=20260901-2">
+  <link rel="stylesheet" href="submit-paper.css?v=20260901-3">
 </head>
 <body class="submission-page">
   <header class="site-header">
@@ -28,12 +28,12 @@
     <section class="submission-intro">
       <p class="submission-kicker">PAPER INGESTION</p>
       <h1>添加一篇论文</h1>
-      <p>无需登录，粘贴论文网址即可。服务器会自动识别信息、生成总结并立即发布。</p>
+      <p>登录或注册后，粘贴论文网址即可。服务器会自动识别信息、生成总结并立即发布。</p>
     </section>
 
     <section class="submission-access" id="accessState" aria-live="polite">
       <span class="loading-spinner" aria-hidden="true"></span>
-      <p>正在连接论文处理服务…</p>
+      <p>正在检查登录状态…</p>
     </section>
 
     <div class="submission-workspace" id="submissionWorkspace" hidden>
@@ -85,6 +85,6 @@
     </div>
   </footer>
 
-  <script src="submit-paper.js?v=20260901-5"></script>
+  <script src="submit-paper.js?v=20260901-7"></script>
 </body>
 </html>

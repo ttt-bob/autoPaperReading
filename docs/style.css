@@ -1430,7 +1430,32 @@ input, select { font-family: inherit; outline: none; }
 .modal-hint {
   font-size: .85rem;
   color: var(--text-muted);
+  margin: 0;
+}
+
+.modal-hint-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   margin-bottom: 14px;
+}
+
+.show-new-tag {
+  flex: 0 0 auto;
+  border: 1px solid var(--primary-light);
+  border-radius: 999px;
+  padding: 5px 11px;
+  background: var(--primary-lighter);
+  color: var(--primary);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.show-new-tag:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #fff;
 }
 
 .tag-grid {
@@ -1469,10 +1494,17 @@ input, select { font-family: inherit; outline: none; }
   font-weight: 600;
 }
 
-.new-tag-row { margin-bottom: 12px; }
+.new-tag-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.new-tag-row[hidden] { display: none; }
 
 .tag-input {
-  width: 100%;
+  min-width: 0;
+  flex: 1;
   background: var(--bg-subtle);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -1490,6 +1522,22 @@ input, select { font-family: inherit; outline: none; }
 }
 
 .tag-input::placeholder { color: var(--text-muted); }
+
+.new-tag-add {
+  flex: 0 0 auto;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  background: var(--primary-lighter);
+  color: var(--primary);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.new-tag-add:hover {
+  background: var(--primary);
+  color: #fff;
+}
 
 .selected-tags {
   display: flex;
@@ -1534,6 +1582,20 @@ input, select { font-family: inherit; outline: none; }
   border-top: 1px solid var(--border);
   background: var(--bg-subtle);
 }
+
+.favorite-remove {
+  margin-right: auto;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  background: transparent;
+  color: #b42318;
+  font-size: .84rem;
+  font-weight: 650;
+}
+
+.favorite-remove:hover { border-color: #ef4444; background: #fff1f2; }
+.favorite-remove[hidden] { display: none; }
 
 /* ---------- Favorite Tags Filter ---------- */
 .fav-tags-filter {
@@ -1706,6 +1768,8 @@ input, select { font-family: inherit; outline: none; }
   .auth-field input { background: var(--surface); }
   .app-toast { border-color: #285f50; background: #102d25; }
   .app-toast.error { border-color: #713044; background: #351923; color: #fda4af; }
+  .favorite-remove { border-color: #713044; color: #fda4af; }
+  .favorite-remove:hover { border-color: #fb7185; background: #351923; }
 }
 
 /* ---------- Responsive ---------- */
