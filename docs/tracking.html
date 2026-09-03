@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f8f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#09110f" media="(prefers-color-scheme: dark)">
+<title>Tracking Papers Landscape</title>
+<style>
+:root { --bg:#f6f8f7; --ink:#17212b; --muted:#53636c; --line:#dfe8e4; --teal:#0f8378; --teal2:#086a61; --mint:#e7f3ef; --blue:#2a6f97; --amber:#b57925; --red:#9a4d4d; --white:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",Arial,sans-serif; line-height:1.55; }
+a { color:var(--teal2); text-decoration:none; }
+a:hover { text-decoration:underline; }
+header { background:var(--teal); color:white; padding:30px 42px 30px; }
+.header-top { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; }
+header h1 { margin:0 0 12px; font-size:36px; line-height:1.15; letter-spacing:0; }
+header p { margin:0; max-width:980px; color:#e7f3ef; font-size:17px; }
+.header-actions { display:flex; align-items:center; justify-content:flex-end; gap:8px; flex-wrap:wrap; }
+.header-action { display:inline-flex; align-items:center; gap:7px; min-height:34px; padding:7px 11px; border:1px solid rgba(255,255,255,.28); border-radius:8px; color:white; background:rgba(255,255,255,.12); font-size:13px; font-weight:800; text-decoration:none; white-space:nowrap; }
+.header-action:hover { background:rgba(255,255,255,.2); text-decoration:none; color:white; }
+main { padding:28px 38px 56px; max-width:1480px; margin:0 auto; }
+section { margin:28px 0 42px; }
+h2 { font-size:25px; margin:0 0 14px; color:var(--teal2); }
+h3 { font-size:18px; margin:18px 0 10px; }
+.small { color:var(--muted); font-size:13px; }
+.survey-panel { background:white; border:1px solid var(--line); border-radius:8px; padding:18px; overflow:auto; }
+.survey-map { min-width:1040px; display:grid; grid-template-columns:1.15fr 220px 1.15fr; gap:18px; align-items:stretch; }
+.survey-col { border:1px solid var(--line); border-radius:8px; padding:16px; background:#fbfdfc; }
+.survey-col.components { border-left:6px solid #6c8a3d; }
+.survey-col.capabilities { border-left:6px solid var(--blue); background:#f6fbff; }
+.survey-col h3 { margin:0 0 12px; color:var(--teal2); font-size:18px; }
+.survey-stack { display:grid; gap:10px; }
+.survey-box { border:1px dashed #a6b889; border-radius:8px; background:white; padding:12px; }
+.survey-box b { display:block; color:var(--ink); margin-bottom:5px; }
+.survey-box p { margin:0; color:var(--muted); font-size:12px; }
+.survey-center { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; min-height:310px; }
+.survey-agent { width:178px; height:178px; border-radius:50%; border:10px solid #e5a531; background:radial-gradient(circle,#fff 0 45%,#fbf1d7 46% 58%,#fff 59%); display:flex; align-items:center; justify-content:center; color:#7a4d07; font-weight:900; font-size:22px; text-align:center; box-shadow:inset 0 0 0 2px #f4d99a; }
+.survey-platforms { width:100%; border:1px solid #d7e6cf; border-radius:8px; background:#eef6e8; padding:10px; text-align:center; color:#4d6c2e; font-weight:800; }
+.survey-arrow { color:#c58522; font-size:28px; font-weight:900; text-align:center; }
+.survey-cap { border:1px dashed #86add2; border-radius:8px; padding:12px; background:white; }
+.survey-cap b { display:block; color:var(--blue); margin-bottom:5px; }
+.survey-cap p { margin:0; color:var(--muted); font-size:12px; }
+.survey-source { margin-top:12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.source-link { display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); background:#fbfdfc; border-radius:999px; padding:6px 10px; font-size:12px; font-weight:800; color:var(--teal2); }
+.source-link:hover { background:var(--mint); text-decoration:none; }
+.stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:22px; }
+.stat { background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.24); border-radius:8px; padding:14px 16px; }
+.stat b { display:block; font-size:28px; line-height:1; color:white; }
+.stat span { display:block; margin-top:8px; color:#d9efeb; font-size:13px; }
+.panel { background:white; border:1px solid var(--line); border-radius:8px; padding:18px; }
+.system-flow { background:white; border:1px solid var(--line); border-radius:8px; padding:18px; overflow:auto; }
+.flow-grid { min-width:980px; display:grid; grid-template-columns:1.05fr .9fr 1fr 1fr 1fr 1fr .95fr; grid-template-rows:auto auto auto; gap:12px 14px; align-items:stretch; }
+.flow-node { border:1px solid var(--line); border-radius:8px; padding:13px 14px; background:#fff; min-height:104px; position:relative; }
+.flow-node b { display:block; color:var(--teal2); margin-bottom:6px; font-size:14px; }
+.flow-node p { margin:0; color:var(--muted); font-size:12px; }
+.flow-node.main { border-color:#b8d8d2; background:#f8fcfb; }
+.flow-node.data { border-left:6px solid var(--amber); }
+.flow-node.model { border-left:6px solid var(--teal); }
+.flow-node.exec { border-left:6px solid var(--blue); }
+.flow-node.safe { border-left:6px solid var(--red); }
+.flow-arrow { align-self:center; justify-self:center; color:var(--teal2); font-weight:900; font-size:24px; }
+.flow-feedback { grid-column:2 / 7; border:1px dashed #a9c7c2; color:var(--muted); background:#fbfdfc; border-radius:8px; padding:10px 14px; font-size:13px; text-align:center; }
+.pipeline { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:12px; }
+.step { background:white; border:1px solid var(--line); border-radius:8px; padding:14px; position:relative; min-height:155px; cursor:pointer; transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.step:hover { border-color:#a9c7c2; box-shadow:0 8px 22px rgba(15,131,120,.12); transform:translateY(-1px); text-decoration:none; }
+.step:focus-visible { outline:3px solid rgba(15,131,120,.24); outline-offset:2px; }
+.step::before { content:""; display:block; width:42px; height:4px; background:var(--teal); border-radius:2px; margin-bottom:12px; }
+.step .num { color:var(--teal2); font-size:12px; font-weight:800; }
+.step h3 { margin:4px 0 8px; font-size:16px; }
+.step p { margin:0; color:var(--muted); font-size:13px; }
+.step .badge { position:absolute; right:12px; top:12px; background:var(--mint); color:var(--teal2); border-radius:999px; padding:3px 9px; font-size:12px; font-weight:800; }
+.flow-note { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:12px; margin-top:14px; }
+.note-card { border-left:5px solid var(--teal); background:white; border-radius:8px; padding:14px 16px; border-top:1px solid var(--line); border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+.bar-row { display:grid; grid-template-columns:250px 1fr 54px; gap:12px; align-items:center; margin:8px 0; font-size:13px; }
+.bar { height:14px; background:#e9f1ee; border-radius:999px; overflow:hidden; }
+.bar i { display:block; height:100%; background:var(--teal); border-radius:999px; }
+.controls { position:sticky; top:0; z-index:5; background:rgba(246,248,247,.96); backdrop-filter:blur(8px); border:1px solid var(--line); border-radius:8px; padding:12px; display:grid; grid-template-columns:auto minmax(420px,1fr) auto; gap:10px; align-items:center; }
+input[type="search"] { width:100%; min-width:0; box-sizing:border-box; border:1px solid #cfdad6; border-radius:7px; padding:10px 12px; font-size:14px; background:white; }
+button { border:1px solid var(--line); background:white; color:var(--ink); border-radius:999px; padding:7px 11px; cursor:pointer; font-size:13px; }
+button.active { background:var(--teal); color:white; border-color:var(--teal); }
+.view-tabs { display:flex; gap:8px; flex-wrap:wrap; }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 0; }
+.controls .chips { grid-column:1 / -1; }
+.chip { display:inline-flex; gap:6px; align-items:center; border:1px solid var(--line); background:white; border-radius:999px; padding:5px 10px; font-size:12px; color:var(--muted); }
+.chip b { color:var(--teal2); }
+details { background:white; border:1px solid var(--line); border-radius:8px; margin:12px 0; overflow:hidden; }
+summary { cursor:pointer; padding:15px 17px; font-weight:800; color:var(--teal2); background:#fbfdfc; display:flex; justify-content:space-between; gap:12px; }
+summary span { color:var(--muted); font-weight:600; font-size:13px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:12px; padding:14px; }
+.card { border:1px solid var(--line); border-radius:8px; padding:13px 14px; background:#fff; min-height:172px; display:flex; flex-direction:column; gap:8px; cursor:pointer; transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.card:hover { border-color:#a9c7c2; box-shadow:0 8px 22px rgba(15,131,120,.12); transform:translateY(-1px); }
+.card:focus-visible { outline:3px solid rgba(15,131,120,.24); outline-offset:2px; }
+.card .date { color:var(--amber); font-weight:800; font-size:12px; }
+.card h4 { margin:0; font-size:15px; line-height:1.35; }
+.card p { margin:0; color:var(--muted); font-size:13px; }
+.meta { display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; }
+.tag { background:var(--mint); color:var(--teal2); border-radius:999px; padding:3px 8px; font-size:11px; font-weight:700; }
+.tag.stage { background:#edf3f8; color:var(--blue); }
+.group-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px; }
+.group-card { background:white; border:1px solid var(--line); border-radius:8px; padding:15px; cursor:pointer; transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+.group-card:hover { border-color:#a9c7c2; box-shadow:0 8px 22px rgba(15,131,120,.12); transform:translateY(-1px); }
+.group-card:focus-visible { outline:3px solid rgba(15,131,120,.24); outline-offset:2px; }
+.group-card b { color:var(--teal2); display:block; margin-bottom:6px; }
+.group-card p { margin:0; color:var(--muted); font-size:13px; }
+.group-card .count { margin-top:10px; font-weight:800; color:var(--amber); }
+.empty { padding:20px; color:var(--muted); }
+.modal-overlay { position:fixed; inset:0; background:rgba(23,33,43,.48); backdrop-filter:blur(4px); z-index:100; display:none; align-items:flex-start; justify-content:center; padding:38px 18px; overflow-y:auto; }
+.modal-overlay.active { display:flex; }
+.modal { width:100%; max-width:860px; background:white; border:1px solid var(--line); border-radius:10px; box-shadow:0 24px 60px rgba(23,33,43,.24); overflow:hidden; animation:modalIn .2s ease; }
+@keyframes modalIn { from { opacity:0; transform:translateY(12px) scale(.985); } to { opacity:1; transform:translateY(0) scale(1); } }
+.modal-header { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding:22px 24px 16px; border-bottom:1px solid var(--line); background:#fbfdfc; }
+.modal-title-wrap { min-width:0; flex:1; }
+.modal-kicker { color:var(--teal2); font-size:12px; font-weight:800; letter-spacing:.04em; text-transform:uppercase; margin-bottom:6px; }
+.modal-title { margin:0; color:var(--ink); font-size:21px; line-height:1.35; }
+.modal-meta { display:flex; flex-wrap:wrap; gap:8px 12px; color:var(--muted); font-size:13px; margin-top:9px; }
+.modal-close { border:1px solid transparent; background:transparent; color:var(--muted); border-radius:7px; padding:7px; line-height:0; }
+.modal-close:hover { background:#eef6f4; color:var(--teal2); }
+.modal-tags { display:flex; flex-wrap:wrap; gap:7px; padding:14px 24px; border-bottom:1px solid var(--line); }
+.modal-links { display:flex; flex-wrap:wrap; gap:8px; padding:14px 24px; border-bottom:1px solid var(--line); }
+.modal-link { display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); border-radius:7px; padding:7px 12px; color:var(--ink); background:white; font-size:13px; font-weight:700; text-decoration:none; }
+.modal-link:hover { border-color:#a9c7c2; background:#f8fcfb; color:var(--teal2); text-decoration:none; }
+.modal-link.local-pdf { border-color:#b7dfd5; background:#eef9f6; color:var(--teal2); }
+.modal-summary { padding:22px 24px 28px; color:var(--ink); font-size:14px; line-height:1.85; }
+.modal-summary h1, .modal-summary h2, .modal-summary h3 { margin:18px 0 8px; line-height:1.4; color:var(--ink); }
+.modal-summary h1 { font-size:20px; }
+.modal-summary h2 { font-size:17px; color:var(--teal2); border-bottom:2px solid var(--mint); padding-bottom:6px; }
+.modal-summary h3 { font-size:15px; }
+.modal-summary p { margin:0 0 10px; }
+.modal-summary li { margin:4px 0 4px 20px; }
+.modal-summary code { background:#eef3f1; border:1px solid var(--line); border-radius:4px; padding:1px 5px; font-size:.92em; }
+@media (max-width:900px) { .controls { grid-template-columns:1fr auto; } .view-tabs { grid-column:1 / -1; } }
+@media (max-width:720px) { header, main { padding-left:18px; padding-right:18px; } .header-top { flex-direction:column; } .header-actions { justify-content:flex-start; } .controls { grid-template-columns:1fr; position:static; } .bar-row { grid-template-columns:1fr; } }
+@media (prefers-color-scheme: dark) {
+  :root { color-scheme:dark; --bg:#09110f; --ink:#edf7f3; --muted:#a9bdb5; --line:rgba(213,232,224,.16); --teal:#0b6e4f; --teal2:#5edba7; --mint:#143226; --blue:#75acd1; --amber:#e7b766; --red:#e58b8b; --white:#11201b; }
+  .survey-panel, .panel, .system-flow, .step, .note-card, details, .card, .group-card, .modal, button, .chip, .modal-link { background:var(--white); }
+  .survey-col, .source-link, .flow-feedback, summary, .modal-header { background:#0d1815; }
+  .survey-col.capabilities, .flow-node.main { background:#10201e; }
+  .survey-box, .survey-cap, .flow-node { background:#11201b; }
+  .survey-agent { background:radial-gradient(circle,#11201b 0 45%,#3b321b 46% 58%,#11201b 59%); color:#f3c76a; }
+  .survey-platforms { border-color:#3b5132; background:#1a2d19; color:#b9d893; }
+  .bar { background:#20342d; }
+  .controls { background:rgba(9,17,15,.94); }
+  input[type="search"] { border-color:var(--line); background:#11201b; color:var(--ink); }
+  .tag.stage { background:#172836; color:#9bc8e6; }
+  .modal-close:hover, .modal-link:hover { background:#173027; }
+  .modal-link.local-pdf { border-color:#276749; background:#102d21; }
+  .modal-summary code { background:#192a24; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="header-top">
+    <h1>Tracking Papers Landscape</h1>
+    <nav class="header-actions" aria-label="page links">
+      <a class="header-action" href="papers.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/>
+        </svg>
+        Daily CV Papers
+      </a>
+      <a class="header-action" href="video-search.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
+        </svg>
+        Video Search
+      </a>
+      <a class="header-action" href="gui-taxonomy.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+        </svg>
+        GUI 论文地图
+      </a>
+    </nav>
+  </div>
+  <div class="stats">
+    <div class="stat"><b id="stat-count">50</b><span>tracking papers</span></div>
+    <div class="stat"><b id="stat-range"></b><span>time range</span></div>
+    <div class="stat"><b>8</b><span>pipeline layers</span></div>
+    <div class="stat"><b>7</b><span>model directions</span></div>
+  </div>
+</header>
+<main>
+<section>
+    <h2>0. Tracking 问题空间</h2>
+    <div class="survey-panel">
+      <div class="survey-map">
+        <div class="survey-col components">
+          <h3>Inputs</h3>
+          <div class="survey-stack">
+            <div class="survey-box"><b>Observations</b><p>图像帧、检测框、分割掩膜、关键点、LiDAR、IMU 与事件流。</p></div>
+            <div class="survey-arrow">↑</div>
+            <div class="survey-box"><b>Target State</b><p>位置、尺度、速度、姿态、外观特征与身份历史。</p></div>
+            <div class="survey-arrow">↑</div>
+            <div class="survey-box"><b>Scene Constraints</b><p>遮挡、相机运动、拥挤、跨镜头、长时间丢失与实时预算。</p></div>
+          </div>
+        </div>
+        <div class="survey-center">
+          <div class="survey-agent">Visual<br>Tracking</div>
+          <div class="survey-platforms">Frame → State → Association → Track</div>
+        </div>
+        <div class="survey-col capabilities">
+          <h3>Outputs</h3>
+          <div class="survey-stack">
+            <div class="survey-cap"><b>Locate</b><p>在当前帧输出目标框、点、掩膜或 3D/6D 姿态。</p></div>
+            <div class="survey-arrow">↓</div>
+            <div class="survey-cap"><b>Associate</b><p>把观测与历史轨迹匹配，维持稳定 Track ID。</p></div>
+            <div class="survey-arrow">↓</div>
+            <div class="survey-cap"><b>Recover / Reason</b><p>处理遮挡和丢失，并为视频理解、异常分析与决策提供轨迹。</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="survey-source"><span class="small">覆盖 MOT、SOT、ReID、点/姿态跟踪、3D 多相机跟踪及多模态应用；按 8 个研究环节和 7 类技术路线浏览。</span></div>
+    </div>
+  </section>
+
+<section>
+    <h2>1. 端到端流程关系图：从观测到稳定轨迹</h2>
+    <div class="system-flow">
+      <div class="flow-grid">
+        <div class="flow-node data"><b>Data / Benchmark</b><p>MOT、SOT、点跟踪、3D 与行业数据，配合 HOTA、IDF1、MOTA、成功率等指标。</p></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-node main model"><b>Detection / Representation</b><p>产生候选框、掩膜、关键点和外观特征。</p></div>
+        <div class="flow-node main model"><b>Motion Prediction</b><p>预测位置、速度、轨迹与不确定性。</p></div>
+        <div class="flow-node main model"><b>Data Association</b><p>匹配观测与轨迹，分配并维护身份。</p></div>
+        <div class="flow-node exec"><b>Track Management</b><p>初始化、确认、更新、终止和遮挡恢复。</p></div>
+        <div class="flow-node data" style="grid-column:1 / 3;"><b>Camera / Sensor</b><p>单目、多相机、LiDAR、IMU、事件相机及真实视频流。</p></div>
+        <div class="flow-node model" style="grid-column:3 / 5;"><b>Identity / Memory</b><p>ReID、外观记忆和长时轨迹用于跨遮挡、跨镜头恢复。</p></div>
+        <div class="flow-node safe" style="grid-column:5 / 7;"><b>Quality / Robustness</b><p>控制 ID switch、误检、漏检、漂移和延迟。</p></div>
+        <div class="flow-node exec"><b>Downstream</b><p>视频理解、行为分析、自动驾驶、机器人与医疗应用。</p></div>
+        <div class="flow-feedback">Feedback loop: 轨迹质量反馈给检测、运动与关联模块；失败案例进入难例挖掘、再训练和阈值校准。</div>
+      </div>
+    </div>
+    <h3>8 个研究环节</h3>
+    <div class="pipeline" id="pipeline"></div>
+    <div class="flow-note">
+      <div class="note-card"><b>推荐读法</b><br><span class="small">先看 00 基准理解指标，再按 01 表征 → 02 运动 → 03 关联 → 04 恢复理解完整 MOT 链路。</span></div>
+      <div class="note-card"><b>扩展任务</b><br><span class="small">SOT、点/姿态跟踪集中在 05；三维和跨镜头问题集中在 06。</span></div>
+      <div class="note-card"><b>系统落地</b><br><span class="small">07 汇总 VLM、异常检测、医疗、交通和实时部署等下游组合。</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. 分层分布</h2>
+    <div class="panel" id="stage-bars"></div>
+  </section>
+
+  <section>
+    <h2>3. 模型层专题分组</h2>
+    <p class="small">研究环节回答论文解决跟踪系统的哪一步，模型专题回答采用什么技术路线。例如 ByteTrack 属于数据关联环节和 Tracking-by-Detection 路线；LAMP 属于 3D/多相机环节和传感器融合路线。</p>
+    <div class="group-grid" id="model-group-summary"></div>
+  </section>
+
+  <section>
+    <h2>4. 论文浏览器</h2>
+    <div class="controls">
+      <div class="view-tabs">
+        <button id="view-stage" class="active">按流程层</button>
+        <button id="view-model">按模型专题</button>
+      </div>
+      <input id="search" type="search" placeholder="搜索标题、年份、环节、方向，例如 ByteTrack / MOT / ReID / 3D">
+      <button id="clear">清空</button>
+      <div class="chips" id="paper-filter"></div>
+    </div>
+    <div id="paper-sections"></div>
+  </section>
+
+<section>
+    <h2>5. 阅读锚点</h2>
+    <div class="panel">
+      <p>建议以 <b>ByteTrack → OC-SORT → BoT-SORT → Deep OC-SORT → TrackTrack</b> 作为在线 MOT 主线：先理解低分检测框利用，再看运动观测、外观 ReID 与轨迹视角关联。随后按需求扩展到点/姿态跟踪、3D 多相机或 VLM 时空接地。</p>
+    </div>
+  </section>
+</main>
+<div class="modal-overlay" id="paper-modal-overlay" onclick="closePaperModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="modal-header">
+      <div class="modal-title-wrap">
+        <div class="modal-kicker" id="paper-modal-kicker"></div>
+        <h2 class="modal-title" id="paper-modal-title"></h2>
+        <div class="modal-meta" id="paper-modal-meta"></div>
+      </div>
+      <button class="modal-close" onclick="closePaperModal()" aria-label="关闭详情">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <div class="modal-tags" id="paper-modal-tags"></div>
+    <div class="modal-links" id="paper-modal-links"></div>
+    <div class="modal-summary" id="paper-modal-summary"></div>
+  </div>
+</div>
+<script id="taxonomy-data" type="application/json">{"generatedAt": "2026-09-03", "count": 50, "oldest": "2021-10-13", "newest": "2026-08-27", "stages": [{"code": "benchmark_dataset", "title": "00 数据集 / 基准 / 评测", "question": "跟踪数据如何标注，长期、遮挡和跨域能力如何评价", "artifact": "Dataset / Benchmark / HOTA / IDF1", "count": 9}, {"code": "detection_representation", "title": "01 检测 / 表征 / 特征", "question": "如何检测目标并提取稳定、可区分的时空特征", "artifact": "BBox / Feature / Mask / Token", "count": 1}, {"code": "motion_state", "title": "02 运动建模 / 状态估计", "question": "如何预测目标位置、速度、轨迹和不确定性", "artifact": "Motion state / Trajectory / Filter", "count": 3}, {"code": "association_mot", "title": "03 数据关联 / 多目标跟踪", "question": "检测结果如何与已有轨迹匹配并保持身份一致", "artifact": "Association / Track ID / MOT", "count": 7}, {"code": "identity_occlusion", "title": "04 身份 / ReID / 遮挡恢复", "question": "目标被遮挡或离开视野后如何找回并保持身份", "artifact": "Embedding / ReID / Recovery", "count": 1}, {"code": "single_point_pose", "title": "05 单目标 / 点 / 姿态跟踪", "question": "如何持续跟踪单个物体、稠密点、人体或物体姿态", "artifact": "SOT / Point track / Pose / Mask", "count": 3}, {"code": "multicamera_3d", "title": "06 3D / 4D / 多相机跟踪", "question": "如何跨相机、跨传感器在三维世界中统一跟踪", "artifact": "3D track / Worldline / Sensor fusion", "count": 5}, {"code": "multimodal_applications", "title": "07 多模态推理 / 行业应用", "question": "跟踪如何服务视频理解、异常检测、医疗和自动驾驶", "artifact": "Grounding / Reasoning / Deployment", "count": 21}], "modelGroups": [{"code": "tracking_by_detection", "title": "Tracking-by-Detection / SORT", "desc": "以检测框为输入，通过匹配、轨迹管理和级联策略完成在线多目标跟踪。", "count": 7}, {"code": "transformer_query", "title": "Transformer / Query Tracking", "desc": "使用对象查询、时空注意力或统一网络联合表示检测与轨迹。", "count": 1}, {"code": "motion_geometry", "title": "运动模型 / 滤波 / 几何", "desc": "利用 Kalman、轨迹预测、光流、状态空间和几何约束传播目标状态。", "count": 4}, {"code": "appearance_reid", "title": "外观特征 / ReID / 身份", "desc": "用外观嵌入、重识别和身份记忆处理遮挡、跨镜头及长期关联。", "count": 3}, {"code": "dense_pose_segmentation", "title": "点 / 姿态 / 分割跟踪", "desc": "跟踪稠密点、关键点、手部与 6D 姿态，或随时间传播分割掩膜。", "count": 3}, {"code": "multiview_3d", "title": "多相机 / 3D / 传感器融合", "desc": "融合多视角、LiDAR、IMU、事件相机等信息，在真实坐标系中跟踪。", "count": 5}, {"code": "vlm_grounding_application", "title": "VLM / Grounding / 应用系统", "desc": "将跟踪接入视频语言模型、时空接地、异常分析和垂直行业系统。", "count": 27}], "focusCounts": {"单目标跟踪": 1, "实时 / 边缘": 13, "遮挡恢复": 10, "3D / 多视角": 11, "姿态跟踪": 3, "ReID / 身份": 12, "医疗跟踪": 6, "多模态 / VLM": 26, "多目标跟踪": 8, "交通 / 自动驾驶": 7, "点跟踪": 1, "异常 / 监控": 6}, "papers": [{"id": "2110.06864v3", "title": "ByteTrack: Multi-Object Tracking by Associating Every Detection Box", "date": "2021-10-13", "year": "2021", "url": "http://arxiv.org/abs/2110.06864v3", "pdf": "https://arxiv.org/pdf/2110.06864v3", "detailPath": "paper-data/details/2110.06864v3.json", "summary": "## 一、论文基本信息\n标题：ByteTrack: Multi-Object Tracking by Associating Every Detection Box\n作者列表（原文）：Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang\n所属机构：华中科技大学（Huazhong University of Science and Technology）、香港大学（The University of Hong Kong）、字节跳动（ByteDance Inc.）\n发表时间：2022年4月7日（arXiv预印本，编号arXiv:2110.06864v3）\n…", "intro": "## 一、论文基本信息\n标题：ByteTrack: Multi-Object Tracking by Associating Every Detection Box\n作者列表（原文）：Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang\n所属机构：华中科技大学（Huazhong", "tagsText": "tracking, object detection, video segmentation, YOLO, edge deployment", "authors": "Yifu Zhang, Peize Sun, Yi Jiang, Dongdong Yu, Fucheng Weng, Zehuan Yuan, Ping Luo, Wenyu Liu, Xinggang Wang", "affiliations": "华中科技大学（Huazhong University of Science and Technology）、香港大学（The University of Hong Kong）、字节跳动（ByteDance Inc.）", "code_url": "https://github.com/ifzhang/B", "local_pdf_path": "data/pdfs/detection/2110.06864v3.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪", "遮挡恢复", "实时 / 边缘"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": true, "relevance": 170}, {"id": "2203.14360v3", "title": "Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking", "date": "2022-03-27", "year": "2022", "url": "http://arxiv.org/abs/2203.14360v3", "pdf": "https://arxiv.org/pdf/2203.14360v3", "detailPath": "paper-data/details/2203.14360v3.json", "summary": "## 一、论文基本信息\n标题：Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking\n作者列表（原文）：Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, Kris Kitani\n所属机构：Carnegie Mellon University, Shanghai AI Laboratory, Nvidia\n发表时间：2023年3月16日（arXiv预印本，编号arXiv:2203.14360v3）\n开源代码地址：https://github.com/noahcao/OC_SORT\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问…", "intro": "## 一、论文基本信息\n标题：Observation-Centric SORT: Rethinking SORT for Robust Multi-Object Tracking\n作者列表（原文）：Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, Kris Kitani\n所属机构：Carnegie Mellon University, Shanghai AI Labor", "tagsText": "tracking, object detection, video segmentation", "authors": "Jinkun Cao, Jiangmiao Pang, Xinshuo Weng, Rawal Khirodkar, Kris Kitani", "affiliations": "Carnegie Mellon University, Shanghai AI Laboratory, Nvidia", "code_url": "https://github.com/noahcao/O", "local_pdf_path": "data/pdfs/detection/2203.14360v3.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪", "遮挡恢复", "实时 / 边缘"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": true, "relevance": 170}, {"id": "2206.14651v2", "title": "BoT-SORT: Robust Associations Multi-Pedestrian Tracking", "date": "2022-06-29", "year": "2022", "url": "http://arxiv.org/abs/2206.14651v2", "pdf": "https://arxiv.org/pdf/2206.14651v2", "detailPath": "paper-data/details/2206.14651v2.json", "summary": "## 一、论文基本信息\n标题：BoT-SORT: Robust Associations Multi-Pedestrian Tracking\n作者列表（原文）：Nir Aharon, Roy Orfaig, Ben-Zion Bobrovsky\n所属机构：School of Electrical Engineering, Tel-Aviv University\n发表时间：2022年7月7日（arXiv预印本，编号arXiv:2206.14651v2）\n开源代码地址：https://github.com/NirAharon/BOT-SORT\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：多目标跟踪（MOT）中的鲁棒数据关联问题，即在视频流中检测并跟踪多个对象，同时为每个对象保持唯一…", "intro": "## 一、论文基本信息\n标题：BoT-SORT: Robust Associations Multi-Pedestrian Tracking\n作者列表（原文）：Nir Aharon, Roy Orfaig, Ben-Zion Bobrovsky\n所属机构：School of Electrical Engineering, Tel-Aviv University\n发表时间：2022年7月7日（arXiv预印本，编号arXiv:2206.1", "tagsText": "tracking, object detection, video segmentation, autonomous driving, video search", "authors": "Nir Aharon, Roy Orfaig, Ben-Zion Bobrovsky", "affiliations": "School of Electrical Engineering, Tel-Aviv University", "code_url": "https://github.com/NirAharon/B", "local_pdf_path": "data/pdfs/tracking/2206.14651v2.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪", "ReID / 身份", "交通 / 自动驾驶"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": true, "relevance": 170}, {"id": "2302.11813v1", "title": "Deep OC-SORT: Multi-Pedestrian Tracking by Adaptive Re-Identification", "date": "2023-02-23", "year": "2023", "url": "http://arxiv.org/abs/2302.11813v1", "pdf": "https://arxiv.org/pdf/2302.11813v1", "detailPath": "paper-data/details/2302.11813v1.json", "summary": "## 一、论文基本信息\n标题：Deep OC-SORT: Multi-Pedestrian Tracking by Adaptive Re-Identification\n作者列表（原文）：Gerard Maggiolino, Adnan Ahmad, Jinkun Cao, Kris Kitani\n所属机构：Carnegie Mellon University\n发表时间：2023年2月23日（arXiv预印本，编号arXiv:2302.11813v1）\n开源代码地址：https://github.com/GerardMaggiolino/Deep-OC-SORT\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决的问题：如何将外观特征（appearance cues）有效地整合到基于运动（mo…", "intro": "## 一、论文基本信息\n标题：Deep OC-SORT: Multi-Pedestrian Tracking by Adaptive Re-Identification\n作者列表（原文）：Gerard Maggiolino, Adnan Ahmad, Jinkun Cao, Kris Kitani\n所属机构：Carnegie Mellon University\n发表时间：2023年2月23日（arXiv预印本，编号arXiv:2302.", "tagsText": "tracking, object detection, video segmentation, vision transformer", "authors": "Gerard Maggiolino, Adnan Ahmad, Jinkun Cao, Kris Kitani", "affiliations": "Carnegie Mellon University", "code_url": "https://github.com/GerardMaggiolino/D", "local_pdf_path": "data/pdfs/tracking/2302.11813v1.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪", "ReID / 身份"], "modelGroup": "appearance_reid", "modelGroupTitle": "外观特征 / ReID / 身份", "curated": true, "relevance": 170}, {"id": "pdf_e36689164b9e1016", "title": "Focusing on Tracks for Online Multi-Object Tracking", "date": "2025-06-10", "year": "2025", "url": "https://openaccess.thecvf.com/content/CVPR2025/html/Shim_Focusing_on_Tracks_for_Online_Multi-Object_Tracking_CVPR_2025_paper.html", "pdf": "https://openaccess.thecvf.com/content/CVPR2025/papers/Shim_Focusing_on_Tracks_for_Online_Multi-Object_Tracking_CVPR_2025_paper.pdf", "detailPath": "paper-data/details/pdf_e36689164b9e1016.json", "summary": "## 一、论文基本信息\n标题：Focusing on Tracks for Online Multi-Object Tracking\n作者列表（原文）：Kyujin Shim, Kangwook Ko, Yujin Yang, Changick Kim\n所属机构：Korea Advanced Institute of Science and Technology (KAIST)\n发表时间：未明确（CVPR会议论文，Open Access版本）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：多目标跟踪（MOT）中的数据关联问题，特别是在遮挡、目标外观相似、运动模式多样等复杂场景下，如何准确地将检测结果与已有轨迹进行匹配，以及如何避免生成虚假轨迹。\n- 目前最好…", "intro": "## 一、论文基本信息\n标题：Focusing on Tracks for Online Multi-Object Tracking\n作者列表（原文）：Kyujin Shim, Kangwook Ko, Yujin Yang, Changick Kim\n所属机构：Korea Advanced Institute of Science and Technology (KAIST)\n发表时间：未明确（CVPR会议论文，Open Access", "tagsText": "tracking, object detection, video segmentation", "authors": "Kyujin Shim; Kangwook Ko; Yujin Yang; Changick Kim", "affiliations": "Korea Advanced Institute of Science and Technology (KAIST)", "code_url": "", "local_pdf_path": "data/pdfs/other/pdf_e36689164b9e1016.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": true, "relevance": 170}, {"id": "2508.14370v5", "title": "FastTracker: Real-Time and Accurate Visual Tracking", "date": "2025-08-20", "year": "2025", "url": "http://arxiv.org/abs/2508.14370v5", "pdf": "https://arxiv.org/pdf/2508.14370v5", "detailPath": "paper-data/details/2508.14370v5.json", "summary": "## 一、论文基本信息\n标题：FastTracker: Real-Time and Accurate Visual Tracking\n作者列表（原文）：Hamidreza Hashempoor, Yu Dong Hwang\n所属机构：Pintel Co. Ltd., Seoul, South Korea\n发表时间：2025年9月25日（arXiv预印本，编号arXiv:2508.14370v5）\n开源代码地址：github.com/Hamidreza-Hashempoor/FastTracker\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：传统的多目标跟踪（MOT）系统主要针对行人跟踪设计，在扩展到其他物体类别（如车辆）时泛化能力有限。本文旨在提出一个通用的多类别跟踪框架，特别…", "intro": "## 一、论文基本信息\n标题：FastTracker: Real-Time and Accurate Visual Tracking\n作者列表（原文）：Hamidreza Hashempoor, Yu Dong Hwang\n所属机构：Pintel Co. Ltd., Seoul, South Korea\n发表时间：2025年9月25日（arXiv预印本，编号arXiv:2508.14370v5）\n开源代码地址：github.com/Ha", "tagsText": "tracking, object detection, autonomous driving, video segmentation, BEV perception", "authors": "Hamidreza Hashempoor, Yu Dong Hwang", "affiliations": "Pintel Co. Ltd., Seoul, South Korea", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2508.14370v5.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪", "ReID / 身份", "遮挡恢复", "交通 / 自动驾驶"], "modelGroup": "appearance_reid", "modelGroupTitle": "外观特征 / ReID / 身份", "curated": false, "relevance": 70}, {"id": "2608.13555v1", "title": "HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark", "date": "2026-08-13", "year": "2026", "url": "http://arxiv.org/abs/2608.13555v1", "pdf": "https://arxiv.org/pdf/2608.13555v1", "detailPath": "paper-data/details/2608.13555v1.json", "summary": "## 一、论文基本信息\n标题：HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark\n作者列表（原文）：Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Yu, Yu Guan, Yintianrun Zhang, Xuchuan Chen, Sikai Liang, Zekai Li, Chenghuai Lin, Xinqiang Yu, Wenyao Zhang, He Wang, Li Yi\n所属机构：Nankai University, Tsinghua University, Galbot, Shanghai Jiao Tong University, Peking U…", "intro": "## 一、论文基本信息\n标题：HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark\n作者列表（原文）：Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Yu, Yu Guan, Yintianrun Zhang, Xuchuan Chen, Sikai Liang, Zekai Li, Chenghuai", "tagsText": "pose estimation, tracking, video segmentation, autonomous driving, 3D reconstruction", "authors": "Dairu Liu, Zekun Qi, Jiayu Zeng, Ruixi Yu, Yu Guan, Yintianrun Zhang, Xuchuan Chen, Sikai Liang, Zekai Li, Chenghuai Lin, Xinqiang Yu, Wenyao Zhang, He Wang, Li Yi", "affiliations": "Nankai University, Tsinghua University, Galbot, Shanghai Jiao Tong University, Peking University, Shanghai Qi Zhi Institute", "code_url": "https://github.com/GalaxyGeneralRobotics/H", "local_pdf_path": "data/pdfs/tracking/2608.13555v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["3D / 多视角", "交通 / 自动驾驶"], "modelGroup": "motion_geometry", "modelGroupTitle": "运动模型 / 滤波 / 几何", "curated": false, "relevance": 70}, {"id": "2607.08729v1", "title": "WaspMOT: A Benchmark for Long-Term Multi-Object Tracking of Trichogramma Wasps", "date": "2026-07-09", "year": "2026", "url": "http://arxiv.org/abs/2607.08729v1", "pdf": "https://arxiv.org/pdf/2607.08729v1", "detailPath": "paper-data/details/2607.08729v1.json", "summary": "## 一、论文基本信息\n标题：WaspMOT: A Benchmark for Long-Term Multi-Object Tracking of Trichogramma Wasps\n作者列表（原文）：Tomasz Stanczyk, Yuan Gao, Hardik Agarwal, Seongroo Yoon, Tiantao Zhang, Vincent Calcagno, Francois Bremond\n所属机构：Inria, Sophia Antipolis, France; INRAE Institut Sophia Agrobiotech, Sophia Antipolis, France; Université Côte d’Azur, Sophia Antipolis, France; …", "intro": "## 一、论文基本信息\n标题：WaspMOT: A Benchmark for Long-Term Multi-Object Tracking of Trichogramma Wasps\n作者列表（原文）：Tomasz Stanczyk, Yuan Gao, Hardik Agarwal, Seongroo Yoon, Tiantao Zhang, Vincent Calcagno, Francois Bremond\n所属机构：Inri", "tagsText": "", "authors": "Tomasz Stanczyk, Yuan Gao, Hardik Agarwal, Seongroo Yoon, Tiantao Zhang, Vincent Calcagno, Francois Bremond", "affiliations": "Inria, Sophia Antipolis, France; INRAE Institut Sophia Agrobiotech, Sophia Antipolis, France; Université Côte d’Azur, Sophia Antipolis, France; Indian Institute of Technology Delhi, Delhi, India; Institute of Plant Protection, Chinese Academy of Agricultural Sciences, Beijing, China", "code_url": "https://github.com/tstanczyk95/W", "local_pdf_path": "data/pdfs/detection/2607.08729v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["多目标跟踪", "ReID / 身份", "遮挡恢复"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": false, "relevance": 60}, {"id": "2607.13891v1", "title": "PiVoT: A Variational Solution for Real-time Large-scale Multi-object Detection and Tracking under Heavy Clutter", "date": "2026-07-15", "year": "2026", "url": "http://arxiv.org/abs/2607.13891v1", "pdf": "https://arxiv.org/pdf/2607.13891v1", "detailPath": "paper-data/details/2607.13891v1.json", "summary": "## 一、论文基本信息\n标题：PiVoT: A Variational Solution for Real-time Large-scale Multi-object Detection and Tracking under Heavy Clutter\n作者列表（原文）：Runze Gan, Qing Li, Simon J. Godsill, Mike E. Davies, James R. Hopgood\n所属机构：University of Edinburgh; University of Cambridge\n发表时间：2026年7月15日（arXiv预印本，编号arXiv:2607.13891v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：在多…", "intro": "## 一、论文基本信息\n标题：PiVoT: A Variational Solution for Real-time Large-scale Multi-object Detection and Tracking under Heavy Clutter\n作者列表（原文）：Runze Gan, Qing Li, Simon J. Godsill, Mike E. Davies, James R. Hopgood\n所属机构：Universi", "tagsText": "", "authors": "Runze Gan, Qing Li, Simon J. Godsill, Mike E. Davies, James R. Hopgood", "affiliations": "University of Edinburgh; University of Cambridge", "code_url": "", "local_pdf_path": "data/pdfs/detection/2607.13891v1.pdf", "stage": "association_mot", "stageTitle": "03 数据关联 / 多目标跟踪", "stageTags": ["association_mot"], "focus": ["多目标跟踪", "实时 / 边缘"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": false, "relevance": 60}, {"id": "2606.25880v1", "title": "USS: Unified Spatial-Semantic Prompts for Embodied Visual Tracking with Latent Dynamics Learning", "date": "2026-06-24", "year": "2026", "url": "http://arxiv.org/abs/2606.25880v1", "pdf": "https://arxiv.org/pdf/2606.25880v1", "detailPath": "paper-data/details/2606.25880v1.json", "summary": "## 一、论文基本信息\n标题：USS: Unified Spatial-Semantic Prompts for Embodied Visual Tracking with Latent Dynamics Learning\n作者列表（原文）：Yuchen Xie, Xinyu Zhou, Kuangji Zuo, Yanshuo Lu, Fengrui Huang, Boyu Ma, Jianfei Yang\n所属机构：Nanyang Technological University\n发表时间：2026年6月24日（arXiv预印本，编号arXiv:2606.25880v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：解决具身视觉跟踪（Embodied …", "intro": "## 一、论文基本信息\n标题：USS: Unified Spatial-Semantic Prompts for Embodied Visual Tracking with Latent Dynamics Learning\n作者列表（原文）：Yuchen Xie, Xinyu Zhou, Kuangji Zuo, Yanshuo Lu, Fengrui Huang, Boyu Ma, Jianfei Yang\n所属机构：Nanyang ", "tagsText": "tracking, visual grounding, Segment Anything", "authors": "Yuchen Xie, Xinyu Zhou, Kuangji Zuo, Yanshuo Lu, Fengrui Huang, Boyu Ma, Jianfei Yang", "affiliations": "Nanyang Technological University", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2606.25880v1.pdf", "stage": "motion_state", "stageTitle": "02 运动建模 / 状态估计", "stageTags": ["motion_state"], "focus": ["ReID / 身份", "多模态 / VLM"], "modelGroup": "motion_geometry", "modelGroupTitle": "运动模型 / 滤波 / 几何", "curated": false, "relevance": 45}, {"id": "2606.29023v1", "title": "Efficient Spatio-Temporal Grounding with Multimodal Large Models via Second-Level Tracking and RL Verification", "date": "2026-06-27", "year": "2026", "url": "http://arxiv.org/abs/2606.29023v1", "pdf": "https://arxiv.org/pdf/2606.29023v1", "detailPath": "paper-data/details/2606.29023v1.json", "summary": "## 一、论文基本信息\n标题：Efficient Spatio-Temporal Grounding with Multimodal Large Models via Second-Level Tracking and RL Verification  \n作者列表（原文）：Tianshu Zhang, Yan Wang, Ji Qi, Lijie Wen  \n所属机构：Tsinghua University  \n发表时间：2026年6月27日（arXiv预印本，编号arXiv:2606.29023v1）  \n开源代码地址：未明确  \n开源许可证类型：未明确  \n\n## 二、研究背景与动机\n- 该研究要解决什么问题：如何让基于多模态大语言模型（MLLM）的系统在长视频上高效且准确地进行时空定位（STVG），即同时…", "intro": "## 一、论文基本信息\n标题：Efficient Spatio-Temporal Grounding with Multimodal Large Models via Second-Level Tracking and RL Verification  \n作者列表（原文）：Tianshu Zhang, Yan Wang, Ji Qi, Lijie Wen  \n所属机构：Tsinghua University  \n发表时间：2026年6月", "tagsText": "visual grounding, tracking, multimodal learning, video search", "authors": "Tianshu Zhang, Yan Wang, Ji Qi, Lijie Wen", "affiliations": "Tsinghua University", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2606.29023v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 45}, {"id": "2607.12939v1", "title": "Point Tracking in Surgery--The 2025 Surgical Tattoos in Infrared Challenge (STIRC2025)", "date": "2026-07-14", "year": "2026", "url": "http://arxiv.org/abs/2607.12939v1", "pdf": "https://arxiv.org/pdf/2607.12939v1", "detailPath": "paper-data/details/2607.12939v1.json", "summary": "## 一、论文基本信息\n标题：Point Tracking in Surgery--The 2025 Surgical Tattoos in Infrared Challenge (STIRC2025)\n作者列表（原文）：Adam Schmidt, Mert Asim Karaoglu, Zijian Wu, Jiaming Zhang, Yuxin Chen, Tim Salcudean, Ho-Gun Ha, Minkang Jang, Kyungmin Jung, Ihsan Ullah, Hyunki Lee, Suresh Guttikonda, Sarah Latus, Alexander Schlaefer, Xinkai Zhao, Yuichiro Hayashi, Masahiro Oda,…", "intro": "## 一、论文基本信息\n标题：Point Tracking in Surgery--The 2025 Surgical Tattoos in Infrared Challenge (STIRC2025)\n作者列表（原文）：Adam Schmidt, Mert Asim Karaoglu, Zijian Wu, Jiaming Zhang, Yuxin Chen, Tim Salcudean, Ho-Gun Ha, Minkang Jan", "tagsText": "tracking, 3D reconstruction, medical image", "authors": "Adam Schmidt, Mert Asim Karaoglu, Zijian Wu, Jiaming Zhang, Yuxin Chen, Tim Salcudean, Ho-Gun Ha, Minkang Jang, Kyungmin Jung, Ihsan Ullah, Hyunki Lee, Suresh Guttikonda, Sarah Latus, Alexander Schlaefer, Xinkai Zhao, Yuichiro Hayashi, Masahiro Oda, Takayuki Kitasaka, Kensaku Mori, Peng Liu, Chenyang Li, Stefanie Speidel, Aoife Gardiner, Agostino Stilli, Danail Stoyanov, Francisco Vasconcelos, Anwesa Choudhuri, Meng Zheng, Zhongpai Gao, Benjamin Planche, Van Nguyen Nguyen, Terrence Chen, Ziyan Wu, Alexander Ladikos, Omid Mohareri", "affiliations": "未明确（论文中作者所属机构分散在多个单位，但未给出统一的所属机构字段，详见第十二节）", "code_url": "https://github.com/athaddius/S", "local_pdf_path": "data/pdfs/segmentation/2607.12939v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["点跟踪", "3D / 多视角", "交通 / 自动驾驶", "医疗跟踪"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 45}, {"id": "2607.18142v1", "title": "O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning", "date": "2026-07-20", "year": "2026", "url": "http://arxiv.org/abs/2607.18142v1", "pdf": "https://arxiv.org/pdf/2607.18142v1", "detailPath": "paper-data/details/2607.18142v1.json", "summary": "## 一、论文基本信息\n标题：O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning\n作者列表（原文）：Mei Yuan, Qi Long, Qifeng Wu, Zhenyang Li, Yizhou Zhao, Lei Wang, Yang Liu, Min Xu\n所属机构：Carnegie Mellon University, University of Alabama at Birmingham, Griffith University\n发表时间：2026年7月20日（arXiv预印本，编号arXiv:2607.18142v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二…", "intro": "## 一、论文基本信息\n标题：O-VAD: Industrial Video Anomaly Detection through Object-Centric Tracking and Reasoning\n作者列表（原文）：Mei Yuan, Qi Long, Qifeng Wu, Zhenyang Li, Yizhou Zhao, Lei Wang, Yang Liu, Min Xu\n所属机构：Carnegie Mellon Univ", "tagsText": "object detection, tracking, Segment Anything, video search", "authors": "Mei Yuan, Qi Long, Qifeng Wu, Zhenyang Li, Yizhou Zhao, Lei Wang, Yang Liu, Min Xu", "affiliations": "Carnegie Mellon University, University of Alabama at Birmingham, Griffith University", "code_url": "", "local_pdf_path": "data/pdfs/detection/2607.18142v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "异常 / 监控", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 45}, {"id": "2608.05699v1", "title": "TAU-Bench: From Anomaly Instance Tracking to Fine-Grained Video Anomaly Understanding", "date": "2026-08-06", "year": "2026", "url": "http://arxiv.org/abs/2608.05699v1", "pdf": "https://arxiv.org/pdf/2608.05699v1", "detailPath": "paper-data/details/2608.05699v1.json", "summary": "## 一、论文基本信息\n标题：TAU-Bench: From Anomaly Instance Tracking to Fine-Grained Video Anomaly Understanding  \n作者列表（原文）：Kepeng Yang, Dongxuan Liu, Rongxin Gao, Zixin Su, Rui Wu, Shuzhao Xie, Chenxin Li, Panwang Pan, Yuzhi Huang, Yue Huang, Jingyan Jiang  \n所属机构：厦门大学（XMU）、清华大学（THU）、香港中文大学（CUHK）、深圳技术大学（SZTU）  \n发表时间：2026年8月6日（arXiv预印本，编号arXiv:2608.05699v1）  \n开源代码地址：未明确 …", "intro": "## 一、论文基本信息\n标题：TAU-Bench: From Anomaly Instance Tracking to Fine-Grained Video Anomaly Understanding  \n作者列表（原文）：Kepeng Yang, Dongxuan Liu, Rongxin Gao, Zixin Su, Rui Wu, Shuzhao Xie, Chenxin Li, Panwang Pan, Yuzhi Huang,", "tagsText": "video segmentation, tracking, instance segmentation, video search", "authors": "Kepeng Yang, Dongxuan Liu, Rongxin Gao, Zixin Su, Rui Wu, Shuzhao Xie, Chenxin Li, Panwang Pan, Yuzhi Huang, Yue Huang, Jingyan Jiang", "affiliations": "厦门大学（XMU）、清华大学（THU）、香港中文大学（CUHK）、深圳技术大学（SZTU）", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2608.05699v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["多模态 / VLM", "异常 / 监控"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 45}, {"id": "2605.05390v1", "title": "LAMP: Localization Aware Multi-camera People Tracking in Metric 3D World", "date": "2026-05-06", "year": "2026", "url": "http://arxiv.org/abs/2605.05390v1", "pdf": "https://arxiv.org/pdf/2605.05390v1", "detailPath": "paper-data/details/2605.05390v1.json", "summary": "## 一、论文基本信息\n\n- **标题：** LAMP: Localization Aware Multi-camera People Tracking in Metric 3D World  \n- **作者列表（原文）：** Nan Yang, Julian Straub, Fan Zhang, Richard Newcombe, Jakob Engel, Lingni Ma  \n- **所属机构：** Meta Reality Labs Research  \n- **发表时间：** 2026 年 5 月 6 日（arXiv:2605.05390v1）  \n- **开源代码地址：** https://facebookresearch.github.io/LAMP  \n- **开源许可证类型：** 未在论文中明…", "intro": "## 一、论文基本信息\n\n- **标题：** LAMP: Localization Aware Multi-camera People Tracking in Metric 3D World  \n- **作者列表（原文）：** Nan Yang, Julian Straub, Fan Zhang, Richard Newcombe, Jakob Engel, Lingni Ma  \n- **所属机构：** Meta Reality La", "tagsText": "pose estimation, object detection, video search", "authors": "Nan Yang, Julian Straub, Fan Zhang, Richard Newcombe, Jakob Engel, Lingni Ma", "affiliations": "** Meta Reality Labs Research", "code_url": "https://facebookresearch.github.io/LAMP", "local_pdf_path": "data/pdfs/tracking/2605.05390v1.pdf", "stage": "multicamera_3d", "stageTitle": "06 3D / 4D / 多相机跟踪", "stageTags": ["multicamera_3d"], "focus": ["遮挡恢复", "3D / 多视角"], "modelGroup": "multiview_3d", "modelGroupTitle": "多相机 / 3D / 传感器融合", "curated": false, "relevance": 35}, {"id": "2605.06112v1", "title": "Dynamic Pondering Sparsity-aware Mixture-of-Experts Transformer for Event Stream based Visual Object Tracking", "date": "2026-05-07", "year": "2026", "url": "http://arxiv.org/abs/2605.06112v1", "pdf": "https://arxiv.org/pdf/2605.06112v1", "detailPath": "paper-data/details/2605.06112v1.json", "summary": "## 一、论文基本信息\n- **标题**: Dynamic Pondering Sparsity-aware Mixture-of-Experts Transformer for Event Stream based Visual Object Tracking  \n- **作者列表**: Shiao Wang, Xiao Wang*, Duoqing Yang, Wenhao Zhang, Bo Jiang*, Lin Zhu, Yonghong Tian, Bin Luo  \n- **所属机构**: School of Computer Science and Technology, Anhui University (Shiao Wang, Duoqing Yang, Wenhao Zhang, Xiao…", "intro": "## 一、论文基本信息\n- **标题**: Dynamic Pondering Sparsity-aware Mixture-of-Experts Transformer for Event Stream based Visual Object Tracking  \n- **作者列表**: Shiao Wang, Xiao Wang*, Duoqing Yang, Wenhao Zhang, Bo Jiang*, Lin Zhu, Yo", "tagsText": "object detection", "authors": "Shiao Wang, Xiao Wang, Duoqing Yang, Wenhao Zhang, Bo Jiang, Lin Zhu, Yonghong Tian, Bin Luo", "affiliations": "School of Computer Science and Technology, Anhui University (Shiao Wang, Duoqing Yang, Wenhao Zhang, Xiao Wang, Bo Jiang, Bin Luo); Beijing Institute of Technology (Lin Zhu); Peng Cheng Laboratory, Peking University (Yonghong Tian)", "code_url": "https://github.com/Event-AHU/O", "local_pdf_path": "data/pdfs/tracking/2605.06112v1.pdf", "stage": "single_point_pose", "stageTitle": "05 单目标 / 点 / 姿态跟踪", "stageTags": ["single_point_pose"], "focus": ["单目标跟踪"], "modelGroup": "transformer_query", "modelGroupTitle": "Transformer / Query Tracking", "curated": false, "relevance": 35}, {"id": "2605.06092v1", "title": "Boosting Self-Supervised Tracking with Contextual Prompts and Noise Learning", "date": "2026-05-07", "year": "2026", "url": "http://arxiv.org/abs/2605.06092v1", "pdf": "https://arxiv.org/pdf/2605.06092v1", "detailPath": "paper-data/details/2605.06092v1.json", "summary": "## 一、论文基本信息\n\n- **标题**：Boosting Self-Supervised Tracking with Contextual Prompts and Noise Learning  \n- **作者列表**：Yaozong Zheng, Qihua Liang, Bineng Zhong, Shuimu Zeng, Yuanliang Xue, Ning Li, Shuxiang Song  \n- **所属机构**：  \n  - 广西师范大学（教育部教育区块链与智能技术重点实验室 / 教育智能技术大学工程研究中心）  \n  - 南安普顿大学  \n  - 西安高技术研究所  \n- **发表时间**：2026年5月7日（arXiv预印本）  \n- **开源代码地址**：论文中未明确提供开源代码链接。…", "intro": "## 一、论文基本信息\n\n- **标题**：Boosting Self-Supervised Tracking with Contextual Prompts and Noise Learning  \n- **作者列表**：Yaozong Zheng, Qihua Liang, Bineng Zhong, Shuimu Zeng, Yuanliang Xue, Ning Li, Shuxiang Song  \n- **所属机构**：  ", "tagsText": "Image Feature Extraction", "authors": "Yaozong Zheng, Qihua Liang, Bineng Zhong, Shuimu Zeng, Yuanliang Xue, Ning Li, Shuxiang Song", "affiliations": "广西师范大学（教育部教育区块链与智能技术重点实验室 / 教育智能技术大学工程研究中心） 南安普顿大学 西安高技术研究所", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2605.06092v1.pdf", "stage": "detection_representation", "stageTitle": "01 检测 / 表征 / 特征", "stageTags": ["detection_representation"], "focus": ["实时 / 边缘"], "modelGroup": "tracking_by_detection", "modelGroupTitle": "Tracking-by-Detection / SORT", "curated": false, "relevance": 35}, {"id": "2605.21714v1", "title": "AVI-HT: Adaptive Vision-IMU Fusion for 3D Hand Tracking", "date": "2026-05-20", "year": "2026", "url": "http://arxiv.org/abs/2605.21714v1", "pdf": "https://arxiv.org/pdf/2605.21714v1", "detailPath": "paper-data/details/2605.21714v1.json", "summary": "## 一、论文基本信息\n标题：AVI-HT: Adaptive Vision-IMU Fusion for 3D Hand Tracking\n作者列表（原文）：Ziyi Kou, Ankit Kumar, Mia Huang, Taylor Niehues, Vatsal Mehta, Ergys Ristani, Li Guan\n所属机构：Meta Reality Labs\n发表时间：2026年5月20日（arXiv预印本，编号arXiv:2605.21714v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：在严重视觉遮挡的手-物交互（HOI）场景中，从单模态（纯视觉或纯IMU）难以准确跟踪3D手部姿态的问题。\n- 目前最好的方法存在哪些不足：纯RGB…", "intro": "## 一、论文基本信息\n标题：AVI-HT: Adaptive Vision-IMU Fusion for 3D Hand Tracking\n作者列表（原文）：Ziyi Kou, Ankit Kumar, Mia Huang, Taylor Niehues, Vatsal Mehta, Ergys Ristani, Li Guan\n所属机构：Meta Reality Labs\n发表时间：2026年5月20日（arXiv预印本，编号arX", "tagsText": "", "authors": "Ziyi Kou, Ankit Kumar, Mia Huang, Taylor Niehues, Vatsal Mehta, Ergys Ristani, Li Guan", "affiliations": "Meta Reality Labs", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2605.21714v1.pdf", "stage": "multicamera_3d", "stageTitle": "06 3D / 4D / 多相机跟踪", "stageTags": ["multicamera_3d"], "focus": ["遮挡恢复", "姿态跟踪", "3D / 多视角"], "modelGroup": "multiview_3d", "modelGroupTitle": "多相机 / 3D / 传感器融合", "curated": false, "relevance": 35}, {"id": "2606.04249v1", "title": "Prospective Dynamic 3D MRI Reconstruction via Latent-Space Motion Tracking from Single Measurement", "date": "2026-06-02", "year": "2026", "url": "http://arxiv.org/abs/2606.04249v1", "pdf": "https://arxiv.org/pdf/2606.04249v1", "detailPath": "paper-data/details/2606.04249v1.json", "summary": "## 一、论文基本信息\n标题：Prospective Dynamic 3D MRI Reconstruction via Latent-Space Motion Tracking from Single Measurement\n作者列表（原文）：Lixuan Chen, Zhongnan Liu, Jesse Hamilton, James M. Balter, Jeong Joon Park, Liyue Shen\n所属机构：University of Michigan\n发表时间：2026年6月2日（arXiv预印本，编号arXiv:2606.04249v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：在MRI引导的放射治疗等临床应用中，需要从当前采集…", "intro": "## 一、论文基本信息\n标题：Prospective Dynamic 3D MRI Reconstruction via Latent-Space Motion Tracking from Single Measurement\n作者列表（原文）：Lixuan Chen, Zhongnan Liu, Jesse Hamilton, James M. Balter, Jeong Joon Park, Liyue Shen\n所属机构：Univ", "tagsText": "", "authors": "Lixuan Chen, Zhongnan Liu, Jesse Hamilton, James M. Balter, Jeong Joon Park, Liyue Shen", "affiliations": "University of Michigan", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2606.04249v1.pdf", "stage": "multicamera_3d", "stageTitle": "06 3D / 4D / 多相机跟踪", "stageTags": ["multicamera_3d"], "focus": ["3D / 多视角", "医疗跟踪"], "modelGroup": "multiview_3d", "modelGroupTitle": "多相机 / 3D / 传感器融合", "curated": false, "relevance": 35}, {"id": "2606.22631v1", "title": "4DVLT: Dynamic Scene Understanding with Worldline-Centered Vision-Language Tracking", "date": "2026-06-21", "year": "2026", "url": "http://arxiv.org/abs/2606.22631v1", "pdf": "https://arxiv.org/pdf/2606.22631v1", "detailPath": "paper-data/details/2606.22631v1.json", "summary": "## 一、论文基本信息\n标题：4DVLT: Dynamic Scene Understanding with Worldline-Centered Vision-Language Tracking\n作者列表（原文）：Chaoyue Li, Boxue Yang, Shengyao Zhou, Haoyang Wu, Rui Qian, Linfeng Zhang\n所属机构：Huazhong University of Science and Technology (Chaoyue Li, Haoyang Wu); Shanghai Jiao Tong University (Boxue Yang, Rui Qian, Linfeng Zhang); Zhejiang University (Shengyao Z…", "intro": "## 一、论文基本信息\n标题：4DVLT: Dynamic Scene Understanding with Worldline-Centered Vision-Language Tracking\n作者列表（原文）：Chaoyue Li, Boxue Yang, Shengyao Zhou, Haoyang Wu, Rui Qian, Linfeng Zhang\n所属机构：Huazhong University of Science a", "tagsText": "", "authors": "Chaoyue Li, Boxue Yang, Shengyao Zhou, Haoyang Wu, Rui Qian, Linfeng Zhang", "affiliations": "Huazhong University of Science and Technology (Chaoyue Li, Haoyang Wu); Shanghai Jiao Tong University (Boxue Yang, Rui Qian, Linfeng Zhang); Zhejiang University (Shengyao Zhou)", "code_url": "https://github.com/mikubaka88/4", "local_pdf_path": "data/pdfs/tracking/2606.22631v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["ReID / 身份", "遮挡恢复", "3D / 多视角", "多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 35}, {"id": "2607.09103v1", "title": "Equivariant Filter for High Performance Image Tracking using an Event Camera", "date": "2026-07-10", "year": "2026", "url": "http://arxiv.org/abs/2607.09103v1", "pdf": "https://arxiv.org/pdf/2607.09103v1", "detailPath": "paper-data/details/2607.09103v1.json", "summary": "## 一、论文基本信息\n标题：Equivariant Filter for High Performance Image Tracking using an Event Camera\n作者列表（原文）：Angus Apps, Yixiao Ge, Timothy L. Molloy, Robert Mahony\n所属机构：Australian National University\n发表时间：2026年7月10日（arXiv预印本，编号arXiv:2607.09103v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：利用事件相机实现高性能图像跟踪，估计从运动图像到参考图像间的平面变换（平移和旋转）。\n- 目前最好的方法存在哪些不足：现有基于滤波的事件跟踪…", "intro": "## 一、论文基本信息\n标题：Equivariant Filter for High Performance Image Tracking using an Event Camera\n作者列表（原文）：Angus Apps, Yixiao Ge, Timothy L. Molloy, Robert Mahony\n所属机构：Australian National University\n发表时间：2026年7月10日（arXiv预印本，编号", "tagsText": "", "authors": "Angus Apps, Yixiao Ge, Timothy L. Molloy, Robert Mahony", "affiliations": "Australian National University", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2607.09103v1.pdf", "stage": "motion_state", "stageTitle": "02 运动建模 / 状态估计", "stageTags": ["motion_state"], "focus": ["交通 / 自动驾驶"], "modelGroup": "motion_geometry", "modelGroupTitle": "运动模型 / 滤波 / 几何", "curated": false, "relevance": 35}, {"id": "2607.11754v1", "title": "Higher-Order Cell Tracking Transformer", "date": "2026-07-13", "year": "2026", "url": "http://arxiv.org/abs/2607.11754v1", "pdf": "https://arxiv.org/pdf/2607.11754v1", "detailPath": "paper-data/details/2607.11754v1.json", "summary": "## 一、论文基本信息\n标题：Higher-Order Cell Tracking Transformer\n作者列表（原文）：Jordão Bragantini, Ilan Theodoro, Loïc A. Royer\n所属机构：Biohub\n发表时间：2026年7月13日（arXiv预印本，编号arXiv:2607.11754v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：在基于检测的细胞跟踪中，候选跟踪图存在两个结构性问题：(i) 细胞分裂导致不同谱系路径在节点嵌入空间中纠缠在一起（连接流形效应）；(ii) 共享同一节点的边之间标签一致性近乎随机，候选图拓扑无法为图神经网络提供有用信息（非均匀拓扑）。\n- 目前最好的方法存在哪些不足：现有方法（如…", "intro": "## 一、论文基本信息\n标题：Higher-Order Cell Tracking Transformer\n作者列表（原文）：Jordão Bragantini, Ilan Theodoro, Loïc A. Royer\n所属机构：Biohub\n发表时间：2026年7月13日（arXiv预印本，编号arXiv:2607.11754v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：", "tagsText": "", "authors": "Jordão Bragantini, Ilan Theodoro, Loïc A. Royer", "affiliations": "Biohub", "code_url": "", "local_pdf_path": "data/pdfs/detection/2607.11754v1.pdf", "stage": "single_point_pose", "stageTitle": "05 单目标 / 点 / 姿态跟踪", "stageTags": ["single_point_pose"], "focus": ["3D / 多视角", "医疗跟踪", "实时 / 边缘"], "modelGroup": "dense_pose_segmentation", "modelGroupTitle": "点 / 姿态 / 分割跟踪", "curated": false, "relevance": 35}, {"id": "2607.23669v1", "title": "RRTrack: Robust and Recoverable Object 6D Pose Tracking for Dynamic Scenes", "date": "2026-07-26", "year": "2026", "url": "http://arxiv.org/abs/2607.23669v1", "pdf": "https://arxiv.org/pdf/2607.23669v1", "detailPath": "paper-data/details/2607.23669v1.json", "summary": "## 一、论文基本信息\n标题：RRTrack: Robust and Recoverable Object 6D Pose Tracking for Dynamic Scenes\n作者列表（原文）：Junyue Li, Ye Zheng, Yifan Chen, Zhe Sun, Xuelong Li\n所属机构：未明确（各作者所属机构见第十二节）\n发表时间：2026年7月26日（arXiv预印本，编号arXiv:2607.23669v1）\n开源代码地址：https://github.com/7kevin24/RRTrack（项目页面）\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：在快速运动和完全遮挡等动态场景下，如何实现鲁棒且可恢复的物体6D姿态跟踪，即使在目标消失后重新出现时…", "intro": "## 一、论文基本信息\n标题：RRTrack: Robust and Recoverable Object 6D Pose Tracking for Dynamic Scenes\n作者列表（原文）：Junyue Li, Ye Zheng, Yifan Chen, Zhe Sun, Xuelong Li\n所属机构：未明确（各作者所属机构见第十二节）\n发表时间：2026年7月26日（arXiv预印本，编号arXiv:2607.23669v1", "tagsText": "", "authors": "Junyue Li, Ye Zheng, Yifan Chen, Zhe Sun, Xuelong Li", "affiliations": "未明确（各作者所属机构见第十二节）", "code_url": "https://github.com/7kevin24/R", "local_pdf_path": "data/pdfs/segmentation/2607.23669v1.pdf", "stage": "multicamera_3d", "stageTitle": "06 3D / 4D / 多相机跟踪", "stageTags": ["multicamera_3d"], "focus": ["遮挡恢复", "姿态跟踪", "实时 / 边缘"], "modelGroup": "multiview_3d", "modelGroupTitle": "多相机 / 3D / 传感器融合", "curated": false, "relevance": 35}, {"id": "2608.04995v1", "title": "Promptable Animal Pose Tracking Across Species", "date": "2026-08-05", "year": "2026", "url": "http://arxiv.org/abs/2608.04995v1", "pdf": "https://arxiv.org/pdf/2608.04995v1", "detailPath": "paper-data/details/2608.04995v1.json", "summary": "## 一、论文基本信息\n标题：Promptable Animal Pose Tracking Across Species\n作者列表（原文）：Le Li, Daniela Ivanova, Nicolas Pugeault\n所属机构：School of Computing Science, University of Glasgow\n发表时间：2026年8月5日（arXiv预印本，编号arXiv:2608.04995v1；已接收为ECCV 2026 Workshop on CV4Ecology）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：动物姿态估计与跟踪在野生动物监测、动物行为分析和生态保护中非常重要，但动物物种间形态差异大、标注数据稀缺，导致现有方法…", "intro": "## 一、论文基本信息\n标题：Promptable Animal Pose Tracking Across Species\n作者列表（原文）：Le Li, Daniela Ivanova, Nicolas Pugeault\n所属机构：School of Computing Science, University of Glasgow\n发表时间：2026年8月5日（arXiv预印本，编号arXiv:2608.04995v1；已接收为ECC", "tagsText": "", "authors": "Le Li, Daniela Ivanova, Nicolas Pugeault", "affiliations": "School of Computing Science, University of Glasgow", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2608.04995v1.pdf", "stage": "single_point_pose", "stageTitle": "05 单目标 / 点 / 姿态跟踪", "stageTags": ["single_point_pose"], "focus": ["姿态跟踪"], "modelGroup": "dense_pose_segmentation", "modelGroupTitle": "点 / 姿态 / 分割跟踪", "curated": false, "relevance": 35}, {"id": "2608.17884v1", "title": "CFB-GBM v2.0: An Augmented Longitudinal Dataset for Multi-Modal Glioblastoma Segmentation, Radiomics, and RANO Progression Tracking", "date": "2026-08-18", "year": "2026", "url": "http://arxiv.org/abs/2608.17884v1", "pdf": "https://arxiv.org/pdf/2608.17884v1", "detailPath": "paper-data/details/2608.17884v1.json", "summary": "## 一、论文基本信息\n标题：CFB-GBM v2.0: An Augmented Longitudinal Dataset for Multi-Modal Glioblastoma Segmentation, Radiomics, and RANO Progression Tracking\n作者列表（原文）：Alexandre G. Leclercq, Noémie N. Moreau, Hugo Audebert, Andros Nassar, Thomas Cochin, Thomas Leleu, Loïc Le Henaff, Alexis Desmonts, Yoann Poirier, Aurélie Dubru, Laura Guillemette, Pascal Lecoeur, Kévin …", "intro": "## 一、论文基本信息\n标题：CFB-GBM v2.0: An Augmented Longitudinal Dataset for Multi-Modal Glioblastoma Segmentation, Radiomics, and RANO Progression Tracking\n作者列表（原文）：Alexandre G. Leclercq, Noémie N. Moreau, Hugo Audebert, Andros N", "tagsText": "medical image, semantic segmentation, image classification, vision transformer", "authors": "Alexandre G. Leclercq, Noémie N. Moreau, Hugo Audebert, Andros Nassar, Thomas Cochin, Thomas Leleu, Loïc Le Henaff, Alexis Desmonts, Yoann Poirier, Aurélie Dubru, Laura Guillemette, Pascal Lecoeur, Kévin Lemasson, Cyril Jaudet, Sébastien Bougleux, Romain Hérault, Carole Brunaud, Samuel Valable, Dinu Stefan, Charlotte Raboutet, Alain Batalla, Joëlle Lacroix, Roman Rouzier, Aurélien Corroyer-Dulmont", "affiliations": "Centre François Baclesse; Université de Caen Normandie; ENSICAEN; CNRS; Normandie Univ; ISTCT UMR6030; CYCERON; GREYC UMR 6072", "code_url": "", "local_pdf_path": "data/pdfs/segmentation/2608.17884v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["医疗跟踪"], "modelGroup": "dense_pose_segmentation", "modelGroupTitle": "点 / 姿态 / 分割跟踪", "curated": false, "relevance": 35}, {"id": "2603.12382v1", "title": "SPARROW: Learning Spatial Precision and Temporal Referential Consistency in Pixel-Grounded Video MLLMs", "date": "2026-03-12", "year": "2026", "url": "http://arxiv.org/abs/2603.12382v1", "pdf": "https://arxiv.org/pdf/2603.12382v1", "detailPath": "paper-data/details/2603.12382v1.json", "summary": "## 一、论文基本信息\n标题：SPARROW: Learning Spatial Precision and Temporal Referential Consistency in Pixel-Grounded Video MLLMs\n作者列表（原文）：Mohamad Alansari, Naufal Suryanto, Divya Velayudhan, Sajid Javed, Naoufel Werghi, Muzammal Naseer\n所属机构：Khalifa University, Abu Dhabi, UAE\n发表时间：2026年3月12日（arXiv预印本，编号arXiv:2603.12382v1）\n开源代码地址：https://github.com/RISys-Lab/SPARROW\n开源许可…", "intro": "## 一、论文基本信息\n标题：SPARROW: Learning Spatial Precision and Temporal Referential Consistency in Pixel-Grounded Video MLLMs\n作者列表（原文）：Mohamad Alansari, Naufal Suryanto, Divya Velayudhan, Sajid Javed, Naoufel Werghi, Muzammal Na", "tagsText": "video segmentation, tracking, multimodal learning, visual grounding, video search", "authors": "Mohamad Alansari, Naufal Suryanto, Divya Velayudhan, Sajid Javed, Naoufel Werghi, Muzammal Naseer", "affiliations": "Khalifa University, Abu Dhabi, UAE", "code_url": "https://github.com/RISys-Lab/S", "local_pdf_path": "data/pdfs/segmentation/2603.12382v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["ReID / 身份", "多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2604.08014v3", "title": "Bridging Time and Space: Decoupled Spatio-Temporal Alignment for Video Grounding", "date": "2026-04-09", "year": "2026", "url": "http://arxiv.org/abs/2604.08014v3", "pdf": "https://arxiv.org/pdf/2604.08014v3", "detailPath": "paper-data/details/2604.08014v3.json", "summary": "## 一、论文基本信息\n标题：Bridging Time and Space: Decoupled Spatio-Temporal Alignment for Video Grounding\n作者列表（原文）：Xuezhen Tu, Jingyu Wu, Fangyu Kang, Qingpeng Nong, Kaijin Zhang, Chaoyue Niu, Fan Wu\n所属机构：Shanghai Jiao Tong University; ZTE Corporation\n发表时间：2026年4月21日（arXiv预印本，编号arXiv:2604.08014v3）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：时空视频定位（Spatio-Tempora…", "intro": "## 一、论文基本信息\n标题：Bridging Time and Space: Decoupled Spatio-Temporal Alignment for Video Grounding\n作者列表（原文）：Xuezhen Tu, Jingyu Wu, Fangyu Kang, Qingpeng Nong, Kaijin Zhang, Chaoyue Niu, Fan Wu\n所属机构：Shanghai Jiao Tong Univer", "tagsText": "visual grounding, multimodal learning, video segmentation, tracking, video search", "authors": "Xuezhen Tu, Jingyu Wu, Fangyu Kang, Qingpeng Nong, Kaijin Zhang, Chaoyue Niu, Fan Wu", "affiliations": "Shanghai Jiao Tong University; ZTE Corporation", "code_url": "", "local_pdf_path": "data/pdfs/other/2604.08014v3.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2604.15090v1", "title": "Beyond Visual Cues: Semantic-Driven Token Filtering and Expert Routing for Anytime Person ReID", "date": "2026-04-16", "year": "2026", "url": "http://arxiv.org/abs/2604.15090v1", "pdf": "https://arxiv.org/pdf/2604.15090v1", "detailPath": "paper-data/details/2604.15090v1.json", "summary": "## 一、论文基本信息\n标题：Beyond Visual Cues: Semantic-Driven Token Filtering and Expert Routing for Anytime Person ReID\n作者列表（原文）：Jiaxuan Li, Xin Wen, Zhihang Li\n所属机构：清华大学、独立研究者、中国科学院大学\n发表时间：2026年4月16日（arXiv预印本，编号arXiv:2604.15090v1）\n开源代码地址：未明确（论文称“代码即将发布”）\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：Any-Time Person Re-identification（AT-ReID）要求在任意条件下对目标行人进行鲁棒检索，包括白天（RGB）与夜间（…", "intro": "## 一、论文基本信息\n标题：Beyond Visual Cues: Semantic-Driven Token Filtering and Expert Routing for Anytime Person ReID\n作者列表（原文）：Jiaxuan Li, Xin Wen, Zhihang Li\n所属机构：清华大学、独立研究者、中国科学院大学\n发表时间：2026年4月16日（arXiv预印本，编号arXiv:2604.15090v1", "tagsText": "multimodal learning, image retrieval, tracking, video search", "authors": "Jiaxuan Li, Xin Wen, Zhihang Li", "affiliations": "清华大学、独立研究者、中国科学院大学", "code_url": "", "local_pdf_path": "data/pdfs/multimodal/2604.15090v1.pdf", "stage": "identity_occlusion", "stageTitle": "04 身份 / ReID / 遮挡恢复", "stageTags": ["identity_occlusion"], "focus": ["ReID / 身份", "多模态 / VLM"], "modelGroup": "appearance_reid", "modelGroupTitle": "外观特征 / ReID / 身份", "curated": false, "relevance": 10}, {"id": "2605.00684v1", "title": "Static and Dynamic Graph Alignment Network for Temporal Video Grounding", "date": "2026-05-01", "year": "2026", "url": "http://arxiv.org/abs/2605.00684v1", "pdf": "https://arxiv.org/pdf/2605.00684v1", "detailPath": "paper-data/details/2605.00684v1.json", "summary": "## 一、论文基本信息\n标题：Static and Dynamic Graph Alignment Network for Temporal Video Grounding\n作者列表（原文）：Zhanjie Hu, Bolin Zhang, Jianhua Wang, Jianbo Zheng, Chenchen Yan, Takahiro Komamizu, Ichiro Ide, Jiangbo Qian\n所属机构：Ningbo University, Inner Mongolia University, Hunan Normal University, Georg-August-Universität Göttingen, Nagoya University\n发表时间：2026年5月1日（arXiv预印本…", "intro": "## 一、论文基本信息\n标题：Static and Dynamic Graph Alignment Network for Temporal Video Grounding\n作者列表（原文）：Zhanjie Hu, Bolin Zhang, Jianhua Wang, Jianbo Zheng, Chenchen Yan, Takahiro Komamizu, Ichiro Ide, Jiangbo Qian\n所属机构：Ningbo U", "tagsText": "video segmentation, tracking, multimodal learning, visual grounding, video search", "authors": "Zhanjie Hu, Bolin Zhang, Jianhua Wang, Jianbo Zheng, Chenchen Yan, Takahiro Komamizu, Ichiro Ide, Jiangbo Qian", "affiliations": "Ningbo University, Inner Mongolia University, Hunan Normal University, Georg-August-Universität Göttingen, Nagoya University", "code_url": "https://github.com/ZhanJieHu/S", "local_pdf_path": "data/pdfs/multimodal/2605.00684v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2605.08412v1", "title": "SYNCR: A Cross-Video Reasoning Benchmark with Synthetic Grounding", "date": "2026-05-08", "year": "2026", "url": "http://arxiv.org/abs/2605.08412v1", "pdf": "https://arxiv.org/pdf/2605.08412v1", "detailPath": "paper-data/details/2605.08412v1.json", "summary": "## 一、论文基本信息\n标题：SYNCR: A Cross-Video Reasoning Benchmark with Synthetic Grounding\n作者列表（原文）：Sara Ghazanfari, Siddharth Garg, Prashanth Krishnamurthy, Farshad Khorrami\n所属机构：New York University\n发表时间：2026年5月8日（arXiv预印本，编号arXiv:2605.08412v1）\n开源代码地址：https://github.com/SaraGhazanfari/SYNCR\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：多模态大语言模型（MLLMs）在单视频理解方面取得了显著进展，但其跨多个独立…", "intro": "## 一、论文基本信息\n标题：SYNCR: A Cross-Video Reasoning Benchmark with Synthetic Grounding\n作者列表（原文）：Sara Ghazanfari, Siddharth Garg, Prashanth Krishnamurthy, Farshad Khorrami\n所属机构：New York University\n发表时间：2026年5月8日（arXiv预印本，编号arXi", "tagsText": "video search, video segmentation, tracking, multimodal learning", "authors": "Sara Ghazanfari, Siddharth Garg, Prashanth Krishnamurthy, Farshad Khorrami", "affiliations": "New York University", "code_url": "https://github.com/SaraGhazanfari/S", "local_pdf_path": "data/pdfs/tracking/2605.08412v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2605.15342v1", "title": "Minerva-Ego: Spatiotemporal Hints for Egocentric Video Understanding", "date": "2026-05-14", "year": "2026", "url": "http://arxiv.org/abs/2605.15342v1", "pdf": "https://arxiv.org/pdf/2605.15342v1", "detailPath": "paper-data/details/2605.15342v1.json", "summary": "## 一、论文基本信息\n标题：Minerva-Ego: Spatiotemporal Hints for Egocentric Video Understanding\n作者列表（原文）：Arsha Nagrani, Jasper Uijlings, Shyamal Buch, Tobias Weyand, Sudheendra Vijayanarasimhan, Bo Hu, Ramin Mehran, David A Ross, Cordelia Schmid\n所属机构：Google DeepMind\n发表时间：2026年5月14日（arXiv预印本，编号arXiv:2605.15342v1）\n开源代码地址：https://github.com/google-deepmind/neptune\n开源许可证类型：…", "intro": "## 一、论文基本信息\n标题：Minerva-Ego: Spatiotemporal Hints for Egocentric Video Understanding\n作者列表（原文）：Arsha Nagrani, Jasper Uijlings, Shyamal Buch, Tobias Weyand, Sudheendra Vijayanarasimhan, Bo Hu, Ramin Mehran, David A Ross, Co", "tagsText": "video segmentation, tracking, video generation, multimodal learning, video search", "authors": "Arsha Nagrani, Jasper Uijilings, Shyamal Buch, Tobias Weyand, Sudheendra Vijayanarasimhan, Bo Hu, Ramin Mehran, David A Ross, Cordelia Schmid", "affiliations": "Google DeepMind", "code_url": "https://github.com/google-deepmind/n", "local_pdf_path": "data/pdfs/other/2605.15342v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2605.26104v1", "title": "EVIDENT: Routing MLLM Adaptation through Entity-Grounded Visual Evidence for Cross-Domain Video Temporal Grounding", "date": "2026-05-25", "year": "2026", "url": "http://arxiv.org/abs/2605.26104v1", "pdf": "https://arxiv.org/pdf/2605.26104v1", "detailPath": "paper-data/details/2605.26104v1.json", "summary": "## 一、论文基本信息\n标题：EVIDENT: Routing MLLM Adaptation through Entity-Grounded Visual Evidence for Cross-Domain Video Temporal Grounding\n作者列表（原文）：Geo Ahn, Jiwook Han, Youngrae Kim, Joonseok Lee, Jinwoo Choi\n所属机构：Kyung Hee University, University of Southern California, Seoul National University\n发表时间：2026年5月25日（arXiv预印本，编号arXiv:2605.26104v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n#…", "intro": "## 一、论文基本信息\n标题：EVIDENT: Routing MLLM Adaptation through Entity-Grounded Visual Evidence for Cross-Domain Video Temporal Grounding\n作者列表（原文）：Geo Ahn, Jiwook Han, Youngrae Kim, Joonseok Lee, Jinwoo Choi\n所属机构：Kyung Hee Unive", "tagsText": "video search, multimodal learning, video segmentation, tracking", "authors": "Geo Ahn, Jiwook Han, Youngrae Kim, Joonseok Lee, Jinwoo Choi", "affiliations": "Kyung Hee University, University of Southern California, Seoul National University", "code_url": "", "local_pdf_path": "data/pdfs/other/2605.26104v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2605.27304v1", "title": "PlayClass: Automated Play Behaviour Classification in Poultry", "date": "2026-05-26", "year": "2026", "url": "http://arxiv.org/abs/2605.27304v1", "pdf": "https://arxiv.org/pdf/2605.27304v1", "detailPath": "paper-data/details/2605.27304v1.json", "summary": "## 一、论文基本信息\n标题：PlayClass: Automated Play Behaviour Classification in Poultry\n作者列表（原文）：Prince Ravi Leow, Neil Scheidwasser, Rebecca Oscarsson, Per Jensen, Samir Bhatt, David Alejandro Duchêne\n所属机构：University of Copenhagen, Linköping University, Imperial College London\n发表时间：2026年5月26日（arXiv预印本，编号arXiv:2605.27304v1）\n开源代码地址：https://github.com/sbhattlab/PlayClass…", "intro": "## 一、论文基本信息\n标题：PlayClass: Automated Play Behaviour Classification in Poultry\n作者列表（原文）：Prince Ravi Leow, Neil Scheidwasser, Rebecca Oscarsson, Per Jensen, Samir Bhatt, David Alejandro Duchêne\n所属机构：University of Copenhagen", "tagsText": "object detection, tracking, Segment Anything, vision transformer, image classification", "authors": "Prince Ravi Leow, Neil Scheidwasser, Rebecca Oscarsson, Per Jensen, Samir Bhatt, David Alejandro Duchêne", "affiliations": "University of Copenhagen, Linköping University, Imperial College London", "code_url": "https://github.com/sbhattlab/P", "local_pdf_path": "data/pdfs/tracking/2605.27304v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["ReID / 身份", "遮挡恢复"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2605.31598v1", "title": "Linear Scaling Video VLMs for Long Video Understanding", "date": "2026-05-29", "year": "2026", "url": "http://arxiv.org/abs/2605.31598v1", "pdf": "https://arxiv.org/pdf/2605.31598v1", "detailPath": "paper-data/details/2605.31598v1.json", "summary": "## 一、论文基本信息\n标题：Linear Scaling Video VLMs for Long Video Understanding\n作者列表（原文）：Cristóbal Eyzaguirre, Jiajun Wu, Juan Carlos Niebles\n所属机构：Stanford University\n发表时间：2026年5月29日（arXiv预印本，编号arXiv:2605.31598v1）\n开源代码地址：https://ceyzaguirre4.github.io/StateKV\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：视频视觉语言模型（Video VLMs）在处理长视频时，其计算成本随帧数呈二次方增长，导致推理延迟高、无法支持实时流式应用。论文旨在将预训练的…", "intro": "## 一、论文基本信息\n标题：Linear Scaling Video VLMs for Long Video Understanding\n作者列表（原文）：Cristóbal Eyzaguirre, Jiajun Wu, Juan Carlos Niebles\n所属机构：Stanford University\n发表时间：2026年5月29日（arXiv预印本，编号arXiv:2605.31598v1）\n开源代码地址：https://c", "tagsText": "multimodal learning, video segmentation, tracking, video search", "authors": "Cristobal Eyzaguirre, Jiajun Wu, Juan Carlos Niebles", "affiliations": "Stanford University", "code_url": "https://ceyzaguirre4.github.io/StateKV", "local_pdf_path": "data/pdfs/multimodal/2605.31598v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2606.03951v1", "title": "Demo2Tutorial: From Human Experience to Multimodal Software Tutorials", "date": "2026-06-02", "year": "2026", "url": "http://arxiv.org/abs/2606.03951v1", "pdf": "https://arxiv.org/pdf/2606.03951v1", "detailPath": "paper-data/details/2606.03951v1.json", "summary": "## 一、论文基本信息\n标题：Demo2Tutorial: From Human Experience to Multimodal Software Tutorials\n作者列表（原文）：Zechen Bai, Zhiheng Chen, Yiqi Lin, Kevin Qinghong Lin, Difei Gao, Xiangwu Guo, Xin Wang, Mike Zheng Shou\n所属机构：Show Lab, National University of Singapore\n发表时间：2026年6月2日（arXiv预印本，编号arXiv:2606.03951v1）\n开源代码地址：https://github.com/showlab/Demo2Tutorial\n开源许可证类型：未明确\n\n## 二、…", "intro": "## 一、论文基本信息\n标题：Demo2Tutorial: From Human Experience to Multimodal Software Tutorials\n作者列表（原文）：Zechen Bai, Zhiheng Chen, Yiqi Lin, Kevin Qinghong Lin, Difei Gao, Xiangwu Guo, Xin Wang, Mike Zheng Shou\n所属机构：Show Lab, Natio", "tagsText": "gui, tracking, multimodal learning", "authors": "Zechen Bai, Zhiheng Chen, Yiqi Lin, Kevin Qinghong Lin, Difei Gao, Xiangwu Guo, Xin Wang, Mike Zheng Shou", "affiliations": "Show Lab, National University of Singapore", "code_url": "https://github.com/showlab/D", "local_pdf_path": "data/pdfs/gui/2606.03951v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2606.14667v1", "title": "Memento: Reconstruct to Remember for Consistent Long Video Generation", "date": "2026-06-12", "year": "2026", "url": "http://arxiv.org/abs/2606.14667v1", "pdf": "https://arxiv.org/pdf/2606.14667v1", "detailPath": "paper-data/details/2606.14667v1.json", "summary": "## 一、论文基本信息\n标题：Memento: Reconstruct to Remember for Consistent Long Video Generation\n作者列表（原文）：Xuan Wei, Longbin Ji, Guan Wang, Xiangrui Liu, Zhenyu Zhang, Shuohuan Wang, Yu Sun, Qingqi Hong\n所属机构：Xiamen University, ERNIE Team, Baidu Inc.\n发表时间：2026年6月12日（arXiv预印本，编号arXiv:2606.14667v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：长视频生成中，重复出现的主体（如人物、物体）在跨镜头…", "intro": "## 一、论文基本信息\n标题：Memento: Reconstruct to Remember for Consistent Long Video Generation\n作者列表（原文）：Xuan Wei, Longbin Ji, Guan Wang, Xiangrui Liu, Zhenyu Zhang, Shuohuan Wang, Yu Sun, Qingqi Hong\n所属机构：Xiamen University, ERNIE ", "tagsText": "video generation, diffusion model, tracking", "authors": "Xuan Wei, Longbin Ji, Guan Wang, Xiangrui Liu, Zhenyu Zhang, Shuohuan Wang, Yu Sun, Qingqi Hong", "affiliations": "Xiamen University, ERNIE Team, Baidu Inc", "code_url": "", "local_pdf_path": "data/pdfs/generation/2606.14667v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["ReID / 身份", "遮挡恢复", "多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2606.15320v1", "title": "Conditional Multi-Event Temporal Grounding in Long-Form Video", "date": "2026-06-13", "year": "2026", "url": "http://arxiv.org/abs/2606.15320v1", "pdf": "https://arxiv.org/pdf/2606.15320v1", "detailPath": "paper-data/details/2606.15320v1.json", "summary": "## 一、论文基本信息\n标题：Conditional Multi-Event Temporal Grounding in Long-Form Video\n作者列表（原文）：Yuanhao Zou, Arthad Kulkarni, Lucas Tonanez, Lincoln Spencer, Guangyu Sun, Tianxingjian Ding, Andong Deng, Yi Li, Shuangjun Liu, Yuan Li, Dashan Gao, Ning Bi, Taotao Jing, Shuai Zhang, Chen Chen\n所属机构：University of Central Florida（作者1-8、作者15）；Qualcomm AI Research（作者9-14）\n发表时…", "intro": "## 一、论文基本信息\n标题：Conditional Multi-Event Temporal Grounding in Long-Form Video\n作者列表（原文）：Yuanhao Zou, Arthad Kulkarni, Lucas Tonanez, Lincoln Spencer, Guangyu Sun, Tianxingjian Ding, Andong Deng, Yi Li, Shuangjun Liu, Yuan ", "tagsText": "video search, video segmentation, tracking, multimodal learning", "authors": "Yuanhao Zou, Arthad Kulkarni, Lucas Tonanez, Lincoln Spencer, Guangyu Sun, Tianxingjian Ding, Andong Deng, Yi Li, Shuangjun Liu, Yuan Li, Dashan Gao, Ning Bi, Taotao Jing, Shuai Zhang, Chen Chen", "affiliations": "University of Central Florida（作者1-8、作者15）；Qualcomm AI Research（作者9-14）", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2606.15320v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2607.02269v1", "title": "AnyGroundBench: A Specialized-Domain Benchmark for Video Grounding in Vision-Language Models", "date": "2026-07-02", "year": "2026", "url": "http://arxiv.org/abs/2607.02269v1", "pdf": "https://arxiv.org/pdf/2607.02269v1", "detailPath": "paper-data/details/2607.02269v1.json", "summary": "## 一、论文基本信息\n标题：AnyGroundBench: A Specialized-Domain Benchmark for Video Grounding in Vision-Language Models  \n作者列表（原文）：Rintaro Otsubo, Ryo Fujii, Reina Ishikawa, Taiki Kanaya, Kanta Sawafuji, Hiroki Kajita, Shigeki Sakai, Hideo Saito, Ryo Hachiuma  \n所属机构：Keio University; Keio AI Research Center; Keio University School of Medicine; NVIDIA  \n发表时间：2026年7月2日（arX…", "intro": "## 一、论文基本信息\n标题：AnyGroundBench: A Specialized-Domain Benchmark for Video Grounding in Vision-Language Models  \n作者列表（原文）：Rintaro Otsubo, Ryo Fujii, Reina Ishikawa, Taiki Kanaya, Kanta Sawafuji, Hiroki Kajita, Shigeki Sakai", "tagsText": "video segmentation, object detection, tracking, multimodal learning, video search", "authors": "Rintaro Otsubo, Ryo Fujii, Reina Ishikawa, Taiki Kanaya, Kanta Sawafuji, Hiroki Kajita, Shigeki Sakai, Hideo Saito, Ryo Hachiuma", "affiliations": "Keio University; Keio AI Research Center; Keio University School of Medicine; NVIDIA", "code_url": "", "local_pdf_path": "data/pdfs/multimodal/2607.02269v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["多模态 / VLM", "医疗跟踪"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2607.02096v1", "title": "LongEgoRefer: A Benchmark for Long-Form Egocentric Video Referring Expression Comprehension", "date": "2026-07-02", "year": "2026", "url": "http://arxiv.org/abs/2607.02096v1", "pdf": "https://arxiv.org/pdf/2607.02096v1", "detailPath": "paper-data/details/2607.02096v1.json", "summary": "## 一、论文基本信息\n标题：LongEgoRefer: A Benchmark for Long-Form Egocentric Video Referring Expression Comprehension\n作者列表（原文）：Shunya Kato, Taiki Miyanishi, Shuhei Kurita, Mahiro Ukai, Nakamasa Inoue, Chenhui Chu\n所属机构：Woven by Toyota, Japan; The University of Tokyo, Japan; National Institute of Informatics, Japan; Institute of Science Tokyo, Japan; NII LLMC, Japan; Kyo…", "intro": "## 一、论文基本信息\n标题：LongEgoRefer: A Benchmark for Long-Form Egocentric Video Referring Expression Comprehension\n作者列表（原文）：Shunya Kato, Taiki Miyanishi, Shuhei Kurita, Mahiro Ukai, Nakamasa Inoue, Chenhui Chu\n所属机构：Woven by Toyo", "tagsText": "visual grounding, tracking, video segmentation, scene understanding, video search", "authors": "Shunya Kato, Taiki Miyanishi, Shuhei Kurita, Mahiro Ukai, Nakamasa Inoue, Chenhui Chu", "affiliations": "Woven by Toyota, Japan; The University of Tokyo, Japan; National Institute of Informatics, Japan; Institute of Science Tokyo, Japan; NII LLMC, Japan; Kyoto University, Japan", "code_url": "https://github.com/shunya-kato/L", "local_pdf_path": "data/pdfs/multimodal/2607.02096v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["3D / 多视角", "多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2607.13569v2", "title": "GHR-VLM: Making Zero-Shot Transit Video Analytics Realizable with Grounded Hybrid Reasoning", "date": "2026-07-15", "year": "2026", "url": "http://arxiv.org/abs/2607.13569v2", "pdf": "https://arxiv.org/pdf/2607.13569v2", "detailPath": "paper-data/details/2607.13569v2.json", "summary": "## 一、论文基本信息\n标题：GHR-VLM: Making Zero-Shot Transit Video Analytics Realizable with Grounded Hybrid Reasoning\n作者列表（原文）：Kaicong Huang, Weiheng Oh, Jack M. Reilly, Thomas Guggisberg, Ruimin Ke\n所属机构：Rensselaer Polytechnic Institute（Kaicong Huang, Weiheng Oh, Jack M. Reilly, Ruimin Ke）；Capital District Transportation Authority（Thomas Guggisberg）\n发表时间：2026年7月20日（arX…", "intro": "## 一、论文基本信息\n标题：GHR-VLM: Making Zero-Shot Transit Video Analytics Realizable with Grounded Hybrid Reasoning\n作者列表（原文）：Kaicong Huang, Weiheng Oh, Jack M. Reilly, Thomas Guggisberg, Ruimin Ke\n所属机构：Rensselaer Polytechnic Inst", "tagsText": "video segmentation, tracking, multimodal learning, edge deployment, video search", "authors": "Kaicong Huang, Weiheng Oh, Jack M. Reilly, Thomas Guggisberg, Ruimin Ke", "affiliations": "Rensselaer Polytechnic Institute（Kaicong Huang, Weiheng Oh, Jack M. Reilly, Ruimin Ke）；Capital District Transportation Authority（Thomas Guggisberg）", "code_url": "", "local_pdf_path": "data/pdfs/multimodal/2607.13569v2.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "异常 / 监控", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2607.19228v1", "title": "IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer", "date": "2026-07-21", "year": "2026", "url": "http://arxiv.org/abs/2607.19228v1", "pdf": "https://arxiv.org/pdf/2607.19228v1", "detailPath": "paper-data/details/2607.19228v1.json", "summary": "## 一、论文基本信息\n标题：IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer\n作者列表（原文）：Zhengyu Zou, Hao Li, Kuixuan Jiao, Liu Liu, Tingyang Xiao, Xiaolin Zhou, Fangzhou Hong, Zhizhong Su, Dingwen Zhang, Ziwei Liu\n所属机构：Horizon Robotics; S-Lab, Nanyang Technological University; Institute of Artificial Intelligence, Hefei Comprehensive National Science Center\n发表时间…", "intro": "## 一、论文基本信息\n标题：IGGT4D: Streaming 4D Instance-Grounded Geometry Transformer\n作者列表（原文）：Zhengyu Zou, Hao Li, Kuixuan Jiao, Liu Liu, Tingyang Xiao, Xiaolin Zhou, Fangzhou Hong, Zhizhong Su, Dingwen Zhang, Ziwei Liu\n所属机构：Horiz", "tagsText": "3D reconstruction, pose estimation, instance segmentation, tracking", "authors": "Zhengyu Zou, Hao Li, Kuixuan Jiao, Liu Liu, Tingyang Xiao, Xiaolin Zhou, Fangzhou Hong, Zhizhong Su, Dingwen Zhang, Ziwei Liu", "affiliations": "Horizon Robotics; S-Lab, Nanyang Technological University; Institute of Artificial Intelligence, Hefei Comprehensive National Science Center", "code_url": "", "local_pdf_path": "data/pdfs/segmentation/2607.19228v1.pdf", "stage": "multicamera_3d", "stageTitle": "06 3D / 4D / 多相机跟踪", "stageTags": ["multicamera_3d"], "focus": ["ReID / 身份", "3D / 多视角", "多模态 / VLM"], "modelGroup": "multiview_3d", "modelGroupTitle": "多相机 / 3D / 传感器融合", "curated": false, "relevance": 10}, {"id": "2607.19077v1", "title": "Context-structured Video Anomaly Detection with Large Vision-Language Models", "date": "2026-07-21", "year": "2026", "url": "http://arxiv.org/abs/2607.19077v1", "pdf": "https://arxiv.org/pdf/2607.19077v1", "detailPath": "paper-data/details/2607.19077v1.json", "summary": "## 一、论文基本信息\n标题：Context-structured Video Anomaly Detection with Large Vision-Language Models\n作者列表（原文）：Dongjun Kim, Changjae Oh, Andrea Cavallaro, Jeonghoon Mo\n所属机构：Yonsei University; Queen Mary University of London; EPFL\n发表时间：2026年7月21日（arXiv预印本，编号arXiv:2607.19077v1）\n开源代码地址：未明确（项目主页为 https://dj991108.github.io/CSI-VAD/）\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：…", "intro": "## 一、论文基本信息\n标题：Context-structured Video Anomaly Detection with Large Vision-Language Models\n作者列表（原文）：Dongjun Kim, Changjae Oh, Andrea Cavallaro, Jeonghoon Mo\n所属机构：Yonsei University; Queen Mary University of London; EPFL\n", "tagsText": "object detection, tracking, multimodal learning, scene understanding, video search", "authors": "Dongjun Kim, Changjae Oh, Andrea Cavallaro, Jeonghoon Mo", "affiliations": "Yonsei University; Queen Mary University of London; EPFL", "code_url": "https://dj991108.github.io/CSI-VAD/", "local_pdf_path": "data/pdfs/detection/2607.19077v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "异常 / 监控"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2607.20389v1", "title": "PercepCap: Video Captioner with Structured Spatio-Temporal Perception", "date": "2026-07-22", "year": "2026", "url": "http://arxiv.org/abs/2607.20389v1", "pdf": "https://arxiv.org/pdf/2607.20389v1", "detailPath": "paper-data/details/2607.20389v1.json", "summary": "## 一、论文基本信息\n标题：PercepCap: Video Captioner with Structured Spatio-Temporal Perception\n作者列表（原文）：Yifan Xu, Zihao Wang, Zhixiao Wang, Jiaming Zhang, Yichun Yang, Desen Meng, Yuanxing Zhang, Pengfei Wan, Limin Wang\n所属机构：State Key Laboratory for Novel Software Technology, Nanjing University; Kling Team, Kuaishou Technology; Shanghai AI Laboratory\n发表时间：2026年7月22日（a…", "intro": "## 一、论文基本信息\n标题：PercepCap: Video Captioner with Structured Spatio-Temporal Perception\n作者列表（原文）：Yifan Xu, Zihao Wang, Zhixiao Wang, Jiaming Zhang, Yichun Yang, Desen Meng, Yuanxing Zhang, Pengfei Wan, Limin Wang\n所属机构：State", "tagsText": "object detection, tracking, multimodal learning, video search", "authors": "Yifan Xu, Zihao Wang, Zhixiao Wang, Jiaming Zhang, Yichun Yang, Desen Meng, Yuanxing Zhang, Pengfei Wan, Limin Wang", "affiliations": "State Key Laboratory for Novel Software Technology, Nanjing University; Kling Team, Kuaishou Technology; Shanghai AI Laboratory", "code_url": "", "local_pdf_path": "data/pdfs/other/2607.20389v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2607.29627v1", "title": "FlexComposer: Unified Video Compositing from Images to Dynamic Footage with Flexible Trajectory Control", "date": "2026-07-31", "year": "2026", "url": "http://arxiv.org/abs/2607.29627v1", "pdf": "https://arxiv.org/pdf/2607.29627v1", "detailPath": "paper-data/details/2607.29627v1.json", "summary": "## 一、论文基本信息\n标题：FlexComposer: Unified Video Compositing from Images to Dynamic Footage with Flexible Trajectory Control  \n作者列表（原文）：Songchun Zhang, Sitong Guo, Xianghao Kong, Pengwei Liu, Yuwei Guo, Lvmin Zhang, Anyi Rao  \n所属机构：HKUST, ZJU, CUHK, Stanford University  \n发表时间：2026年7月31日（arXiv预印本，编号arXiv:2607.29627v1）  \n开源代码地址：未明确  \n开源许可证类型：未明确  \n\n## 二、研究背景与动机\n- 该研…", "intro": "## 一、论文基本信息\n标题：FlexComposer: Unified Video Compositing from Images to Dynamic Footage with Flexible Trajectory Control  \n作者列表（原文）：Songchun Zhang, Sitong Guo, Xianghao Kong, Pengwei Liu, Yuwei Guo, Lvmin Zhang, Anyi Rao  ", "tagsText": "video generation, diffusion model, tracking", "authors": "Songchun Zhang, Sitong Guo, Xianghao Kong, Pengwei Liu, Yuwei Guo, Lvmin Zhang, Anyi Rao", "affiliations": "HKUST, ZJU, CUHK, Stanford University", "code_url": "", "local_pdf_path": "data/pdfs/3d/2607.29627v1.pdf", "stage": "motion_state", "stageTitle": "02 运动建模 / 状态估计", "stageTags": ["motion_state"], "focus": ["3D / 多视角"], "modelGroup": "motion_geometry", "modelGroupTitle": "运动模型 / 滤波 / 几何", "curated": false, "relevance": 10}, {"id": "2608.02471v1", "title": "Action-grounded tissue affordance enables anticipatory auto-framing that lowers surgeon cognitive workload during laparoscopic surgery", "date": "2026-08-03", "year": "2026", "url": "http://arxiv.org/abs/2608.02471v1", "pdf": "https://arxiv.org/pdf/2608.02471v1", "detailPath": "paper-data/details/2608.02471v1.json", "summary": "## 一、论文基本信息\n标题：Action-grounded tissue affordance enables anticipatory auto-framing that lowers surgeon cognitive workload during laparoscopic surgery  \n作者列表（原文）：Jiayu Gu, Yiwei Wang, Jie Zhang, Guojun Cao, Keshen Lyu, Song Zhou, Yimeng Chen, Haorui Wang, Qingmin Feng, Shenchao Shi, Huan Zhao, Wenbin Chen, Caihua Xiong, Chidan Wan, Jing Samantha Pan, Xiong Ca…", "intro": "## 一、论文基本信息\n标题：Action-grounded tissue affordance enables anticipatory auto-framing that lowers surgeon cognitive workload during laparoscopic surgery  \n作者列表（原文）：Jiayu Gu, Yiwei Wang, Jie Zhang, Guojun Cao, Keshen Lyu, So", "tagsText": "semantic segmentation, video segmentation, tracking, medical image, scene understanding", "authors": "Jiayu Gu, Yiwei Wang, Jie Zhang, Guojun Cao, Keshen Lyu, Song Zhou, Yimeng Chen, Haorui Wang, Qingmin Feng, Shenchao Shi, Huan Zhao, Wenbin Chen, Caihua Xiong, Chidan Wan, Jing Samantha Pan, Xiong Cai, Han Ding", "affiliations": "华中科技大学同济医学院附属协和医院肝胆外科（机构1）；华中科技大学机械科学与工程学院（机构2）；中山大学心理学系（机构3）；华中科技大学同济医学院附属协和医院生物医学工程研究所（机构4）；华中科技大学医学装备科学与工程研究所（机构5）；武汉大学人民医院肝胆胰外科（机构6）", "code_url": "", "local_pdf_path": "data/pdfs/tracking/2608.02471v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["医疗跟踪", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2608.11017v1", "title": "R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video", "date": "2026-08-11", "year": "2026", "url": "http://arxiv.org/abs/2608.11017v1", "pdf": "https://arxiv.org/pdf/2608.11017v1", "detailPath": "paper-data/details/2608.11017v1.json", "summary": "## 一、论文基本信息\n标题：R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video\n作者列表（原文）：Ke Ma, Yamin Mao, Weiming Li, Shuai Tan, Yijie Zhong, Hao Chen, Haofen Wang, Meng Wang\n所属机构：Tongji University; Samsung R&D Institute China - Beijing; Shanghai Jiao Tong University; Samsung Research America\n发表时间：2026年8月11日（arXiv预印本，编号ar…", "intro": "## 一、论文基本信息\n标题：R4DSG: Relative 4D Scene Graph Memory for Object-Centric Question Answering in Long Egocentric Video\n作者列表（原文）：Ke Ma, Yamin Mao, Weiming Li, Shuai Tan, Yijie Zhong, Hao Chen, Haofen Wang, Meng Wang\n所属机构：Ton", "tagsText": "video segmentation, tracking, scene understanding, visual question answering, video search", "authors": "Ke Ma, Yamin Mao, Weiming Li, Shuai Tan, Yijie Zhong, Hao Chen, Haofen Wang, Meng Wang", "affiliations": "Tongji University; Samsung R&D Institute China - Beijing; Shanghai Jiao Tong University; Samsung Research America", "code_url": "https://dualtransparency.github.io/R4DSG/", "local_pdf_path": "data/pdfs/segmentation/2608.11017v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["ReID / 身份", "3D / 多视角", "多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2608.23435v1", "title": "Towards Comprehensive Basketball Understanding", "date": "2026-08-24", "year": "2026", "url": "http://arxiv.org/abs/2608.23435v1", "pdf": "https://arxiv.org/pdf/2608.23435v1", "detailPath": "paper-data/details/2608.23435v1.json", "summary": "## 一、论文基本信息\n标题：Towards Comprehensive Basketball Understanding\n作者列表（原文）：Yirong Hu, Jiayuan Rao, Yu Zhang, Shangzhe Di, Weidi Xie\n所属机构：北京大学数学科学学院；上海交通大学人工智能学院\n发表时间：2026年8月24日（arXiv预印本，编号arXiv:2608.23435v1）\n开源代码地址：未明确\n开源许可证类型：未明确\n\n## 二、研究背景与动机\n- 该研究要解决什么问题：篮球比赛理解需要同时具备事件识别、动作定位、球员识别以及将这些信息与结构化比赛知识关联的能力。现有基准测试通常只单独评估这些能力中的某一种，忽略了多种能力之间的交互与组合，缺乏一个统一的框架来评估和促进\"综合性篮…", "intro": "## 一、论文基本信息\n标题：Towards Comprehensive Basketball Understanding\n作者列表（原文）：Yirong Hu, Jiayuan Rao, Yu Zhang, Shangzhe Di, Weidi Xie\n所属机构：北京大学数学科学学院；上海交通大学人工智能学院\n发表时间：2026年8月24日（arXiv预印本，编号arXiv:2608.23435v1）\n开源代码地址：未明确\n开源许可证", "tagsText": "multimodal learning, video segmentation, tracking, scene understanding", "authors": "Yirong Hu, Jiayuan Rao, Yu Zhang, Shangzhe Di, Weidi Xie", "affiliations": "北京大学数学科学学院；上海交通大学人工智能学院", "code_url": "", "local_pdf_path": "data/pdfs/multimodal/2608.23435v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2608.24439v1", "title": "DoublesEval: Diagnosing Multi-Agent Tactical Reasoning in Vision-Language Models via Professional Doubles Badminton", "date": "2026-08-25", "year": "2026", "url": "http://arxiv.org/abs/2608.24439v1", "pdf": "https://arxiv.org/pdf/2608.24439v1", "detailPath": "paper-data/details/2608.24439v1.json", "summary": "## 一、论文基本信息\n标题：DoublesEval: Diagnosing Multi-Agent Tactical Reasoning in Vision-Language Models via Professional Doubles Badminton\n作者列表（原文）：Jintao Cheng, Weibin Li\n所属机构：The Hong Kong University of Science and Technology; University of Macau\n发表时间：2026年8月25日（arXiv预印本，编号arXiv:2608.24439v1）\n开源代码地址：https://github.com/Chengjt1999/DoublesEval\n开源许可证类型：未明确\n\n## 二、研究背景…", "intro": "## 一、论文基本信息\n标题：DoublesEval: Diagnosing Multi-Agent Tactical Reasoning in Vision-Language Models via Professional Doubles Badminton\n作者列表（原文）：Jintao Cheng, Weibin Li\n所属机构：The Hong Kong University of Science and Technology;", "tagsText": "multimodal learning, video segmentation, tracking, scene understanding", "authors": "Jintao Cheng, Weibin Li", "affiliations": "The Hong Kong University of Science and Technology; University of Macau", "code_url": "https://github.com/Chengjt1999/D", "local_pdf_path": "data/pdfs/multimodal/2608.24439v1.pdf", "stage": "benchmark_dataset", "stageTitle": "00 数据集 / 基准 / 评测", "stageTags": ["benchmark_dataset"], "focus": ["多模态 / VLM"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2608.25935v1", "title": "TAU-Agent: An Agentic Retrieval-Augmented Framework for Traffic Anomaly Understanding", "date": "2026-08-26", "year": "2026", "url": "http://arxiv.org/abs/2608.25935v1", "pdf": "https://arxiv.org/pdf/2608.25935v1", "detailPath": "paper-data/details/2608.25935v1.json", "summary": "## 一、论文基本信息\n标题：TAU-Agent: An Agentic Retrieval-Augmented Framework for Traffic Anomaly Understanding\n作者列表（原文）：Yuqiang Lin, Yan Shi, Sam Lockyer, Harish Tayyar Madabushi, Adrian Evans, Wenbin Li, Yinhai Wang, Nic Zhang\n所属机构：University of Bath, University of Washington\n发表时间：2026年8月26日（arXiv预印本，编号arXiv:2608.25935v1）\n开源代码地址：https://github.com/siri-rouser/TAU-Age…", "intro": "## 一、论文基本信息\n标题：TAU-Agent: An Agentic Retrieval-Augmented Framework for Traffic Anomaly Understanding\n作者列表（原文）：Yuqiang Lin, Yan Shi, Sam Lockyer, Harish Tayyar Madabushi, Adrian Evans, Wenbin Li, Yinhai Wang, Nic Zhang\n所属", "tagsText": "video search, object detection, tracking, YOLO", "authors": "Yuqiang Lin, Yan Shi, Sam Lockyer, Harish Tayyar Madabushi, Adrian Evans, Wenbin Li, Yinhai Wang, Nic Zhang", "affiliations": "University of Bath, University of Washington", "code_url": "https://github.com/siri-rouser/T", "local_pdf_path": "data/pdfs/tracking/2608.25935v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["多模态 / VLM", "异常 / 监控", "交通 / 自动驾驶"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}, {"id": "2608.26669v1", "title": "Beyond the Proving Ground: Independent Public-Road Testing of Assisted Lane Change Systems using LiDAR", "date": "2026-08-27", "year": "2026", "url": "http://arxiv.org/abs/2608.26669v1", "pdf": "https://arxiv.org/pdf/2608.26669v1", "detailPath": "paper-data/details/2608.26669v1.json", "summary": "## 一、论文基本信息\n标题：Beyond the Proving Ground: Independent Public-Road Testing of Assisted Lane Change Systems using LiDAR\n作者列表（原文）：Marcello Cellina, Akos Kriston, Antonio Migneco, Davide Maggi, Stefano Favelli, Fabrizio Re, Fabrizio Minarini, Andrea Nuovo, Riccardo Dona, Biagio Ciuffo\n所属机构：European Commission Joint Research Centre\n发表时间：2026年1月8日（投稿日期，arXiv预印本）\n开…", "intro": "## 一、论文基本信息\n标题：Beyond the Proving Ground: Independent Public-Road Testing of Assisted Lane Change Systems using LiDAR\n作者列表（原文）：Marcello Cellina, Akos Kriston, Antonio Migneco, Davide Maggi, Stefano Favelli, Fabrizio Re, ", "tagsText": "autonomous driving, LiDAR, object detection, tracking, BEV perception", "authors": "Marcello Cellina, Akos Kriston, Antonio Migneco, Davide Maggi, Stefano Favelli, Fabrizio Re, Fabrizio Minarini, Andrea Nuovo, Riccardo Dona, Biagio Ciuffo", "affiliations": "European Commission Joint Research Centre", "code_url": "", "local_pdf_path": "data/pdfs/detection/2608.26669v1.pdf", "stage": "multimodal_applications", "stageTitle": "07 多模态推理 / 行业应用", "stageTags": ["multimodal_applications"], "focus": ["异常 / 监控", "交通 / 自动驾驶", "实时 / 边缘"], "modelGroup": "vlm_grounding_application", "modelGroupTitle": "VLM / Grounding / 应用系统", "curated": false, "relevance": 10}]}</script>
+<script>
+const DATA = JSON.parse(document.getElementById('taxonomy-data').textContent);
+const $ = (s) => document.querySelector(s);
+const el = (tag, cls, html='') => { const n=document.createElement(tag); if(cls) n.className=cls; n.innerHTML=html; return n; };
+const stageMap = Object.fromEntries(DATA.stages.map(s => [s.code, s]));
+const paperIndex = new Map(DATA.papers.map(p => [p.id, p]));
+const detailCache = new Map();
+let modalRequestId = 0;
+$('#stat-count').textContent = DATA.count;
+$('#stat-range').textContent = `${DATA.oldest.slice(0,4)}-${DATA.newest.slice(0,4)}`;
+
+function escHtml(value='') {
+  return String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+}
+
+function normalizeTitle(value='') {
+  return String(value).toLowerCase().replace(/\s+/g, ' ').trim();
+}
+
+function paperCard(p) {
+  const tags = [...(p.focus||[]).slice(0,4).map(t=>`<span class="tag">${escHtml(t)}</span>`), `<span class="tag stage">${escHtml(p.stageTitle)}</span>`].join('');
+  const text = [p.id,p.title,p.date,p.stageTitle,p.modelGroupTitle,(p.focus||[]).join(' ')].join(' ').toLowerCase();
+  return `<article class="card paper-card" role="button" tabindex="0" data-paper-id="${escHtml(p.id)}" data-text="${escHtml(text)}">
+    <div class="date">${escHtml(p.date || 'no date')}</div>
+    <h4>${escHtml(p.title)}</h4>
+    <p>${escHtml(p.intro || '点击查看论文总结')}</p>
+    <div class="meta">${tags}</div>
+  </article>`;
+}
+
+function scrollToPaperSection(view, code, behavior='smooth') {
+  const target = document.getElementById(`paper-${view}-${code}`);
+  if (!target) return;
+  target.open = true;
+  target.scrollIntoView({ behavior, block: 'start' });
+}
+
+function jumpToGroup(view, code, behavior='smooth') {
+  activeView = view;
+  activeFilter = code;
+  $('#search').value = '';
+  renderBrowserFilters();
+  renderPaperSections();
+  updateFilterButtons();
+  filterCards();
+  requestAnimationFrame(() => scrollToPaperSection(view, code, behavior));
+}
+
+function keepScrollPosition(callback) {
+  const scrollX = window.scrollX;
+  const scrollY = window.scrollY;
+  callback();
+  requestAnimationFrame(() => window.scrollTo(scrollX, scrollY));
+}
+
+function applyBrowserFilter(code) {
+  keepScrollPosition(() => {
+    activeFilter = code;
+    updateFilterButtons();
+    filterCards();
+  });
+}
+
+function renderPipeline() {
+  const box = $('#pipeline'); box.innerHTML='';
+  DATA.stages.forEach((s,i) => {
+    const n = el('a','step'); n.href = '#paper-sections';
+    n.onclick = (event) => { event.preventDefault(); jumpToGroup('stage', s.code); };
+    n.innerHTML = `<span class="badge">${s.count}</span><div class="num">STEP ${String(i).padStart(2,'0')}</div><h3>${s.title}</h3><p>${s.question}</p><p class="small">${s.artifact}</p>`;
+    box.appendChild(n);
+  });
+}
+
+function renderBars() {
+  const max = Math.max(...DATA.stages.map(s=>s.count));
+  $('#stage-bars').innerHTML = DATA.stages.map(s => `<div class="bar-row"><b>${s.title}</b><div class="bar"><i style="width:${Math.max(3, s.count/max*100)}%"></i></div><span>${s.count}</span></div>`).join('');
+}
+
+function renderModelGroups() {
+  const summary = $('#model-group-summary'); summary.innerHTML='';
+  DATA.modelGroups.forEach(g => {
+    const card = el('div', 'group-card', `<b>${g.title}</b><p>${g.desc}</p><div class="count">${g.count} papers</div>`);
+    card.tabIndex = 0;
+    card.role = 'button';
+    card.onclick = () => jumpToGroup('model', g.code);
+    card.onkeydown = (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        jumpToGroup('model', g.code);
+      }
+    };
+    summary.appendChild(card);
+  });
+}
+
+let activeView = 'stage';
+let activeFilter = 'all';
+
+function currentGroups() {
+  if (activeView === 'model') {
+    return DATA.modelGroups.map(g => ({ code: g.code, title: g.title, count: g.count }));
+  }
+  return DATA.stages.map(s => ({ code: s.code, title: s.title, count: s.count }));
+}
+
+function updateFilterButtons() {
+  document.querySelectorAll('#paper-filter button').forEach((b,i)=>{ b.classList.toggle('active', i===0 ? activeFilter==='all' : b.dataset.filter===activeFilter); });
+  $('#view-stage').classList.toggle('active', activeView === 'stage');
+  $('#view-model').classList.toggle('active', activeView === 'model');
+}
+
+function comparePapers(a, b) {
+  const relevance = (b.relevance || 0) - (a.relevance || 0);
+  if (relevance) return relevance;
+  return (b.date || '').localeCompare(a.date || '');
+}
+
+function renderBrowserFilters() {
+  const root = $('#paper-filter'); root.innerHTML='';
+  const all = el('button','active','全部');
+  all.onclick=()=>applyBrowserFilter('all');
+  root.appendChild(all);
+  currentGroups().forEach(g => {
+    const b=el('button','',`${g.title} · ${g.count}`);
+    b.dataset.filter=g.code;
+    b.onclick=()=>applyBrowserFilter(g.code);
+    root.appendChild(b);
+  });
+}
+
+function sectionPapers(code) {
+  if (activeView === 'model') {
+    return DATA.papers.filter(p=>p.modelGroup===code).sort(comparePapers);
+  }
+  return DATA.papers.filter(p=>p.stage===code).sort(comparePapers);
+}
+
+function renderPaperSections() {
+  const root = $('#paper-sections'); root.innerHTML='';
+  currentGroups().forEach(g => {
+    const papers = sectionPapers(g.code);
+    const d=el('details'); d.open=true; d.dataset.filter=g.code; d.id=`paper-${activeView}-${g.code}`;
+    const modeLabel = activeView === 'model' ? 'model direction' : 'pipeline layer';
+    d.innerHTML = `<summary>${g.title} <span>${papers.length} papers · ${modeLabel} · relevance first · new → old</span></summary><div class="cards">${papers.map(paperCard).join('') || '<div class="empty">No papers</div>'}</div>`;
+    root.appendChild(d);
+  });
+}
+
+function isLocalContext() {
+  return location.protocol === 'file:' || ['localhost', '127.0.0.1', '0.0.0.0', ''].includes(location.hostname);
+}
+
+function renderSummary(text) {
+  if (!text) return '<p>暂无总结</p>';
+  return escHtml(text)
+    .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+    .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+    .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    .replace(/^- (.+)$/gm, '<li>$1</li>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/^---$/gm, '<hr>')
+    .split(/\n\n+/)
+    .map(block => {
+      block = block.trim();
+      if (!block) return '';
+      if (block.startsWith('<h') || block.startsWith('<li') || block.startsWith('<hr')) return block;
+      return `<p>${block.replace(/\n/g, '<br>')}</p>`;
+    })
+    .join('\n');
+}
+
+function linkButton(href, label, className='') {
+  if (!href) return '';
+  return `<a class="modal-link ${className}" href="${escHtml(href)}" target="_blank" rel="noreferrer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14,2 14,8 20,8"/>
+    </svg>
+    ${escHtml(label)}
+  </a>`;
+}
+
+function sourceLinkLabel(href) {
+  return /arxiv\.org\/abs\//i.test(String(href || '')) ? 'arXiv 页面' : '论文页面';
+}
+
+async function openPaperModal(paperId, updateLocation=true) {
+  const base = paperIndex.get(paperId);
+  if (!base) return;
+  const requestId = ++modalRequestId;
+  if (updateLocation && location.hash !== `#paper=${encodeURIComponent(paperId)}`) {
+    history.replaceState(null, '', `#paper=${encodeURIComponent(paperId)}`);
+  }
+  const p = base;
+  const tagItems = [
+    ...(p.focus || []),
+    ...(p.stageTags || []),
+    ...(p.tagsText || '').split(','),
+    p.stageTitle,
+    p.modelGroupTitle,
+  ].map(t => String(t || '').trim()).filter(Boolean);
+  const uniqueTags = [...new Set(tagItems)];
+
+  $('#paper-modal-kicker').textContent = p.stageTitle || 'tracking paper';
+  $('#paper-modal-title').textContent = p.title || 'Untitled';
+  $('#paper-modal-meta').innerHTML = [
+    p.authors ? `Authors: ${escHtml(p.authors)}` : '',
+    p.date ? `Date: ${escHtml(p.date)}` : '',
+    p.modelGroupTitle ? `Direction: ${escHtml(p.modelGroupTitle)}` : '',
+    p.affiliations ? `Affiliations: ${escHtml(p.affiliations)}` : '',
+  ].filter(Boolean).map(x => `<span>${x}</span>`).join('');
+  $('#paper-modal-tags').innerHTML = uniqueTags.map(t => `<span class="tag">${escHtml(t)}</span>`).join('');
+
+  const sourceUrl = p.url || p.entry_url || p.pdf_url || p.pdf;
+  const links = [
+    isLocalContext() ? linkButton(p.local_pdf_path, '本地 PDF', 'local-pdf') : '',
+    linkButton(sourceUrl, sourceLinkLabel(sourceUrl)),
+    linkButton(p.code_url, '代码'),
+  ].join('');
+  $('#paper-modal-links').innerHTML = links || '<span class="small">暂无可用链接</span>';
+  $('#paper-modal-summary').innerHTML = '<p>正在加载论文总结…</p>';
+  $('#paper-modal-overlay').classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  try {
+    const detail = await loadPaperDetail(p);
+    if (requestId !== modalRequestId) return;
+    $('#paper-modal-summary').innerHTML = renderSummary(detail.summary || '暂无总结');
+  } catch (err) {
+    console.warn('Could not load paper detail', err);
+    if (requestId !== modalRequestId) return;
+    // Keep the modal useful during a CDN/deployment race. The inline summary
+    // is intentionally short, while the normal path still loads the full JSON.
+    $('#paper-modal-summary').innerHTML = renderSummary(
+      p.summary || '论文总结暂时无法加载，请稍后重试。',
+    );
+  }
+}
+
+async function loadPaperDetail(paper) {
+  if (!paper.detailPath) return paper;
+  if (!detailCache.has(paper.id)) {
+    const request = fetch(new URL(paper.detailPath, document.baseURI), {
+      cache: 'force-cache',
+    })
+      .then(res => {
+        if (!res.ok) throw new Error(`detail request failed: ${res.status}`);
+        return res.json();
+      })
+      .catch(error => {
+        detailCache.delete(paper.id);
+        throw error;
+      });
+    detailCache.set(paper.id, request);
+  }
+  return detailCache.get(paper.id);
+}
+
+function closePaperModal(e) {
+  if (e && e.target !== e.currentTarget) return;
+  modalRequestId++;
+  $('#paper-modal-overlay').classList.remove('active');
+  document.body.style.overflow = '';
+  if (location.hash.startsWith('#paper=')) {
+    history.replaceState(null, '', `${location.pathname}${location.search}`);
+  }
+}
+
+function openPaperFromLocation() {
+  if (!location.hash.startsWith('#paper=')) return;
+  const paperId = decodeURIComponent(location.hash.slice('#paper='.length));
+  openPaperModal(paperId, false);
+}
+
+function filterCards() {
+  const q = $('#search').value.trim().toLowerCase();
+  document.querySelectorAll('#paper-sections details').forEach(sec => {
+    const groupOk = activeFilter === 'all' || sec.dataset.filter === activeFilter;
+    let visible = 0;
+    sec.querySelectorAll('.card').forEach(card => {
+      const ok = groupOk && (!q || card.dataset.text.includes(q));
+      card.style.display = ok ? '' : 'none';
+      if(ok) visible++;
+    });
+    sec.style.display = groupOk && (visible>0 || !q) ? '' : 'none';
+  });
+}
+
+function setView(view) {
+  keepScrollPosition(() => {
+    activeView = view;
+    activeFilter = 'all';
+    renderBrowserFilters();
+    renderPaperSections();
+    updateFilterButtons();
+    filterCards();
+  });
+}
+
+$('#search').addEventListener('input', filterCards);
+$('#clear').onclick = () => keepScrollPosition(() => { $('#search').value=''; activeFilter='all'; updateFilterButtons(); filterCards(); });
+$('#view-stage').onclick = () => setView('stage');
+$('#view-model').onclick = () => setView('model');
+document.addEventListener('click', event => {
+  const card = event.target.closest('.paper-card');
+  if (!card || !$('#paper-sections').contains(card)) return;
+  openPaperModal(card.dataset.paperId);
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') closePaperModal();
+  if ((event.key === 'Enter' || event.key === ' ') && event.target.classList.contains('paper-card')) {
+    event.preventDefault();
+    openPaperModal(event.target.dataset.paperId);
+  }
+});
+window.addEventListener('hashchange', openPaperFromLocation);
+renderPipeline(); renderBars(); renderModelGroups(); renderBrowserFilters(); renderPaperSections(); filterCards(); openPaperFromLocation();
+</script>
+</body>
+</html>
